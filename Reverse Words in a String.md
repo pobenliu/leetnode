@@ -20,3 +20,13 @@ Yes. However, your reversed string should not contain leading or trailing spaces
 Reduce them to a single space in the reversed string.
 ```
 
+
+解题思路：
+
+考察点：
+
+需要注意的地方：
+
+类似的题目：
+
+延伸：
