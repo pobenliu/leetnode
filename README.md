@@ -48,3 +48,6 @@
 
 ### 参考书籍
 1. [《算法（第4版）》（豆瓣）](https://book.douban.com/subject/19952400/)，Robert Sedgewick教授的书，讲解了基础的数据结构和算法，配有大量图例，深入浅出，结合他老人家在Coursera开的两门课程看，效果更佳。课程分别是Algorithms, Part I([Coursera](https://www.coursera.org/learn/introduction-to-algorithms), [Youtube](https://www.youtube.com/playlist?list=PLUX6FBiUa2g4YWs6HkkCpXL6ru02i7y3Q))和Algorithms, Part II([Coursera](https://www.coursera.org/learn/java-data-structures-algorithms-2), [Youtube](https://www.youtube.com/playlist?list=PLqD_OdMOd_6YixsHkd9f4sNdof4IhIima))
+
+
+### 其他资源
