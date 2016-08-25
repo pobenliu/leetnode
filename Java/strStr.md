@@ -1,2 +1,7 @@
 # strStr
 ***
+strStr (leetcode lintcode)
+
+```
+
+```
