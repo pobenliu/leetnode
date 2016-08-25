@@ -51,3 +51,4 @@
 
 
 ### 其他资源
+1. [数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/)， 
