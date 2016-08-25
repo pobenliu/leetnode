@@ -45,3 +45,6 @@
 ### 题目参考解答
 1. [九章算法](http://www.jiuzhang.com/solutions/)，提供Lintcode三种语言（Java,C++,Python）的解题答案，我个人在学习过程中大量参考了九章的答案，在此致谢。
 2. Leetcode讨论区，大家会讨论分享交流不同的解法和思路。
+
+### 参考书籍
+1. [《算法（第4版）》（豆瓣）](https://book.douban.com/subject/19952400/)， 
