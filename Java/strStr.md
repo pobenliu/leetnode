@@ -21,13 +21,16 @@ O(n2) is acceptable. Can you implement an O(n) algorithm? (hint: KMP)
 
 #### 解题思路：
 
-**思路一：穷举法**
+**一、穷举法**
 
-- 从被搜索字符串的起始位置开始，逐一与目标字符串进行比较，直至找到，或者搜索结束。
+步骤
+
+- 从源字符串的起始位置开始，逐一与目标字符串进行比较，直至找到，或者搜索结束。
+- 具体实现为双重for循环，外循环遍历源字符串，范围为`0 ~ source.length()-target.length()`，内循环遍历目标字符串，范围`0 ~ target.length()-1`。
 
 算法性能：
 
-- 最坏情况需要~MN次比较，如`source = "aaaa…aaaaab", target = "aaab"`。
+- 时间复杂度最坏情况为*O((n - m) \* m)*次比较，如`source = "aaaa…aaaaab", target = "aaab"`。
 
 ```java
 class Solution {
@@ -64,7 +67,7 @@ class Solution {
 
 
 
-**思路二：KMP(Knuth-Morris-Pratt)**
+**二、KMP(Knuth-Morris-Pratt)**
 
 
 
