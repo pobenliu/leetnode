@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* [Reverse Words in a String](chapter1.md)
+* [Reverse Words in a String](chapter1md.md)
 
