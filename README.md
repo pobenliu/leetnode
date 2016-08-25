@@ -47,4 +47,4 @@
 2. Leetcode讨论区，大家会讨论分享交流不同的解法和思路。
 
 ### 参考书籍
-1. [《算法（第4版）》（豆瓣）](https://book.douban.com/subject/19952400/)， 
+1. [《算法（第4版）》（豆瓣）](https://book.douban.com/subject/19952400/)，Robert Sedgewick教授的书 
