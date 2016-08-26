@@ -32,13 +32,17 @@ Can you do it in both recursively and iteratively?
 
 **一、递归解法（DFS）**
 
-题目与Subsets有关，那么解题思路可以参考Subsets的解法，但是需要删除重复的子集。
+题目与 Subsets 有关，解题思路可以参考 Subsets 的解法，但是需要考虑如何删除重复的子集。
 
-思考哪些情况会出现重复。如`{1, 2(1), 2(2), 2(3)}`，`{1, 2(1)}`和`{1, 2(2)}`重复，`{1, 2(1), 2(2)}`和`{1, 2(2), 2(3)}`重复。其实，我们只关心取了几个`2`，不关心取哪几个。
+以`{1, 2(1), 2(2), 2(3)}`为例，`{1, 2(1)}`和`{1, 2(2)}`重复，`{1, 2(1), 2(2)}`和`{1, 2(2), 2(3)}`重复。可以看到，对于重复元素，我们只关心取了几个，不关心取哪几个。
 
-实现方案：从第一个重复元素`2`开始连续取值。
+解决方案是从重复元素的第一个持续向下添加列表，而不能取第二个或之后的重复元素。
 
-Java实现：
+算法复杂度：
+
+- 同 Subsets，最坏情况时间复杂度`O(2^n)`，空间复杂度`O(n)`
+
+Java 实现：
 
 ```java
 class Solution {
@@ -67,6 +71,7 @@ class Solution {
         
         for (int i = pos; i < S.size(); i++) {
             // 遇到重复的元素（已排序），必须从第一个开始连续取
+            // 使用i-1是为了防止索引越界
             if (i != pos && S.get(i) == S.get(i - 1)) {
                 continue;
             }
@@ -80,3 +85,12 @@ class Solution {
 
 ```
 
+
+
+
+
+#### 参考
+
+1. [Unique Subsets](http://algorithm.yuanbin.me/zh-hans/exhaustive_search/unique_subsets.html)
+2. [九章解答](http://www.jiuzhang.com/solutions/subsets-ii/)
+3. ​
