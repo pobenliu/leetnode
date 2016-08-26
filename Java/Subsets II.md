@@ -38,6 +38,8 @@ Can you do it in both recursively and iteratively?
 
 解决方案是从重复元素的第一个持续向下添加列表，而不能取第二个或之后的重复元素。
 
+该方法很巧妙，建议使用图示以及函数运行的堆栈图理解。
+
 算法复杂度：
 
 - 同 Subsets，最坏情况时间复杂度`O(2^n)`，空间复杂度`O(n)`
