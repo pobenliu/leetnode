@@ -40,7 +40,7 @@ Can you do it in both recursively and iteratively?
 
   对原有数组排序，时间复杂度近似为`O(nlogn)`
 
-  状态数为所有可能的组合数`2^n`，生成每个状态所需的时间复杂度近似为`O(1)`（只有add操作）
+  状态数为所有可能的组合数`2^n`，生成每个状态所需的时间复杂度近似为`O(1)`（只有 add 操作）
 
   故总的时间复杂度近似为`O(2^n)`
 
@@ -48,7 +48,7 @@ Can you do it in both recursively and iteratively?
 
   使用临时空间`list`保存中间结果，`list`最大长度为数组长度，故空间复杂度近似为`O(n)`
 
-Java实现：
+Java 实现：
 
 ```java
 class Solution {
@@ -107,7 +107,7 @@ class Solution {
 
 
 
-Java实现：
+Java 实现：
 
 ```java
 class Solution {
