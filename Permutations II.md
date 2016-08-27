@@ -4,5 +4,3 @@ Permutations \( leetcode \[lintcode\]\(http:\/\/www.lintcode.com\/en\/problem\/p
 
 \#\# Job
 
-
-
