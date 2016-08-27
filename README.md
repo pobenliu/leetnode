@@ -1,4 +1,4 @@
-# Leetcode\/Lintcode学习笔记
+# Leetcode/Lintcode学习笔记
 
 记录整理自己在学习算法，准备面试过程中的笔记。
 
