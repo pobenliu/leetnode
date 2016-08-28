@@ -7,6 +7,7 @@
    * [Subsets](Java/Subsets.md)
    * [Subsets II](Java/Subsets II.md)
    * [Permutations II](Permutations II.md)
+   * Permutations
 * 二叉树
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
 
