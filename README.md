@@ -64,5 +64,5 @@
 
 ### 其他资源
 
-1. [数据结构与算法\/leetcode\/lintcode题解](http://algorithm.yuanbin.me/)，主要算法基础知识、编程题目解答等内容，本文档的建立也是受其影响。
+1. [数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/)，主要算法基础知识、编程题目解答等内容，本文档的建立也是受其影响。
 
