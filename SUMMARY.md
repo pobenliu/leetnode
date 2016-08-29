@@ -12,4 +12,5 @@
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
    * [Balanced Binary Tree](Balanced Binary Tree.md)
+   * Binary Tree Maximum Path Sum
 
