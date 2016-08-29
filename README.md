@@ -1,17 +1,17 @@
-Leetcode/Lintcode学习笔记
+# Leetcode/Lintcode学习笔记
 
 记录整理自己在学习算法，准备面试过程中的笔记。
 
-目录
+**目录**
 
 - 算法学习
-- 关于面试
-- 在线刷题网站
+- [关于面试](#2)
+- [在线刷题网站](#1)
 - 题目解答参考
 - 参考书籍
 - 其他资源
 
-算法学习
+### 算法学习
 
 如何高效地准备算法面试
 
@@ -28,7 +28,7 @@ Leetcode/Lintcode学习笔记
   - 空格：二元运算符、括号两侧
   - 可读性：单语句使用花括号等
 
-关于面试 {#2}
+### 关于面试 {#2}
 
 面试官眼中的求职者：你可能是他未来的同事，那么
 
@@ -46,20 +46,20 @@ Leetcode/Lintcode学习笔记
 - 沟通（让面试官时刻明白你的意图）
 - 测试（主动写出合理的测试例）
 
-在线刷题网站 {#1}
+### 在线刷题网站 {#1}
 
-1. Leetcode，应该是最知名的在线刷题网站了。
-2. Lintcode，和 Leetcode 很像，题目也有一定的重合度，
+1. [Leetcode](https://leetcode.com/)，应该是最知名的在线刷题网站了。
+2. [Lintcode](http://www.lintcode.com/)，和 Leetcode 很像，题目也有一定的重合度，
 
-题目参考解答
+### 题目参考解答
 
-1. 九章算法，提供 Lintcode 三种语言（Java, C++, Python）的解题答案，我个人在学习过程中大量参考了九章的答案，在此致谢。
+1. [九章算法](http://www.jiuzhang.com/solutions/)，提供 Lintcode 三种语言（Java, C++, Python）的解题答案，我个人在学习过程中大量参考了九章的答案，在此致谢。
 2. Leetcode 讨论区，大家会讨论分享交流不同的解法和思路。
 
-参考书籍
+### 参考书籍
 
-1. 《算法（第4版）》（豆瓣），Robert Sedgewick 教授的书，讲解了基础的数据结构和算法，配有大量图例，深入浅出，讲解非常细致。结合他老人家在Coursera开的两门课程看，效果更佳。课程分别是Algorithms, Part I (Coursera, Youtube) 和 Algorithms, Part II (Coursera, Youtube)
+1. [《算法（第4版）》（豆瓣）](https://book.douban.com/subject/19952400/)，Robert Sedgewick 教授的书，讲解了基础的数据结构和算法，配有大量图例，深入浅出，讲解非常细致。结合他老人家在Coursera开的两门课程看，效果更佳。课程分别是Algorithms, Part I \([Coursera](https://www.coursera.org/learn/introduction-to-algorithms), [Youtube](https://www.youtube.com/playlist?list=PLUX6FBiUa2g4YWs6HkkCpXL6ru02i7y3Q)\) 和 Algorithms, Part II \([Coursera](https://www.coursera.org/learn/java-data-structures-algorithms-2), [Youtube](https://www.youtube.com/playlist?list=PLqD_OdMOd_6YixsHkd9f4sNdof4IhIima)\)
 
-其他资源
+### 其他资源
 
-1. 数据结构与算法/leetcode/lintcode题解，主要算法基础知识、编程题目解答等内容，本文档的建立也是受其影响。
+1. [数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/)，主要算法基础知识、编程题目解答等内容，本文档的建立也是受其影响。
