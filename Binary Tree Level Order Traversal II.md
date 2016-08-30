@@ -1,4 +1,4 @@
-#  Binary Tree Level Order Traversal II
+# Binary Tree Level Order Traversal II
 
  Binary Tree Level Order Traversal II ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/binary-tree-level-order-traversal-ii/) )
 
@@ -93,3 +93,6 @@ public class Solution {
 
 
 
+### 参考
+
+1. [Binary Tree Level Order Traversal II  | 九章算法](http://www.jiuzhang.com/solutions/binary-tree-level-order-traversal-ii/)
