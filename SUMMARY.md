@@ -21,4 +21,5 @@
    * [Validate Binary Search Tree](Validate Binary Search Tree.md)
    * [Insert Node in a Binary Search Tree](Insert Node in a Binary Search Tree.md)
    * [Search Range in Binary Search Tree](Search Range in Binary Search Tree)
+   * Remove Node in Binary Search Tree
 
