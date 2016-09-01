@@ -26,5 +26,5 @@
    * [Remove Duplicates from Sorted List](Remove Duplicates from Sorted List.md)
    * [Remove Duplicates from Sorted List II](Remove Duplicates from Sorted List II.md)
    * [Reverse Linked List](Reverse Linked List.md)
-   * Reverse Linked List II
+   * [Reverse Linked List II](Reverse Linked List II.md)
 
