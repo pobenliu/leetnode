@@ -1,6 +1,6 @@
 # Summary
 
-* [简介](README.md)
+* [Introduction](README.md)
 * Strings
    * [strStr](Java/strStr.md)
    * [Reverse Words in a String](Reverse Words in a String.md)
