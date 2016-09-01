@@ -28,4 +28,5 @@
    * [Reverse Linked List](Reverse Linked List.md)
    * [Reverse Linked List II](Reverse Linked List II.md)
    * [Partition List](Partition List.md)
+* Binary Search
 
