@@ -27,5 +27,5 @@
    * [Remove Duplicates from Sorted List II](Remove Duplicates from Sorted List II.md)
    * [Reverse Linked List](Reverse Linked List.md)
    * [Reverse Linked List II](Reverse Linked List II.md)
-   * Partition List
+   * [Partition List](Partition List.md)
 
