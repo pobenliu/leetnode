@@ -23,4 +23,5 @@
    * [Search Range in Binary Search Tree](Search Range in Binary Search Tree.md)
    * [Remove Node in Binary Search Tree](Remove Node in Binary Search Tree.md)
 * Linked List
+   * Remove Duplicates from Sorted List
 
