@@ -17,7 +17,7 @@
    * [Binary Tree Level Order Traversal](Binary Tree Level Order Traversal.md)
    * [Binary Tree Level Order Traversal II](Binary Tree Level Order Traversal II.md)
    * [Binary Tree Zigzag Level Order Traversal](Binary Tree Zigzag Level Order Traversal.md)
-* 二叉搜索树
+* Binary Search Tree
    * [Validate Binary Search Tree](Validate Binary Search Tree.md)
    * [Insert Node in a Binary Search Tree](Insert Node in a Binary Search Tree.md)
    * [Search Range in Binary Search Tree](Search Range in Binary Search Tree.md)
