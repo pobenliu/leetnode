@@ -24,4 +24,5 @@
    * [Remove Node in Binary Search Tree](Remove Node in Binary Search Tree.md)
 * Linked List
    * [Remove Duplicates from Sorted List](Remove Duplicates from Sorted List.md)
+   * Remove Duplicates from Sorted List II
 
