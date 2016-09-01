@@ -8,6 +8,7 @@
    * [Subsets II](Java/Subsets II.md)
    * [Permutations](Permutations.md)
    * [Permutations II](Permutations II.md)
+* Binary Search
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
@@ -28,5 +29,4 @@
    * [Reverse Linked List](Reverse Linked List.md)
    * [Reverse Linked List II](Reverse Linked List II.md)
    * [Partition List](Partition List.md)
-* Binary Search
 
