@@ -19,7 +19,7 @@ Solve it by merge sort & quick sort separately.
 
 #### 一、归并排序
 
-在 `findMiddle` 函数中，让 `fast` 先走一步，是为了取得中间节点的前一个，和 `mid = start + ( end - start) / 2` 的效果相同。这样做的目的主要是解决 `1->2->null` 两个结点的情况，如果不这样做，`slow` 就会返回2，就没有办法切割了。
+在 `findMiddle` 函数中，让 `fast` 先走一步，是为了取得中间节点的前一个。这样做的目的主要是解决 `1->2->null` 两个结点的情况，如果不这样做，`slow` 就会返回2，就没有办法切割了。
 
 **复杂度分析**
 
