@@ -30,4 +30,5 @@
    * [Reverse Linked List II](Reverse Linked List II.md)
    * [Partition List](Partition List.md)
    * [Sort List](Sort List.md)
+   * Reorder List
 
