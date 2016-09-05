@@ -9,6 +9,7 @@
    * [Permutations](Permutations.md)
    * [Permutations II](Permutations II.md)
 * Binary Search
+   * Binary Search
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
