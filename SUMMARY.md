@@ -34,5 +34,5 @@
    * [Linked List Cycle](Linked List Cycle.md)
    * [Linked List Cycle II](Linked List Cycle II.md)
    * [Merge k Sorted Lists](Merge k Sorted Lists.md)
-   * Copy List with Random Pointer
+   * [Copy List with Random Pointer](Copy List with Random Pointer.md)
 
