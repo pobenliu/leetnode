@@ -10,6 +10,7 @@
    * [Permutations II](Permutations II.md)
 * Binary Search
    * [Binary Search](Binary Search.md)
+   * First Position of Target
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
