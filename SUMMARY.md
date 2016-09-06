@@ -43,5 +43,5 @@
    * [Minimum Path Sum](Minimum Path Sum.md)
    * [Unique Paths](Unique Paths.md)
    * [Unique Paths II](Unique Paths II.md)
-   * Climbing Stairs
+   * [Climbing Stairs](Climbing Stairs.md)
 
