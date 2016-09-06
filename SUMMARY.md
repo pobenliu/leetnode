@@ -39,4 +39,5 @@
    * [Copy List with Random Pointer](Copy List with Random Pointer.md)
    * [Convert Sorted List to Balanced BST](Convert Sorted List to Balanced BST.md)
 * Dynamic Programming
+   * Triangle.md
 
