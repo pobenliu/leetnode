@@ -40,5 +40,5 @@
    * [Convert Sorted List to Balanced BST](Convert Sorted List to Balanced BST.md)
 * Dynamic Programming
    * [Triangle.md](Triangle.md)
-   * Minimum Path Sum
+   * [Minimum Path Sum](Minimum Path Sum.md)
 
