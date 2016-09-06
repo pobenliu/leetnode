@@ -41,5 +41,5 @@
 * Dynamic Programming
    * [Triangle.md](Triangle.md)
    * [Minimum Path Sum](Minimum Path Sum.md)
-   * Unique Paths
+   * [Unique Paths](Unique Paths.md)
 
