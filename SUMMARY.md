@@ -11,6 +11,7 @@
 * Binary Search
    * [Binary Search](Binary Search.md)
    * [First Position of Target](First Position of Target.md)
+   * Search for a Range
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
