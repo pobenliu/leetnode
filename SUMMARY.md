@@ -46,5 +46,5 @@
    * [Climbing Stairs](Climbing Stairs.md)
    * [Jump Game](Jump Game.md)
    * [Jump Game II](Jump Game II)
-   * Palindrome Partitioning II
+   * [Palindrome Partitioning II](Palindrome Partitioning II.md)
 
