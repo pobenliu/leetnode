@@ -1,6 +1,6 @@
 # Search for a Range
 
-Search for a Range ( [leetcode][] [lintcode](http://www.lintcode.com/en/problem/search-for-a-range/) )
+Search for a Range ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/search-for-a-range/) )
 
 ```
 Given a sorted array of integers, find the starting and ending position of a given target value.
