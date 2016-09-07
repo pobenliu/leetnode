@@ -44,5 +44,5 @@
    * [Unique Paths](Unique Paths.md)
    * [Unique Paths II](Unique Paths II.md)
    * [Climbing Stairs](Climbing Stairs.md)
-   * Jump Game
+   * [Jump Game](Jump Game.md)
 
