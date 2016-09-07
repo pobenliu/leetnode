@@ -12,7 +12,7 @@
    * [Binary Search](Binary Search.md)
    * [First Position of Target](First Position of Target.md)
    * [Search for a Range](Search for a Range.md)
-   * Search Insert Position
+   * [Search Insert Position](Search Insert Position.md)
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
