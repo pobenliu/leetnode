@@ -50,5 +50,5 @@
    * [Jump Game](Jump Game.md)
    * [Jump Game II](Jump Game II)
    * [Palindrome Partitioning II](Palindrome Partitioning II.md)
-   * Word Break
+   * [Word Break](Word Break.md)
 
