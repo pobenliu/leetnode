@@ -52,5 +52,5 @@
    * [Palindrome Partitioning II](Palindrome Partitioning II.md)
    * [Word Break](Word Break.md)
    * [Longest Common Subsequence](Longest Common Subsequence.md)
-   * Longest Common Substring
+   * [Longest Common Substring](Longest Common Substring.md)
 
