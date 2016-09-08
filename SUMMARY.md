@@ -51,4 +51,5 @@
    * [Jump Game II](Jump Game II)
    * [Palindrome Partitioning II](Palindrome Partitioning II.md)
    * [Word Break](Word Break.md)
+   * Longest Common Subsequence
 
