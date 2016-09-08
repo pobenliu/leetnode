@@ -14,6 +14,7 @@
    * [Search for a Range](Search for a Range.md)
    * [Search Insert Position](Search Insert Position.md)
    * [Search a 2D Matrix](Search a 2D Matrix.md)
+   * Search in Rotated Sorted Array
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
