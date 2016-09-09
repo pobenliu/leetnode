@@ -55,5 +55,5 @@
    * [Longest Common Subsequence](Longest Common Subsequence.md)
    * [Longest Common Substring](Longest Common Substring.md)
    * [Edit Distance](Edit Distance.md)
-   * Distinct Subsequences
+   * [Distinct Subsequences](Distinct Subsequences.md)
 
