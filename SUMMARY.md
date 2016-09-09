@@ -56,5 +56,5 @@
    * [Longest Common Substring](Longest Common Substring.md)
    * [Edit Distance](Edit Distance.md)
    * [Distinct Subsequences](Distinct Subsequences.md)
-   * Interleaving String
+   * [Interleaving String](Interleaving String.md)
 
