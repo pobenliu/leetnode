@@ -59,5 +59,5 @@
    * [Interleaving String](Interleaving String.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
-   * Implement Queue by Two Stacks
+   * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
 
