@@ -58,4 +58,5 @@
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
 * Data Structure
+   * Min Stack
 
