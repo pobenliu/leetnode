@@ -63,5 +63,5 @@
    * [Largest Rectangle in Histogram](Largest Rectangle in Histogram.md)
    * [Max Tree](Max Tree.md)
    * [Rehashing](Rehashing.md)
-   * LRU Cache
+   * [LRU Cache](LRU Cache.md)
 
