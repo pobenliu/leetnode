@@ -62,4 +62,5 @@
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
    * [Largest Rectangle in Histogram](Largest Rectangle in Histogram.md)
    * [Max Tree](Max Tree.md)
+   * Rehashing
 
