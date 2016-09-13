@@ -64,4 +64,5 @@
    * [Max Tree](Max Tree.md)
    * [Rehashing](Rehashing.md)
    * [LRU Cache](LRU Cache.md)
+   * Longest Consecutive Sequence
 
