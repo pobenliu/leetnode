@@ -67,4 +67,5 @@
    * [Longest Consecutive Sequence](Longest Consecutive Sequence.md)
    * [Subarray Sum](Subarray Sum.md)
    * [Anagrams](Anagrams.md)
+   * Heapify
 
