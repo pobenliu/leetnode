@@ -60,6 +60,7 @@
    * [Backpack](Backpack.md)
    * [Backpack II](Backpack II.md)
    * [k Sum](k Sum.md)
+   * Minimum Adjustment Cost
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
