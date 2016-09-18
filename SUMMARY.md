@@ -57,6 +57,7 @@
    * [Edit Distance](Edit Distance.md)
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
+* [Backpack](Backpack.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
