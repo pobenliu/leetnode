@@ -74,5 +74,5 @@
    * [Heapify](Heapify.md)
    * [Word Search II](Word Search II.md)
 * Bit Manipulation
-   * Single Number
+   * [Single Number](Single Number.md)
 
