@@ -58,6 +58,7 @@
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
    * [Backpack](Backpack.md)
+* [Backpack II](Backpack II.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
