@@ -75,5 +75,5 @@
    * [Word Search II](Word Search II.md)
 * Bit Manipulation
    * [Single Number](Single Number.md)
-   * Single Number II
+   * [Single Number II](Single Number II.md)
 
