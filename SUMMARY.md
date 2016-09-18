@@ -57,8 +57,8 @@
    * [Edit Distance](Edit Distance.md)
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
+   * [Backpack II](Backpack II.md)
    * [Backpack](Backpack.md)
-* [Backpack II](Backpack II.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
@@ -71,5 +71,4 @@
    * [Anagrams](Anagrams.md)
    * [Heapify](Heapify.md)
    * [Word Search II](Word Search II.md)
-   * [Backpack II](Backpack II.md)
 
