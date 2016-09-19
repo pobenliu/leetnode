@@ -76,4 +76,5 @@
 * Bit Manipulation
    * [Single Number](Single Number.md)
    * [Single Number II](Single Number II.md)
+   * Single Number III
 
