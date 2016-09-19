@@ -1,4 +1,4 @@
-#  Majority Number III
+# Majority Number III
 
  Majority Number III ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/majority-number-iii/) )
 
@@ -21,11 +21,43 @@ O(n) time and O(k) extra space
 
 ### 解题思路
 
-在 HashMap<key, value> 中维护 `k - 1` 个 candidate ，key 为数字， value 为其出现次数。
+在 `HashMap<key, value>` 中维护 `k - 1` 个 `candidate` ，`key` 为数字， `value` 为其出现次数。
 
-- 在 candidate 个数小于 k 时，将数字及其出现次数依次存入 HashMap 或者进行更新。
-- 在 candidate 个数大于等于 k 时，将 k - 1 个数的出现次数减 1 ，并记录次数为 0 的数字，将其从 HashMap 删除。
+- 在 `candidate` 个数小于 `k` 时，将数字及其出现次数依次存入 `HashMap` 或者进行更新。
+- 在 `candidate` 个数大于等于 `k` 时，将 `k - 1` 个数的出现次数减 `1` ，并记录次数为 `0` 的数字，将其从 `HashMap` 删除。
 - 完成它上述步骤后，在所有数字中，统计出现次数最多的数字，即为结果。
+
+HashMap的遍历方法
+
+- 如果只需要访问 key
+
+```java
+Map<String, Object> map = ...;
+
+for (String key : map.keySet()) {
+    // ...
+}
+```
+
+- 如果只需要访问 value
+
+```java
+for (Object value : map.values()) {
+    // ...
+}
+```
+
+- 如果 key 和 value 都需要访问
+
+```java
+for (Map.Entry<String, Object> entry : map.entrySet()) {
+    String key = entry.getKey();
+    Object value = entry.getValue();
+    // ...
+}
+```
+
+
 
 Java 实现
 
@@ -104,3 +136,4 @@ public class Solution {
 ### 参考
 
 1. [Majority Number III | 九章算法](http://www.jiuzhang.com/solutions/majority-number-iii/)
+2. [Iterate through a HashMap [duplicate] | stackoverflow](http://stackoverflow.com/questions/1066589/iterate-through-a-hashmap)
