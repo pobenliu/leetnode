@@ -78,5 +78,5 @@
    * [Single Number II](Single Number II.md)
    * [Single Number III](Single Number III.md)
    * [Majority Number](Majority Number.md)
-   * Majority Number II
+   * [Majority Number II](Majority Number II.md)
 
