@@ -84,5 +84,5 @@
    * [Majority Number II](Majority Number II.md)
    * [Majority Number III](Majority Number III.md)
 * Array
-   * Minimum Subarray
+   * [Minimum Subarray](Minimum Subarray.md)
 
