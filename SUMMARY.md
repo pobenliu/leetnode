@@ -85,4 +85,5 @@
    * [Majority Number III](Majority Number III.md)
 * Array
    * [Minimum Subarray](Minimum Subarray.md)
+   * Maximum Subarray Difference
 
