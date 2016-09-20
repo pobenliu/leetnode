@@ -61,7 +61,7 @@
    * [Backpack II](Backpack II.md)
    * [k Sum](k Sum.md)
    * [Minimum Adjustment Cost](Minimum Adjustment Cost.md)
-   * Maximum Subarray
+   * [Maximum Subarray](Maximum Subarray.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
