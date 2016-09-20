@@ -63,6 +63,7 @@
    * [Minimum Adjustment Cost](Minimum Adjustment Cost.md)
    * [Maximum Subarray](Maximum Subarray.md)
    * [Maximum Subarray II](Maximum Subarray II.md)
+   * Maximum Subarray III
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
