@@ -88,4 +88,5 @@
    * [Maximum Subarray Difference](Maximum Subarray Difference.md)
    * [Subarray Sum Closest](Subarray Sum Closest.md)
    * [Two Sum](Two Sum.md)
+   * 3 Sum
 
