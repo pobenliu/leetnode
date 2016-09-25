@@ -86,6 +86,7 @@
    * [Fast Power](Fast Power.md)
    * [Sqrt(x)](Sqrtx.md)
    * [Trailing Zeros](Trailing Zeros.md)
+   * O(1) Check Power of 2
 * Array
    * [Minimum Subarray](Minimum Subarray.md)
    * [Maximum Subarray Difference](Maximum Subarray Difference.md)
