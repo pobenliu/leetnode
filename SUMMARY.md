@@ -94,5 +94,5 @@
    * [3 Sum](3 Sum.md)
    * [3 Sum Closest](3 Sum Closest.md)
    * [4 Sum](4 Sum.md)
-   * Partition Array
+   * [Partition Array](Partition Array.md)
 
