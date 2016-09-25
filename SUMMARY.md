@@ -84,7 +84,7 @@
    * [Majority Number II](Majority Number II.md)
    * [Majority Number III](Majority Number III.md)
    * [Fast Power](Fast Power.md)
-   * [Sqrt(x)](Sqrt(x\).md)
+   * [Sqrt(x)](Sqrtx.md)
 * Array
    * [Minimum Subarray](Minimum Subarray.md)
    * [Maximum Subarray Difference](Maximum Subarray Difference.md)
