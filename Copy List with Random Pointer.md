@@ -1,4 +1,4 @@
-#  Copy List with Random Pointer
+# Copy List with Random Pointer
 
  Copy List with Random Pointer ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/copy-list-with-random-pointer/) )
 
@@ -21,23 +21,23 @@ Could you solve it with O(1) space?
 
 哈希表需要使用额外的 `O(n)` 的空间。
 
-将原链表的结点作为键（Key），将复制链表的结点作为值（Value），依次向哈希表中存放，在此过程中完成链表的深度复制。
+将原链表的结点作为键（`Key`），将复制链表的结点作为值（`Value`），依次向哈希表中存放，在此过程中完成链表的深度复制。
 
 实现逻辑：
 
-- 处理 next 指针的关系
+- 复制 `next` 指针关系
   - 原链表的当前结点不在哈希表中
     - 新建结点，拷贝结点值。
-    - 将原始链表结点（Key）和新建结点（Value）存放在哈希表中
-  - 原链表当前结点在哈希表中（作为random指针指向结点已被存储）
-    - 指向该结点（Key）对应的（Value）结点
+    - 将原始链表结点（`Key`）和新建结点（`Value`）存放在哈希表中
+  - 原链表当前结点在哈希表中（之前已经作为 `random` 指针指向结点被存储）
+    - 指向该结点（`Key`）对应的（`Value`）结点
   - 将新建结点放入新建链表中
-- 处理 random 指针的关系
-  - 原链表结点的 random 指针不为空
-    - random 指向结点在哈希表中
-      - 将对应复制结点的 random 指针指向哈希表中原始结点 random 指向结点
-    - random 指向结点不在哈希表中
-      - 新建 random 指向结点，将原始结点、复制结点 random 指向结点对放入哈希表
+- 复制 `random` 指针关系
+  - 原链表结点的 `random` 指针不为空
+    - `random` 所指结点在哈希表中
+      - 将对应复制结点的 `random` 指针指向哈希表中原始结点 `random` 指向结点的复制结点
+    - `random` 所指结点不在哈希表中
+      - 新建 `random` 指向结点，将原始结点、复制结点 `random` 指向结点对放入哈希表
   - 准备处理下一个结点
 
 Java 实现
@@ -62,7 +62,8 @@ public class Solution {
             return null;
         }
         
-        HashMap<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
+        HashMap<RandomListNode, RandomListNode> map 
+          = new HashMap<RandomListNode, RandomListNode>();
         RandomListNode dummy = new RandomListNode(0);
         RandomListNode pre = dummy, newNode;
         
@@ -96,14 +97,18 @@ public class Solution {
 
 #### 二、复制链表
 
-- 复制 next 指针关系和 value 值
-  - 利用 next 指针，在原链表每个结点后面建立复制结点（同时复制 random 指针）
-- 复制 random 指针
-  - 将复制结点的 random 指针指向相应的复制结点
+- 复制 `next` 指针关系和 `value` 值
+  - 利用 `next` 指针，在原链表每个结点后面建立复制结点（同时复制 `random` 指针）
+- 复制 `random` 指针关系
+  - 将复制结点的 `random` 指针指向相应的复制结点
 - 拆分链表
 
 ```
-数组是 1->2->3->4， 第一遍扫描利用 next 指针，扫描过程中先建立 copy 结点 1->1`->2->2`->3->3`->4->4`；然后第二遍扫描建立 random 指针的copy；最后拆分结点， 一边扫描一边拆成两个链表，这里用到两个dummy node。第一个链表为 1->2->3->4，第二链表为 1`->2`->3`->4`。
+比如数组是 1->2->3->4， 
+第一遍扫描利用 next 指针，扫描过程中先建立 copy 结点 1->1`->2->2`->3->3`->4->4`；
+第二遍扫描建立 random 指针的copy；
+最后拆分结点，一边扫描一边拆成两个链表，这里用到两个dummy node。
+拆分后第一个链表为 1->2->3->4，第二链表为 1`->2`->3`->4`。
 ```
 
 
@@ -175,4 +180,3 @@ public class Solution {
 ### 参考
 
 1. [Copy List with Random Pointer | 九章算法](http://www.jiuzhang.com/solutions/copy-list-with-random-pointer/)
-
