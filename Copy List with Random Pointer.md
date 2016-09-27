@@ -68,6 +68,7 @@ public class Solution {
         RandomListNode pre = dummy, newNode;
         
         while(head != null) {
+            // copy next pointer
             if(map.containsKey(head)) {
                 newNode = map.get(head);
             } else {
@@ -76,6 +77,7 @@ public class Solution {
             } 
             pre.next = newNode;
             
+            // copy random pointer
             if(head.random != null) {
                 if(map.containsKey(head.random)) {
                     newNode.random = map.get(head.random);
