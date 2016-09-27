@@ -40,6 +40,11 @@ Could you solve it with O(1) space?
       - 新建 `random` 指向结点，将原始结点、复制结点 `random` 指向结点对放入哈希表
   - 准备处理下一个结点
 
+**算法复杂度**
+
+- 时间复杂度：遍历原链表一次，故为 `O(n)` 。
+- 空间复杂度：建立一个哈希表做结点映射，为 `O(n)` 。
+
 Java 实现
 
 ```java
@@ -99,21 +104,42 @@ public class Solution {
 
 #### 二、复制链表
 
-- 复制 `next` 指针关系和 `value` 值
-  - 利用 `next` 指针，在原链表每个结点后面建立复制结点（同时复制 `random` 指针）
-- 复制 `random` 指针关系
+- 在原链表基础上复制结点
+  - 利用 `next` 指针，在原链表每个结点后面建立复制结点（同时复制 `value` 值， `next` 指针和 `random` 指针）。
+- 调整 `random` 指针关系
   - 将复制结点的 `random` 指针指向相应的复制结点
 - 拆分链表
 
+以图示说明（下面的图来自参考链接2中的解释）
+
 ```
-比如数组是 1->2->3->4， 
-第一遍扫描利用 next 指针，扫描过程中先建立 copy 结点 1->1`->2->2`->3->3`->4->4`；
-第二遍扫描建立 random 指针的copy；
+比如链表是
+|------------|
+|            v
+1  --> 2 --> 3 --> 4 
+
+第一遍扫描利用 next 指针，扫描过程中先建立 copy 结点(包括 next 和 random 指针)，得到
+|--------------------------|
+|                          v
+1  --> 1' --> 2 --> 2' --> 3 --> 3' --> 4 --> 4'
+       |                   ^
+       |-------------------|
+
+第二遍扫描复制 random 指针的 copy ，将复制结点的 random 向后移动一位即可；
+|--------------------------|
+|                          v
+1  --> 1' --> 2 --> 2' --> 3 --> 3' --> 4 --> 4'
+       |                         ^
+       |-------------------------|
+
 最后拆分结点，一边扫描一边拆成两个链表，这里用到两个dummy node。
-拆分后第一个链表为 1->2->3->4，第二链表为 1`->2`->3`->4`。
+拆分后第一个链表为 1-->2-->3-->4，第二链表为 1`-->2`-->3`-->4`。
 ```
 
+**算法复杂度**
 
+- 时间复杂度：`O(n)`
+- 空间复杂度：`O(1)` 【疑问：复制结点也占用了O(n)的空间，为何空间复杂度为O(1)】
 
 Java 实现
 
@@ -182,3 +208,5 @@ public class Solution {
 ### 参考
 
 1. [Copy List with Random Pointer | 九章算法](http://www.jiuzhang.com/solutions/copy-list-with-random-pointer/)
+2. [Copy List with Random Pointer | LeetCode题解](https://siddontang.gitbooks.io/leetcode-solution/content/linked_list/copy_list_with_random_pointer.html)
+3. [Copy List with Random Pointer | 数据结构与算法/leetcode/lintcode题解](https://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/73016)
