@@ -209,4 +209,5 @@ public class Solution {
 
 1. [Copy List with Random Pointer | 九章算法](http://www.jiuzhang.com/solutions/copy-list-with-random-pointer/)
 2. [Copy List with Random Pointer | LeetCode题解](https://siddontang.gitbooks.io/leetcode-solution/content/linked_list/copy_list_with_random_pointer.html)
-3. [Copy List with Random Pointer | 数据结构与算法/leetcode/lintcode题解](https://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/73016)
+3. [Copy List with Random Pointer | 数据结构与算法/leetcode/lintcode题解](https://algorithm.yuanbin.me/zh-hans/index.html)
+
