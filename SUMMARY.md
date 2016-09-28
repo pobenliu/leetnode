@@ -6,7 +6,6 @@
    * [Reverse Words in a String](Reverse Words in a String.md)
    * [Subsets](Subsets.md)
    * [Subsets II](Subsets II.md)
-   * [Permutations](Permutations.md)
    * [Permutations II](Permutations II.md)
 * Binary Search
    * [Binary Search](Binary Search.md)
@@ -102,5 +101,6 @@
 * Graph
    * [Clone Graph](Clone Graph.md)
    * [Topological Sorting](Topological Sorting.md)
+* [Permutations](Permutations.md)
 * Search
 
