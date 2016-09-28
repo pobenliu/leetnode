@@ -4,7 +4,6 @@
 * Strings
    * [strStr](strStr.md)
    * [Reverse Words in a String](Reverse Words in a String.md)
-   * [Permutations](Permutations.md)
    * [Permutations II](Permutations II.md)
 * Binary Search
    * [Binary Search](Binary Search.md)
@@ -103,5 +102,6 @@
 * Search
    * [Subsets](Subsets.md)
    * [Subsets II](Subsets II.md)
+   * [Permutations](Permutations.md)
    * [N-Queens](N-Queens.md)
 
