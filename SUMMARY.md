@@ -5,7 +5,7 @@
    * [strStr](strStr.md)
    * [Reverse Words in a String](Reverse Words in a String.md)
    * [Subsets](Subsets.md)
-   * [Subsets II](Java/Subsets II.md)
+   * [Subsets II](Subsets II.md)
    * [Permutations](Permutations.md)
    * [Permutations II](Permutations II.md)
 * Binary Search
