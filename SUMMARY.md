@@ -101,6 +101,6 @@
 * Graph
    * [Clone Graph](Clone Graph.md)
    * [Topological Sorting](Topological Sorting.md)
-* [Permutations](Permutations.md)
 * Search
+* [Permutations](Permutations.md)
 
