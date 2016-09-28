@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * Strings
-   * [strStr](Java/strstr.md)
+   * [strStr](strStr.md)
    * [Reverse Words in a String](Reverse Words in a String.md)
    * [Subsets](Java/Subsets.md)
    * [Subsets II](Java/Subsets II.md)
