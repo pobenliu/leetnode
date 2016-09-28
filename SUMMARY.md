@@ -101,7 +101,7 @@
 * Search
    * [Subsets](Subsets.md)
    * [Subsets II](Subsets II.md)
-   * [Permutations II](Permutations II.md)
    * [Permutations](Permutations.md)
+   * [Permutations II](Permutations II.md)
    * [N-Queens](N-Queens.md)
 
