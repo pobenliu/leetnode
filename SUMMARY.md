@@ -4,7 +4,6 @@
 * Strings
    * [strStr](strStr.md)
    * [Reverse Words in a String](Reverse Words in a String.md)
-   * [Subsets](Subsets.md)
    * [Subsets II](Subsets II.md)
    * [Permutations](Permutations.md)
    * [Permutations II](Permutations II.md)
@@ -103,5 +102,6 @@
    * [Clone Graph](Clone Graph.md)
    * [Topological Sorting](Topological Sorting.md)
 * Search
+   * [Subsets](Subsets.md)
    * [N-Queens](N-Queens.md)
 
