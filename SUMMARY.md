@@ -103,5 +103,5 @@
    * [Clone Graph](Clone Graph.md)
    * [Topological Sorting](Topological Sorting.md)
 * Search
-   * N-Queens
+   * [N-Queens](N-Queens.md)
 
