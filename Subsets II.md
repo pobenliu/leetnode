@@ -26,21 +26,19 @@ Challenge
 Can you do it in both recursively and iteratively?
 ```
 
+### 解题思路
 
-
-#### 解题思路
-
-**一、递归解法（DFS）**
+#### 一、DFS
 
 题目与 Subsets 有关，解题思路可以参考 Subsets 的解法，但是需要考虑如何删除重复的子集。
 
 以`{1, 2(1), 2(2), 2(3)}`为例，`{1, 2(1)}`和`{1, 2(2)}`重复，`{1, 2(1), 2(2)}`和`{1, 2(2), 2(3)}`重复。可以看到，对于重复元素，我们只关心取了几个，不关心取哪几个。
 
-解决方案是从重复元素的第一个持续向下添加列表，而不能取第二个或之后的重复元素。
+解决方案是从重复元素的第一个持续向下添加列表，而不能取第二个或之后的重复元素。（换句话讲就是重复的元素必须连续选取）
 
 该方法很巧妙，建议使用图示以及函数运行的堆栈图理解。
 
-算法复杂度：
+**算法复杂度**
 
 - 同 Subsets，最坏情况时间复杂度`O(2^n)`，空间复杂度`O(n)`
 
@@ -84,15 +82,9 @@ class Solution {
         
     }
 }
-
 ```
 
+### 参考
 
-
-
-
-#### 参考
-
-1. [Unique Subsets](http://algorithm.yuanbin.me/zh-hans/exhaustive_search/unique_subsets.html)
-2. [九章解答](http://www.jiuzhang.com/solutions/subsets-ii/)
-3. ​
+1. [Unique Subsets | 数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/zh-hans/exhaustive_search/unique_subsets.html)
+2. [Subsets II | 九章算法](http://www.jiuzhang.com/solutions/subsets-ii/)
