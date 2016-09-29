@@ -104,4 +104,5 @@
    * [Permutations](Permutations.md)
    * [Permutations II](Permutations II.md)
    * [N-Queens](N-Queens.md)
+   * N-Queens II
 
