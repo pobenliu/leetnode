@@ -105,5 +105,5 @@
    * [Permutations II](Permutations II.md)
    * [N-Queens](N-Queens.md)
    * [N-Queens II](N-Queens II.md)
-   * Palindrome Partitioning
+   * [Palindrome Partitioning](Palindrome Partitioning.md)
 
