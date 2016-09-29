@@ -1,4 +1,4 @@
-#  N-Queens
+# N-Queens
 
  N-Queens  ( [leetcode]()  [lintcode]() )
 
@@ -44,8 +44,6 @@ Can you do it without recursion?
 - 二、不能在同一列，需要将已存入数组的每一个元素值与即将存入的元素比较，两者不同时才可以存入；
 - 三、不能在同一斜线，分为两种，左上到右下，右上到左下，如下图所示，两种情况下“斜率”的绝对值都是 `1` ，以此作为判断依据。（注：这里的斜率并不是在常规的笛卡尔坐标系）
 
-
-
 |   1, 1   | **1, 2** | **1, 3** | **1, 4** |
 | :------: | :------: | :------: | :------: |
 | **2, 1** | **2, 2** | **2, 3** | **2, 4** |
@@ -81,7 +79,9 @@ class Solution {
             result.add(drawChessboard(cols));
             return;
         }          
-        
+        // cols: index i is row-coordinate && cols.get(i) is column-coordinate
+        // for col : the coordinate is (cols.size(), col)
+        // col: [0...n-1] form a permutation of column
         for (int col = 0; col < n; col++) {
             if (!isValid(cols, col)) {
                 continue;
