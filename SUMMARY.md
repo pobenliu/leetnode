@@ -107,5 +107,5 @@
    * [N-Queens II](N-Queens II.md)
    * [Palindrome Partitioning](Palindrome Partitioning.md)
    * [Combination Sum](Combination Sum.md)
-   * [Letter Combinations of a Phone Number](Letter Combinations of a Phone Number)
+   * [Letter Combinations of a Phone Number](Letter Combinations of a Phone Number.md)
 
