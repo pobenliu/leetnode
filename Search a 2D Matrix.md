@@ -25,7 +25,7 @@ O(log(n) + log(m)) time
 
 ### 解题思路
 
-### 一、常规解法
+#### 一、常规解法
 
 考虑到二维数组的性质，先寻找对应的行，然后在行中寻找对应位置。
 
@@ -92,48 +92,52 @@ public class Solution {
 
 #### 二、合并矩阵
 
-将矩阵的每一行拼接起来，成为一个长为 `m × n` 的排序数组，然后使用二分查找。查找时将位置转换为矩阵坐标即可。 此方法更加简洁。
+将矩阵的每一行拼接起来，成为一个长为`m × n`的排序数组，然后使用二分查找。查找时将位置转换为矩阵坐标即可，此方法更加简洁。
 
 ```java
-// Binary search once
 public class Solution {
-    public boolean searchMatrix(int[][] matrix, int target){
-        if (matrix == null || matrix.length == 0) {
-            return false;
+    /**
+     * @param matrix, a list of lists of integers
+     * @param target, an integer
+     * @return a boolean, indicate whether matrix contains target
+     */
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if (matrix == null || matrix.length == 0 ||
+            matrix[0] == null || matrix[0].length == 0) {
+            return false;        
         }
-        if (matrix[0] == null || matrix[0].length == 0) {
-            return false;
-        }
-
-        int row = matrix.length, column = matrix[0].length;
-        int start = 0, end = row * column - 1;
-
+        
+        int row = matrix.length;
+        int col = matrix[0].length;
+        int start = 0;
+        int end = row * col - 1;
+        int mid;
         // put all rows of the matrix into an array
         while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            int number = matrix[mid / column][mid % column];
-            if (number == target) {
+            mid = start + (end - start) / 2;
+            int temp = matrix[mid / col][mid % col];
+            if (temp == target) {
                 return true;
-            } else if (number < target) {
+            } else if (temp < target) {
                 start = mid;
             } else {
                 end = mid;
             }
         }
-
-        if (matrix[start / column][start % column] == target) {
+        if (matrix[start / col][start % col] == target) {
             return true;
-        } else if (matrix[end / column][end % column] == target) {
-            return true;
-        } else {
-            return false;
         }
+        if (matrix[end / col][end % col] == target) {
+            return true;
+        }
+        return false;
     }
 }
+
 ```
 
 
 
 ### 参考
 
-1. [Search a 2D Matrix | 九章算法]()
+1. [Search a 2D Matrix | 九章算法](http://www.jiuzhang.com/solutions/search-a-2d-matrix/)
