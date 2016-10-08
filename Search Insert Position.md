@@ -20,7 +20,16 @@ O(log(n)) time
 
 ### 解题思路
 
-该题目换一个说法，就是要寻找第一个大于等于 `target` 的位置。插入元素和查找元素的区别在于，可能插入到最后一个位置的后面，此时 `target > A[n - 1]` 。
+该题目变换一下说法，可以是：
+
+- 寻找第一个大于等于`target`的位置。
+- 寻找最后一个小于等于`target`的位置。
+
+此外，插入元素和查找元素的区别在于，可能插入到数组最后一个位置的后面，此时对应`target > A[n - 1]` （目标值大于数组最大值）。
+
+易错点：
+
+> 1. 在判断边界条件时，如果数组为空，或者不为空但是不含任何元素，那么插入位置就是 0 。
 
 Java 实现
 
@@ -28,7 +37,7 @@ Java 实现
 public class Solution {
     public int searchInsert(int[] A, int target) {
         if (A == null || A.length == 0) {
-            return 0;
+            return 0;	// if there is no elements in array A, then insert position 0
         }
         int start = 0, end = A.length - 1;
 
@@ -68,7 +77,7 @@ public class Solution {
     public int searchInsert(int[] A, int target) {
         // write your code here
         if (A == null || A.length == 0) {
-            return 0;        //留意此题的边界条件，此处其实也是插入元素和查找元素的不同
+            return 0;        // if there is no elements in array A, then insert position 0
         }
         int start = 0, end = A.length - 1;
         if (A[end] < target) {
