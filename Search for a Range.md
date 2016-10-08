@@ -16,9 +16,13 @@ return [3, 4].
 
 ### 解题思路
 
-数组中含重复元素，要寻找某个整数的范围，先找到第一次出现的位置，然后找最后一次出现的位置。具体实现可参考 First Position of Target 。
+数组中含重复元素，要寻找某个目标值的范围（起始位置），先找第一次出现的位置，再找最后一次出现的位置。具体实现可参考题目 First Position of Target 。
 
+易错点：
 
+> 1. 在函数返回值时，建立数组并直接进行初始化：`return new int[] {-1, -1};`。
+>
+>    直接声明初始化数组：`int[] a = {1, 2, 3, 4};`。
 
 Java 实现
 
@@ -30,7 +34,7 @@ public class Solution {
      *return : a list of length 2, [index1, index2]
      */
     public int[] searchRange(int[] A, int target) {
-        // write your code here
+        
         if (A == null || A.length == 0) {
             return new int[] {-1, -1};     // attention: how Java function return array
         }
@@ -51,8 +55,7 @@ public class Solution {
         } else if (A[end] == target){
             first = end;
         } else {
-            first = -1;
-            last = -1;
+            first = last = -1;
             return new int[] {first, last};     // return two dimension array
         }
 
@@ -72,8 +75,7 @@ public class Solution {
         } else if (A[start] == target) {
             last = start;
         } else {
-            last = -1;
-            first = -1;
+            last = first = -1;
             return new int[] {first, last};
         }
         return new int[] {first, last};    // return the final position
