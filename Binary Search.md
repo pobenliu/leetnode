@@ -22,7 +22,7 @@ If the array is [1, 2, 3, 3, 4, 5, 10], for given target 3, return 2.
 
 注：
 
-1. 写为 `start + 1 < end` 主要是为了防止出现死循环。如果写成 `start＜end`，那么当 `start=1`，`end=2` 时， `mid = start + (end - start)/2 = 1` ，如果在判决条件下得到 `start = mid;` ，会出现死循环。
+1. 写为 `start + 1 < end` 主要是为了防止出现死循环。如果写成 `start＜end`，那么当 `start = 1`，`end = 2` 时， `mid = start + (end - start)/2 = 1` ，如果在判决条件下得到 `start = mid;` ，会出现死循环。
 2. 之所以不使用 `mid = (start + end ) / 2` ，是为了防止`start`和`end`都很大的时候溢出。 
 
 Java 实现
