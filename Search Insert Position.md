@@ -23,10 +23,10 @@ O(log(n)) time
 
 该题目变换一下说法，可以是：
 
-- 寻找第一个大于等于`target`的位置。
-- 寻找最后一个小于等于`target`的位置。
+- 寻找第一个大于等于 `target` 的位置。
+- 寻找最后一个小于等于 `target` 的位置。
 
-此外，插入元素和查找元素的区别在于，可能插入到数组最后一个位置的后面，此时对应`target > A[n - 1]` （目标值大于数组最大值）。
+此外，插入元素和查找元素的区别在于，可能插入到数组最后一个位置的后面，此时对应 `target > A[n - 1]` （目标值大于数组最大值）。
 
 易错点：
 
@@ -110,4 +110,6 @@ public class Solution {
 
 ### 参考
 
-1. [Search Insert Position | 九章算法](http://www.jiuzhang.com/solutions/search-insert-position/)​
+1. [Search Insert Position | 九章算法](http://www.jiuzhang.com/solutions/search-insert-position/)
+
+   ​
