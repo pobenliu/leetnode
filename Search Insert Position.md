@@ -31,6 +31,7 @@ O(log(n)) time
 易错点：
 
 > 1. 在判断边界条件时，如果数组为空，或者不为空但是不含任何元素，那么插入位置就是 0 。
+> 2. 记得目标值大于数组中所有元素这种情况！
 
 Java 实现
 
@@ -109,6 +110,4 @@ public class Solution {
 
 ### 参考
 
-1. [Search Insert Position | 九章算法](http://www.jiuzhang.com/solutions/search-insert-position/)
-
-   ​
+1. [Search Insert Position | 九章算法](http://www.jiuzhang.com/solutions/search-insert-position/)​
