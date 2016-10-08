@@ -92,7 +92,7 @@ public class Solution {
 
 #### 二、合并矩阵
 
-将矩阵的每一行拼接起来，成为一个长为`m × n`的排序数组，然后使用二分查找。查找时将位置转换为矩阵坐标即可，此方法更加简洁。
+将矩阵的每一行拼接起来，成为一个长为 `m × n` 的排序数组，然后使用二分查找。查找时将位置转换为矩阵坐标即可，此方法更加简洁。
 
 ```java
 public class Solution {
@@ -133,7 +133,6 @@ public class Solution {
         return false;
     }
 }
-
 ```
 
 
