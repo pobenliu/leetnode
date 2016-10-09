@@ -1,6 +1,6 @@
 # Search in Rotated Sorted Array
 
-Search in Rotated Sorted Array  ( [leetcode][] [lintcode](http://www.lintcode.com/en/problem/search-in-rotated-sorted-array/) )
+Search in Rotated Sorted Array  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/search-in-rotated-sorted-array/) )
 
 ```
 Description
