@@ -1,93 +1,64 @@
-# Search for a Range
+# First Position of Target
 
-Search for a Range ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/search-for-a-range/) )
+ First Position of Target ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/first-position-of-target/) )
 
 ```
-Given a sorted array of integers, find the starting and ending position of a given target value.
-Your algorithm's runtime complexity must be in the order of O(log n).
-If the target is not found in the array, return [-1, -1].
+For a given sorted array (ascending order) and a target number, 
+find the first index of this number in O(log n) time complexity.
+If the target number does not exist in the array, return -1.
 
-For example,
-Given [5, 7, 7, 8, 8, 10] and target value 8,
-return [3, 4].
+Example
+If the array is [1, 2, 3, 3, 4, 5, 10], for given target 3, return 2.
 
-Challenge 
-O(log n) time.
+Challenge
+If the count of numbers is bigger than 2^32, can your code work properly?
 ```
-
-
 
 ### 解题思路
 
-数组中含重复元素，要寻找某个目标值的范围（起始位置），先找第一次出现的位置，再找最后一次出现的位置。具体实现可参考题目 First Position of Target 。
+数组中有重复元素，在二分查找确定目标值第一次出现位置时，中间元素 `nums[mid] == target` ，有可能左半部分还有相同元素，所以此时应该把 `end` 位置移动到 `mid` 。
 
 ##### 算法复杂度：
 
 - 时间复杂度： `O(log n)` 。
 - 空间复杂度： `O(1)` 。
 
-##### 易错点：
-
-> 1. 在函数返回值时，建立数组并直接进行初始化： `return new int[] {-1, -1};` 。
->
->    直接声明初始化数组： `int[] a = {1, 2, 3, 4};` 。
-
 Java 实现
 
 ```java
-public class Solution {
+class Solution {
     /**
-     *@param A : an integer sorted array
-     *@param target :  an integer to be inserted
-     *return : a list of length 2, [index1, index2]
+     * @param nums: The integer array.
+     * @param target: Target to find.
+     * @return: The first position of target. Position starts from 0.
      */
-    public int[] searchRange(int[] A, int target) {
-        
-        if (A == null || A.length == 0) {
-            return new int[] {-1, -1};     // attention: how Java function return array
+    public int binarySearch(int[] nums, int target) {
+        //write your code here
+        if (nums == null || nums.length == 0){
+            return -1;
         }
 
-        int start = 0, end = A.length - 1;
-        int first, last;
-        // find first target
-        while (start + 1 < end) {
-            int mid = start + (end -  start) / 2;
-            if (A[mid] >= target) {
+        int start = 0, end = nums.length - 1;
+        while(start + 1 < end) {
+            int mid =  start + (end - start)/2;
+            if (nums[mid] == target) {
                 end = mid;
-            } else {
+            } else if (nums[mid] < target) {
                 start = mid;
+            } else if (nums[mid] > target) {
+                end =  mid;
             }
-        }
-        if (A[start] == target) {
-            first = start;
-        } else if (A[end] == target){
-            first = end;
-        } else {
-            first = last = -1;
-            return new int[] {first, last};     // return two dimension array
         }
 
-        // find last target
-        start = 0;
-        end = A.length - 1;
-        while (start + 1 < end) {
-            int mid = start + (end -  start) / 2;
-            if (A[mid] <= target) {
-                start = mid;
-            } else {
-                end = mid;
-            }
+        if (nums[start] == target) {
+            return start;
         }
-        if (A[end] == target) {
-            last = end;
-        } else if (A[start] == target) {
-            last = start;
-        } else {
-            last = first = -1;
-            return new int[] {first, last};
+        if (nums[end] == target) {
+            return end;
         }
-        return new int[] {first, last};    // return the final position
+        return -1;
     }
 }
 ```
 
+​
