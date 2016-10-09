@@ -10,6 +10,9 @@ If the target is not found in the array, return [-1, -1].
 For example,
 Given [5, 7, 7, 8, 8, 10] and target value 8,
 return [3, 4].
+
+Challenge 
+O(log n) time.
 ```
 
 
@@ -18,7 +21,12 @@ return [3, 4].
 
 数组中含重复元素，要寻找某个目标值的范围（起始位置），先找第一次出现的位置，再找最后一次出现的位置。具体实现可参考题目 First Position of Target 。
 
-易错点：
+##### 算法复杂度：
+
+- 时间复杂度： `O(log n)` 。
+- 空间复杂度： `O(1)` 。
+
+##### 易错点：
 
 > 1. 在函数返回值时，建立数组并直接进行初始化： `return new int[] {-1, -1};` 。
 >
