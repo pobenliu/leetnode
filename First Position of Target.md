@@ -18,6 +18,11 @@ If the count of numbers is bigger than 2^32, can your code work properly?
 
 数组中有重复元素，在二分查找确定目标值第一次出现位置时，中间元素 `nums[mid] == target` ，有可能左半部分还有相同元素，所以此时应该把 `end` 位置移动到 `mid` 。
 
+##### 算法复杂度：
+
+- 时间复杂度： `O(log n)` 。
+- 空间复杂度： `O(1)` 。
+
 Java 实现
 
 ```java
