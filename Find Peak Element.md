@@ -1,4 +1,4 @@
-#  Find Peak Element
+# Find Peak Element
 
 Find Peak Element  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/find-peak-element/#) )
 
@@ -28,6 +28,7 @@ Time complexity O(logN)
 
 - 中间值比其右边数小，说明其处在上升沿中，峰值在其右侧， `start = mid` 。
 - 中间值比其左边数小，说明其处在下降沿中，峰值在其左侧， `end = mid` 。
+- （中间值比两边都小，那么左侧和右侧都有峰值，舍弃哪边都可以。）
 - 中间值比两边的数都大，是峰值，直接返回即可。
 
 ##### 算法复杂度
