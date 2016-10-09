@@ -12,7 +12,7 @@
    * [Search a 2D Matrix](Search a 2D Matrix.md)
    * [Search a 2D Matrix II](Search a 2D Matrix II.md)
    * [First Bad Version](First Bad Version.md)
-   * Find Peak Element
+   * [Find Peak Element](Find Peak Element.md)
    * [Search in Rotated Sorted Array](Search in Rotated Sorted Array.md)
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
