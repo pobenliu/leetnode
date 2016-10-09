@@ -1,4 +1,4 @@
-#  Merge Sorted Array
+# Merge Sorted Array
 
  Merge Sorted Array  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/merge-sorted-array/#) )
 
@@ -18,6 +18,11 @@ After merge, A will be filled as [1, 2, 3, 4, 5]
 ### 解题思路
 
 如果从头开始比较，在合并过程中数组 A 会涉及大量的移动操作。考虑到数组 A 中有足够的空间，可以从数组末段开始比较，以从大到小的顺序合并两个数组。需要注意 A 中原有元素可能已全部移至尾部， B 中还有元素。
+
+##### 算法复杂度：
+
+- 时间复杂度： `O(m + n)` 。
+- 空间复杂度： `O(1)` 。
 
 Java 实现
 
