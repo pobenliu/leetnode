@@ -15,7 +15,7 @@
    * [Find Peak Element](Find Peak Element.md)
    * [Search in Rotated Sorted Array](Search in Rotated Sorted Array.md)
    * [Search in Rotated Sorted Array II](Search in Rotated Sorted Array II.md)
-   * Median of two Sorted Arrays
+   * [Median of two Sorted Arrays](Median of two Sorted Arrays.md)
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
