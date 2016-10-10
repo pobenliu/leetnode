@@ -94,6 +94,7 @@
    * [Merge Two Sorted Arrays](Merge Two Sorted Arrays.md)
    * [Recover Rotated Sorted Array](Recover Rotated Sorted Array.md)
    * [Remove Duplicates from Sorted Array](Remove Duplicates from Sorted Array.md)
+   * Remove Duplicates from Sorted Array II
    * [Minimum Subarray](Minimum Subarray.md)
    * [Maximum Subarray Difference](Maximum Subarray Difference.md)
    * [Subarray Sum Closest](Subarray Sum Closest.md)
@@ -105,7 +106,6 @@
    * [Sort Letters by Case](Sort Letters by Case.md)
    * [Sort Colors](Sort Colors.md)
    * [Interleaving Positive and Negative Numbers](Interleaving Positive and Negative Numbers.md)
-   * Remove Duplicates from Sorted Array II
 * Graph
    * [Clone Graph](Clone Graph.md)
    * [Topological Sorting](Topological Sorting.md)
