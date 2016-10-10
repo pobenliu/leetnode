@@ -81,3 +81,25 @@ public class Solution {
 }
 ```
 
+
+
+另一种形式的 Java 实现
+
+```java
+public class Solution {
+    public int removeDuplicates(int[] A) {
+        if (A == null || A.length == 0) {
+            return 0;
+        }
+        
+        int prev = 0;
+        for (int curr = 0; curr < A.length; curr++) {
+            if (A[curr] != A[prev]) {
+                A[++prev] = A[curr];
+            }
+        }
+        return prev + 1;
+    }
+}
+```
+
