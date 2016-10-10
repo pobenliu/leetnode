@@ -94,7 +94,7 @@
    * [Merge Two Sorted Arrays](Merge Two Sorted Arrays.md)
    * [Recover Rotated Sorted Array](Recover Rotated Sorted Array.md)
    * [Remove Duplicates from Sorted Array](Remove Duplicates from Sorted Array.md)
-   * Remove Duplicates from Sorted Array II
+   * [Remove Duplicates from Sorted Array II](Remove Duplicates from Sorted Array II.md)
    * [Minimum Subarray](Minimum Subarray.md)
    * [Maximum Subarray Difference](Maximum Subarray Difference.md)
    * [Subarray Sum Closest](Subarray Sum Closest.md)
