@@ -4,7 +4,7 @@
 * Strings
    * [strStr](strStr.md)
    * [Reverse Words in a String](Reverse Words in a String.md)
-   * Rotate String
+   * [Rotate String](Rotate String.md)
 * Binary Search
    * [Binary Search](Binary Search.md)
    * [First Position of Target](First Position of Target.md)
