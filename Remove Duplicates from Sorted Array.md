@@ -14,25 +14,25 @@ Your function should return length = 2, and A is now [1,2].
 
 ### 解题思路
 
-本题目使用双指针（数组下标），一个指针 `p` 遍历数组，另一个指针 `q` 记录最后一个不重复元素的位置。以图示说明。
+本题目使用双指针（数组下标），一个指针 `curr` 遍历数组，另一个指针 `prev` 记录最后一个不重复元素的位置。以图示说明。
 
 ```
 比如输入数组是 [1, 1, 2, 2, 3, 3, 4]
-双指针的初始状态如下，上面的指针 p 记录不重复元素位置，下面指针 q 遍历数组：
+双指针的初始状态如下，上面的指针 prev 记录不重复元素位置，下面指针 curr 遍历数组：
 |
 v                          
 1  --> 1 --> 2 --> 2 --> 3 --> 3 --> 4
        ^                   
        |
 
-比较两个指针 p, q 指向元素，如果相等，则 p 不移动， q 继续遍历。
+比较两个指针指向元素，如果相等，则 prev 不移动， curr 继续遍历。
 |
 v                          
 1  --> 1 --> 2 --> 2 --> 3 --> 3 --> 4
              ^                   
              |
 
-如果两个指针指向元素不等，那么将 p 右移以为，将 q 指向元素拷贝至 p 处，然后 q 右移一位。
+如果两个指针指向元素不等，那么将 prev 右移一位，将 curr 指向元素拷贝至 prev 处，然后 curr 右移一位。
        |
        v                          
 1  --> 2 --> 2 --> 2 --> 3 --> 3 --> 4
@@ -65,18 +65,18 @@ public class Solution {
             return 0;
         }
         
-        int pos = 0;
-        int i = 1;
-        while (i < nums.length) {
-            if (nums[i] == nums[pos]) {
-                i++;
+        int prev = 0;
+        int curr = 1;
+        while (curr < nums.length) {
+            if (nums[curr] == nums[prev]) {
+                curr++;
             } else {
-                pos++;
-                nums[pos] = nums[i];
-                i++;
+                prev++;
+                nums[prev] = nums[curr];
+                curr++;
             }
         }
-        return pos + 1;
+        return prev + 1;
     }
 }
 ```
