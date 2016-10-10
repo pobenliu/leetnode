@@ -1,4 +1,4 @@
-#  Remove Duplicates from Sorted Array
+# Remove Duplicates from Sorted Array
 
  Remove Duplicates from Sorted Array  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-array/#) )
 
@@ -45,6 +45,11 @@ v
 
 - 时间复杂度：遍历数组，需要 `O(n)` 。
 - 空间复杂度： `O(1)` 。
+
+##### 易错点
+
+> 1. 在数组的不同元素之间赋值时，注意查看下标是否越界，谨慎使用 `num[++pos] = nums[i++];` 这种表达。
+> 2. 题目最后要求返回的是不同元素的个数，所以最后的下标需要加一。
 
 Java 实现
 
