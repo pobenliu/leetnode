@@ -33,11 +33,13 @@ Dijkstra采用的解法为“三向切分”法，“从左向右遍历数组一
 
 借用 [[LeetCode] Sort Colors](http://bangbingsyb.blogspot.jp/2014/11/leetcode-sort-colors.html) 中的图来说明会更清楚
 
+```
 0......0   1......1   x1 x2 .... xm   2.....2
 
               |            |               |
 
             left           i             right
+```
 
 Java 实现
 
