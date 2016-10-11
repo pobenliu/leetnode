@@ -1,10 +1,11 @@
-#  Sort Colors
+# Sort Colors
 
  Sort Colors  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/sort-colors/) )
 
 ```
 Description
-Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+Given an array with n objects colored red, white or blue, 
+sort them so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
 
 Notice
@@ -30,7 +31,7 @@ Dijkstra采用的解法为“三向切分”法，“从左向右遍历数组一
 - nums[i] > 1 ，交换 nums[right] 和 nums[i] ，将 right 减一；
 - nums[i] == 1 ， 将 i 加一。
 
-借用[[LeetCode] Sort Colors](http://bangbingsyb.blogspot.jp/2014/11/leetcode-sort-colors.html)中的图来说明会更清楚
+借用 [[LeetCode] Sort Colors](http://bangbingsyb.blogspot.jp/2014/11/leetcode-sort-colors.html) 中的图来说明会更清楚
 
 0......0   1......1   x1 x2 .... xm   2.....2
 
@@ -83,5 +84,5 @@ class Solution {
 
 ### 参考
 
-1. [《算法（第4版）》](https://book.douban.com/subject/10432347/) 2.3快速排序 / 2.3.3.2三取样切分 
+1. [《算法（第4版）》](https://book.douban.com/subject/10432347/) 2.3 快速排序 / 2.3.3.2 三取样切分 
 2. [[LeetCode] Sort Colors | 喜刷刷](http://bangbingsyb.blogspot.jp/2014/11/leetcode-sort-colors.html) 
