@@ -51,7 +51,7 @@
    * [Unique Paths II](Unique Paths II.md)
    * [Climbing Stairs](Climbing Stairs.md)
    * [Jump Game](Jump Game.md)
-   * [Jump Game II](Jump Game II)
+   * [Jump Game II](Jump Game II.md)
    * [Palindrome Partitioning II](Palindrome Partitioning II.md)
    * [Word Break](Word Break.md)
    * [Longest Common Subsequence](Longest Common Subsequence.md)
