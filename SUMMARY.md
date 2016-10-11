@@ -45,7 +45,7 @@
    * [Copy List with Random Pointer](Copy List with Random Pointer.md)
    * [Convert Sorted List to Balanced BST](Convert Sorted List to Balanced BST.md)
 * Dynamic Programming
-   * [Triangle.md](Triangle.md)
+   * [Triangle](Triangle.md)
    * [Minimum Path Sum](Minimum Path Sum.md)
    * [Unique Paths](Unique Paths.md)
    * [Unique Paths II](Unique Paths II.md)
