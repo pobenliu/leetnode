@@ -48,18 +48,18 @@
 
 ### 在线刷题网站 {#3}
 
-1. [Leetcode](https://leetcode.com/)，应该是最知名的在线刷题网站了。
-2. [Lintcode](http://www.lintcode.com/)，和 Leetcode 很像，题目也有一定的重合度，
+1. [Leetcode](https://leetcode.com/)，应该是最知名的在线刷题网站了，提供多种编程语言的在线检测，评论区氛围很好，大家会分享思路、讨论问题。
+2. [Lintcode](http://www.lintcode.com/)，和 Leetcode 很像，题目也有一定的重合度，没有评论区。有阶梯训练（ Ladder ），方便专题学习。
 
 ### 题目参考解答{#4}
 
-1. [九章算法](http://www.jiuzhang.com/solutions/)，提供 Lintcode 三种语言（Java, C++, Python）的解题答案，我个人在学习过程中大量参考了九章的答案，在此致谢。
+1. [九章算法](http://www.jiuzhang.com/solutions/)，提供 Lintcode 三种语言（ Java, C++, Python ）的解题答案，我个人在学习过程中大量参考了九章的答案，在此致谢。
 2. Leetcode 讨论区，大家会讨论分享交流不同的解法和思路。
 
 ### 参考书籍{#5}
 
-1. [《算法（第4版）》（豆瓣）](https://book.douban.com/subject/19952400/)，Robert Sedgewick 教授的书，讲解了基础的数据结构和算法，配有大量图例，深入浅出，讲解非常细致。结合他老人家在Coursera开的两门课程看，效果更佳。课程分别是Algorithms, Part I \([Coursera](https://www.coursera.org/learn/introduction-to-algorithms), [Youtube](https://www.youtube.com/playlist?list=PLUX6FBiUa2g4YWs6HkkCpXL6ru02i7y3Q)\) 和 Algorithms, Part II \([Coursera](https://www.coursera.org/learn/java-data-structures-algorithms-2), [Youtube](https://www.youtube.com/playlist?list=PLqD_OdMOd_6YixsHkd9f4sNdof4IhIima)\)
+1. [《算法（第4版）》（豆瓣）](https://book.douban.com/subject/19952400/)，Robert Sedgewick 教授的书，讲解了基础的数据结构和算法，配有大量图例，深入浅出，讲解非常细致。结合他老人家在 Coursera 开的两门课程看，效果更佳。课程分别是 Algorithms, Part I \( [Coursera](https://www.coursera.org/learn/introduction-to-algorithms), [Youtube](https://www.youtube.com/playlist?list=PLUX6FBiUa2g4YWs6HkkCpXL6ru02i7y3Q) \) 和 Algorithms, Part II \( [Coursera](https://www.coursera.org/learn/java-data-structures-algorithms-2), [Youtube](https://www.youtube.com/playlist?list=PLqD_OdMOd_6YixsHkd9f4sNdof4IhIima) \)
 
 ### 其他资源{#6}
 
-1. [数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/)，主要算法基础知识、编程题目解答等内容，本文档的建立也是受其影响。
+1. [数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/)，作者 yuanbin 维护的个人博客，包含算法基础知识、编程题目解答等内容，本文档的建立也是受其启发，过程中也借鉴学习了很多，在此表示感谢。
