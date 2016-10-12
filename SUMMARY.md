@@ -66,6 +66,7 @@
    * [Maximum Subarray](Maximum Subarray.md)
    * [Maximum Subarray II](Maximum Subarray II.md)
    * [Maximum Subarray III](Maximum Subarray III.md)
+   * Longest Increasing Subsequence
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
