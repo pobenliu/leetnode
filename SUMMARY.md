@@ -56,6 +56,7 @@
    * [Word Break](Word Break.md)
    * [Longest Common Subsequence](Longest Common Subsequence.md)
    * [Longest Common Substring](Longest Common Substring.md)
+   * Longest Increasing Subsequence
    * [Edit Distance](Edit Distance.md)
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
@@ -66,7 +67,6 @@
    * [Maximum Subarray](Maximum Subarray.md)
    * [Maximum Subarray II](Maximum Subarray II.md)
    * [Maximum Subarray III](Maximum Subarray III.md)
-   * Longest Increasing Subsequence
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
