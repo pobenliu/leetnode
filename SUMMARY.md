@@ -56,7 +56,7 @@
    * [Word Break](Word Break.md)
    * [Longest Common Subsequence](Longest Common Subsequence.md)
    * [Longest Common Substring](Longest Common Substring.md)
-   * Longest Increasing Subsequence
+   * [Longest Increasing Subsequence](Longest Increasing Subsequence.md)
    * [Edit Distance](Edit Distance.md)
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
