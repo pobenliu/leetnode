@@ -1,4 +1,4 @@
-#  Longest Increasing Subsequence
+# Longest Increasing Subsequence
 
  Longest Increasing Subsequence  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/longest-increasing-subsequence/) )
 
@@ -10,7 +10,8 @@ You code should return the length of the LIS.
 Clarification
 What's the definition of longest increasing subsequence?
 - The longest increasing subsequence problem is to find a subsequence of a given sequence in which 
-the subsequence's elements are in sorted order, lowest to highest, and in which the subsequence is as long as possible. 
+the subsequence's elements are in sorted order, lowest to highest, 
+and in which the subsequence is as long as possible. 
 This subsequence is not necessarily contiguous, or unique.
 https://en.wikipedia.org/wiki/Longest_increasing_subsequence
 
@@ -24,7 +25,7 @@ Time complexity O(n^2) or O(nlogn)
 
 ### 解题思路
 
-最长递增子序列的定义（[维基百科](https://zh.wikipedia.org/zh-cn/%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97)）： 
+最长递增子序列的定义（[维基百科](https://zh.wikipedia.org/zh-cn/%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97)）：
 
 > 在计算机科学中，**最长递增子序列**（ longest increasing subsequence, LIS ）问题是指，在一个给定的数值序列中，找到一个子序列，使得这个子序列元素的数值依次递增，并且这个子序列的长度尽可能地大。最长递增子序列中的元素在原序列中不一定是连续的。
 
@@ -84,7 +85,6 @@ public class Solution {
         return max;
     }
 }
-
 ```
 
 
@@ -116,6 +116,11 @@ f[i-1]:  0 1 2 3 1 2 3 4 3
 在求解 `f[7]` 时，前 `6` 个元素中有两个长度为 `3` 的递增子序列 `2, 5, 6` 和 `2, 3, 4` ，而 `nums[6] > 6` 且 `nums[6] > 4` ，所以可将 `nums[6]` 放在任一序列后，构成长度为 `4` 的递增子序列。其实，只要 `nums[6] > 4` 即可接在子序列后面，无需和 `6` 比较。
 
 此外启发二，考察第 `i` 个元素 `nums[i-1]` 时，对于同样长度的递增子序列，我们只关心尾元素中的最小值。
+
+##### 算法复杂度
+
+- 时间复杂度： `n` 次二分查找，为 `O(nlogn)` 。
+- 空间复杂度： `O(n)` 。
 
 Java 实现
 
