@@ -17,16 +17,21 @@ For "ABCD" and "EDCA", the LCS is "A" (or "D", "C"), return 1.
 For "ABCD" and "EACB", the LCS is "AC", return 2.
 ```
 
+Longest Common Subsequence ( [Wekipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) )
 
+> The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). It differs from problems of finding common substrings: <u>unlike substrings, subsequences are not required to occupy consecutive positions</u> within the original sequences. 
 
 ### 解题思路
 
 1. 定义状态：定义 `f[i][j]` 为字符串 `A` 的前 `i` 个字符 和 字符串 `B` 的前 `j` 个字符 的最长公共子序列长度。
 2. 定义状态转移函数：我们来看`f[i][j]` 的上一个状态。如果`A` 的前 `i` 个字符 `A[i - 1]` 和 字符串 `B` 的前 `j` 个字符 `B[j - 1]` 相等，那么易得到 `f[i][j] = f[i - 1][j - 1] + 1` 。如果 `A[i - 1]` 和 `B[i - 1]` 不等，那么可以在 `A` 或 `B` 前溯一个位置进行比较，取最大值 `f[i][j] = max(f[i - 1][j], f[i][j - 1])` 。
-3. 定义起点：当 `A` 为空或 `B` 为空时，对应的状态函数 `f` 为 `0`，考虑到整数数组默认初始化为 `0` ，也可以不显式初始化。
+3. 定义起点：当 `A` 为空或 `B` 为空时，对应的状态函数 `f` 为 `0`，考虑到整数数组默认初始化为 `0` ，也可以不显示初始化。
 4. 定义终点：最终的结果是 `f[n][m]` 。
 
-注：需要注意的地方是，`f[i][j]` 中 `i` 和 `j` 的取值范围分别是 `n + 1` 和 `m + 1` 。
+注：
+
+- 需要注意的地方是，`f[i][j]` 中 `i` 和 `j` 的取值范围分别是 `n + 1` 和 `m + 1` 。
+- 对字符串的操作，取第 `i` 个值是 _`A.charAt(i)`_ 。
 
 Java 实现
 
@@ -73,7 +78,6 @@ public class Solution {
         return f[m][n];
     }
 }
-
 ```
 
 
