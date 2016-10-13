@@ -24,7 +24,7 @@ Time complexity O(n^2) or O(nlogn)
 
 ### 解题思路
 
-最长递增子序列的定义（[维基百科](https://zh.wikipedia.org/zh-cn/%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97)）：
+最长递增子序列的定义（[维基百科](https://zh.wikipedia.org/zh-cn/%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97)）： 
 
 > 在计算机科学中，**最长递增子序列**（ longest increasing subsequence, LIS ）问题是指，在一个给定的数值序列中，找到一个子序列，使得这个子序列元素的数值依次递增，并且这个子序列的长度尽可能地大。最长递增子序列中的元素在原序列中不一定是连续的。
 
