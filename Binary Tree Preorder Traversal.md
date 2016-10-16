@@ -27,11 +27,15 @@ Can you do it without recursion?
 
 实现过程：根据前序遍历访问的顺序，优先访问根结点，然后分别访问左儿子和右儿子。对任一结点，在循环中都可以看作是根结点，可直接访问，访问完之后，若其左儿子非空，按相同规则访问其左儿子，然后访问其右儿子。
 
-根据递归时对返回结果处理方式的不同，可进一步分为遍历和分治两种方法：
+```
+前序遍历：root -> left -> right
+```
+
+根据递归时对返回结果处理方式的不同，可进一步分为**遍历**和**分治**两种方法。
 
 面试时不推荐使用递归的方法实现。
 
-**算法复杂度**
+##### 算法复杂度
 
 - 时间复杂度：遍历树中的所有结点，时间复杂度 `O(n)`。
 - 空间复杂度：未使用额外空间。
@@ -40,11 +44,11 @@ Can you do it without recursion?
 
 实现步骤：
 
-- 访问结点 node ，取值，将其视为根结点
-- 若其左儿子非空，按相同规则访问其左儿子
-- 若其右儿子非空，按相同规则访问其右儿子
+- 访问结点 `node` ，取值，将其视为根结点。
+- 若其左儿子非空，按相同规则访问其左儿子。
+- 若其右儿子非空，按相同规则访问其右儿子。
 
-其中，result 是作为参数传递的。
+其中，`result` 是作为参数传递的。
 
 Java 实现：
 
@@ -66,7 +70,6 @@ public class Solution {
      * @return: Preorder in ArrayList which contains node values.
      */
     public ArrayList<Integer> preorderTraversal(TreeNode root) {
-        // write your code here
         ArrayList<Integer> result = new ArrayList<Integer>();
         // 主循环中无需对边界条件进行检查，递归函数中已完成相关检查
         /*
@@ -95,11 +98,11 @@ public class Solution {
 
 步骤：
 
-- 取左子树的遍历结果
-- 取右子树的遍历结果
-- 按照“根结点+左子树+右子树”的顺序对结果进行合并
+- 获得左子树的遍历结果。
+- 获得右子树的遍历结果。
+- 按照“根结点 + 左子树 + 右子树”的顺序对结果进行合并
 
-其中，result 是作为结果返回的。
+其中，`result` 是作为结果返回的。
 
 Java 实现
 
@@ -121,7 +124,6 @@ public class Solution {
      * @return: Preorder in ArrayList which contains node values.
      */
     public ArrayList<Integer> preorderTraversal(TreeNode root) {
-        // write your code here
         ArrayList<Integer> result = new ArrayList<Integer>();
         // null or leaf
         if (root == null) {
@@ -134,8 +136,9 @@ public class Solution {
         
         // conquer
         result.add(root.val);
-        result.addAll(left);	// 为何这里要使用addAll函数
+        result.addAll(left);	
         result.addAll(right);
+      
         return result;
     }
 }
@@ -147,21 +150,25 @@ public class Solution {
 
 #### 二、非递归法
 
-基本原则：用递归可以解决的问题，改用非递归的方法解决，一般都需要使用栈，来模拟递归解法内存中使用的栈操作
+基本原则：用递归可以解决的问题，改用非递归的方法解决，一般都需要使用栈，来模拟递归解法内存中使用的栈操作。
 
 实现步骤：
 
-- 根结点非空，将根结点 root 入栈
+- 根结点非空，将根结点 `root` 入栈。
 - 栈非空（循环结束的条件）
-  - 取栈顶结点 node 并进行出栈操作，保存当前结点值
-  - 判断结点 node 的**右儿子**是否为空，若不空，将其入栈
-  - 判断结点 node 的**左儿子**是否为空，若不空，将其入栈
+  - 取栈顶结点 `node` 并进行出栈操作，保存当前结点值。
+  - 判断结点 `node` 的**右儿子**是否为空，若不空，将其入栈。
+  - 判断结点 `node` 的**左儿子**是否为空，若不空，将其入栈。
 - 遍历结束，返回结果
 
-**算法复杂度**
+##### 算法复杂度
 
 - 时间复杂度：对每个结点遍历一遍，近似为 `O(n)`
 - 空间复杂度：使用辅助栈，最坏情况下栈空间与结点数相等，近似为 `O(n)`
+
+##### 易错点
+
+> 1. 注意左子树、右子树的进栈顺序。
 
 Java 实现
 
@@ -212,6 +219,6 @@ public class Solution {
 
 ### 参考
 
-1. [九章算法](http://www.jiuzhang.com/solutions/binary-tree-preorder-traversal/)
-2. [Binary Tree Preorder Traversal](http://algorithm.yuanbin.me/zh-hans/binary_tree/binary_tree_preorder_traversal.html)
-3. [二叉树的非递归遍历](http://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html)
+1. [Binary Tree Preorder Traversal | 九章算法](http://www.jiuzhang.com/solutions/binary-tree-preorder-traversal/)
+2. [Binary Tree Preorder Traversal | 数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/zh-hans/binary_tree/binary_tree_preorder_traversal.html)
+3. [二叉树的非递归遍历 | 海子](http://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html)
