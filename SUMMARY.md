@@ -17,6 +17,7 @@
    * [Median of two Sorted Arrays](Median of two Sorted Arrays.md)
    * [Search in Rotated Sorted Array](Search in Rotated Sorted Array.md)
    * [Search in Rotated Sorted Array II](Search in Rotated Sorted Array II.md)
+   * Find Minimum in Rotated Sorted Array
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
@@ -56,7 +57,7 @@
    * [Word Break](Word Break.md)
    * [Longest Common Subsequence](Longest Common Subsequence.md)
    * [Longest Common Substring](Longest Common Substring.md)
-   * [Longest Increasing Subsequence ](Longest Increasing Subsequence.md)
+   * [Longest Increasing Subsequence](Longest Increasing Subsequence.md)
    * [Edit Distance](Edit Distance.md)
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
