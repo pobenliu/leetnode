@@ -21,6 +21,7 @@
    * [Find Minimum in Rotated Sorted Array II](Find Minimum in Rotated Sorted Array II.md)
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
+   * Binary Tree Postorder Traversal
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
    * [Balanced Binary Tree](Balanced Binary Tree.md)
    * [Binary Tree Maximum Path Sum](Binary Tree Maximum Path Sum.md)
@@ -28,7 +29,6 @@
    * [Binary Tree Level Order Traversal](Binary Tree Level Order Traversal.md)
    * [Binary Tree Level Order Traversal II](Binary Tree Level Order Traversal II.md)
    * [Binary Tree Zigzag Level Order Traversal](Binary Tree Zigzag Level Order Traversal.md)
-   * Binary Tree Postorder Traversal
 * Binary Search Tree
    * [Validate Binary Search Tree](Validate Binary Search Tree.md)
    * [Insert Node in a Binary Search Tree](Insert Node in a Binary Search Tree.md)
