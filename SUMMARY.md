@@ -21,7 +21,7 @@
    * [Find Minimum in Rotated Sorted Array II](Find Minimum in Rotated Sorted Array II.md)
 * Binary Tree
    * [Binary Tree Preorder Traversal](Binary Tree Preorder Traversal.md)
-   * Binary Tree Postorder Traversal
+   * [Binary Tree Postorder Traversal](Binary Tree Postorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
    * [Balanced Binary Tree](Balanced Binary Tree.md)
    * [Binary Tree Maximum Path Sum](Binary Tree Maximum Path Sum.md)
