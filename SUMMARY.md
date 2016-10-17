@@ -30,6 +30,7 @@
    * [Binary Tree Level Order Traversal](Binary Tree Level Order Traversal.md)
    * [Binary Tree Level Order Traversal II](Binary Tree Level Order Traversal II.md)
    * [Binary Tree Zigzag Level Order Traversal](Binary Tree Zigzag Level Order Traversal.md)
+   * Minimum Depth of Binary Tree
 * Binary Search Tree
    * [Validate Binary Search Tree](Validate Binary Search Tree.md)
    * [Insert Node in a Binary Search Tree](Insert Node in a Binary Search Tree.md)
