@@ -1,4 +1,4 @@
-#  Binary Tree Inorder Traversal
+# Binary Tree Inorder Traversal
 
  Binary Tree Inorder Traversal  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/binary-tree-inorder-traversal/) )
 
@@ -107,7 +107,9 @@ public class Solution {
 
 #### 二、迭代
 
-使用迭代遍历二叉树一定要使用栈，画图理解结点应该怎样进栈，何时出栈，这里借用 ProgramCreek 的图示，可以看出只要把进栈出栈顺序画出来，程序流程也就出来了。
+可参考 Binary Tree Preorder Traversal 迭代法方法二的实现，只需要把结点输出至结果的顺序调整一下即可。
+
+使用迭代遍历二叉树一定要使用栈，可以画图理解结点应该进栈顺序、出栈时间，这里借用 ProgramCreek 的图示作为参考。
 
 ![](http://ww2.sinaimg.cn/mw690/600e6311jw1f8uf1dzwndj20a708wgm3.jpg)
 
@@ -137,18 +139,18 @@ public class Solution {
             return result;
         }
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        TreeNode curr = root;
+        TreeNode node = root;
         
-        while (!stack.empty() || curr != null) {
+        while (!stack.empty() || node != null) {
             // if it is not null, push to stack and go down the tree to left
-            if (curr != null) {
-                stack.push(curr);
-                curr = curr.left;
+            if (node != null) {
+                stack.push(node);
+                node = node.left;
             } else {
-            // if no left child, pop stack, process the node then let curr point to the right
+            // if no left child, pop stack, process the node then let node point to the right
                 TreeNode tmp = stack.pop();
                 result.add(tmp.val);
-                curr = tmp.right;
+                node = tmp.right;
             }
         }
         return result;
