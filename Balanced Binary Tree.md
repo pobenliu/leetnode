@@ -1,11 +1,12 @@
-#  Balanced Binary Tree
+# Balanced Binary Tree
 
  Balanced Binary Tree ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/balanced-binary-tree/) )
 
 ```
 Description
 Given a binary tree, determine if it is height-balanced.
-For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+For this problem, a height-balanced binary tree is defined as a binary tree in which 
+the depth of the two subtrees of every node never differ by more than 1.
 
 Example
 Given binary tree A = {3,9,20,#,#,15,7}, B = {3,#,20,15,7}
@@ -21,20 +22,20 @@ The binary tree A is a height-balanced binary tree, but B is not.
 
 ### 解题思路
 
-#### 一、ResultType
-
 判断一个二叉树是否平衡，需要判断两个方面：
 
-1. 左子树、右子树是否都平衡
-2. 根节点是否平衡
+1. 左子树、右子树是否平衡。
+2. 当前结点是否平衡。
 
-这样，每次递归需要返回两个信息，一个是树的最大深度，另一个是树是否平衡。
+所以需要两个信息，一个是树的最大深度，另一个是树是否平衡。
 
-方法一新建了一个类 ResultType 来包含两个信息 isBalanced 和 maxDepth 。
+#### 一、ResultType
 
-**算法复杂度**
+新建一个类 `ResultType` 保存 `isBalanced` 和 `maxDepth` 信息。
 
+##### 算法复杂度
 
+- 时间复杂度：每个结点遍历一遍，所需的时间是常数，所以总的时间复杂度为 `O(n)` 。
 
 Java 实现
 
@@ -65,7 +66,6 @@ public class Solution {
      * @return: True if this Binary tree is Balanced, or false.
      */
     public boolean isBalanced(TreeNode root) {
-        // write your code here  
         return traverse(root).isBalanced;
     }
     
@@ -93,18 +93,14 @@ public class Solution {
 }
 ```
 
+#### 二、非ResultType
 
+方法一中递归函数需要返回两个信息，考虑把两个信息合并到一个参数中。如果当前子树不平衡，将树的深度 `depth` 置为 `-1`，每次都对其进行判断即可。该方法很是巧妙。
 
+##### 复杂度分析
 
-
-##### 二、非ResultType
-
-如方法一所述，递归函数需要返回两个信息，那么是否可以把两个信息合并到一个参数中呢。如果树不平衡，将树的深度置为 -1，每次都对其进行判断即可。该方法很是巧妙。
-
-**复杂度分析**
-
-- 时间复杂度：遍历树中的所有节点，时间复杂度 `O(n)`
-- 空间复杂度：使用了部分辅助变量，空间复杂度为`o(1)`
+- 时间复杂度：遍历树中的所有结点，时间复杂度 `O(n)`。
+- 空间复杂度：使用了部分辅助变量，空间复杂度为 `o(1)`。
 
 ```java
 /**
@@ -124,8 +120,7 @@ public class Solution {
      * @param root: The root of binary tree.
      * @return: True if this Binary tree is Balanced, or false.
      */
-    public boolean isBalanced(TreeNode root) {
-        // write your code here  
+    public boolean isBalanced(TreeNode root) { 
         int depth;
         depth = maxDepth(root);
         if (depth == -1) {
@@ -156,10 +151,7 @@ public class Solution {
 
 
 
-
-
 ### 参考
 
-1. [九章算法解答](http://www.jiuzhang.com/solutions/balanced-binary-tree/)
-2. [Balanced Binary Tree](http://algorithm.yuanbin.me/zh-hans/binary_tree/balanced_binary_tree.html)
-
+1. [Balanced Binary Tree | 九章算法](http://www.jiuzhang.com/solutions/balanced-binary-tree/)
+2. [Balanced Binary Tree | 数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/zh-hans/binary_tree/balanced_binary_tree.html)
