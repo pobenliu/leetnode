@@ -24,7 +24,7 @@
    * [Binary Tree Postorder Traversal](Binary Tree Postorder Traversal.md)
    * [Binary Tree Inorder Traversal](Binary Tree Inorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
-   * Minimum Depth of Binary Tree
+   * [Minimum Depth of Binary Tree](Minimum Depth of Binary Tree.md)
    * [Balanced Binary Tree](Balanced Binary Tree.md)
    * [Binary Tree Maximum Path Sum](Binary Tree Maximum Path Sum.md)
    * [Lowest Common Ancestor](Lowest Common Ancestor.md)
