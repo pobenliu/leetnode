@@ -152,6 +152,8 @@ public class Solution {
 
 基本原则：用递归可以解决的问题，改用非递归的方法解决，一般都需要使用栈，来模拟递归解法内存中使用的栈操作。
 
+##### 方法一：分层入栈
+
 实现步骤：
 
 - 根结点非空，将根结点 `root` 入栈。
@@ -208,6 +210,57 @@ public class Solution {
             }
             if (node.left != null) {
                 stack.push(node.left);
+            }
+        }
+        return result;
+    }
+}
+```
+
+##### 方法二
+
+实现步骤：
+
+- 访问结点 `node` ，并将其入栈。若其左儿子非空，将左儿子置为当前结点，重复上述步骤，直至遇到空结点。
+- 取栈顶结点并出栈，将栈顶结点右儿子置为当前结点，重复步骤一。
+- 当前结点为空且栈为空，遍历结束。
+
+Java 实现
+
+```java
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+public class Solution {
+    /**
+     * @param root: The root of binary tree.
+     * @return: Preorder in ArrayList which contains node values.
+     */
+    public ArrayList<Integer> preorderTraversal(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        if (root == null) {
+            return result;
+        }
+        
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode node = root;
+        while (!stack.empty() || node != null) {
+            while (node != null) {
+                result.add(node.val);
+                stack.push(node);
+                node = node.left;
+            }
+            if (!stack.empty()) {
+                node = stack.pop();
+                node = node.right;
             }
         }
         return result;
