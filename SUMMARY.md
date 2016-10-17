@@ -24,13 +24,13 @@
    * [Binary Tree Postorder Traversal](Binary Tree Postorder Traversal.md)
    * [Binary Tree Inorder Traversal](Binary Tree Inorder Traversal.md)
    * [Maximum Depth of Binary Tree](Maximum Depth of Binary Tree.md)
+   * Minimum Depth of Binary Tree
    * [Balanced Binary Tree](Balanced Binary Tree.md)
    * [Binary Tree Maximum Path Sum](Binary Tree Maximum Path Sum.md)
    * [Lowest Common Ancestor](Lowest Common Ancestor.md)
    * [Binary Tree Level Order Traversal](Binary Tree Level Order Traversal.md)
    * [Binary Tree Level Order Traversal II](Binary Tree Level Order Traversal II.md)
    * [Binary Tree Zigzag Level Order Traversal](Binary Tree Zigzag Level Order Traversal.md)
-   * Minimum Depth of Binary Tree
 * Binary Search Tree
    * [Validate Binary Search Tree](Validate Binary Search Tree.md)
    * [Insert Node in a Binary Search Tree](Insert Node in a Binary Search Tree.md)
