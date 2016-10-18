@@ -4,7 +4,8 @@ Binary Tree Zigzag Level Order Traversal ( [leetcode]() [lintcode](http://www.li
 
 ```
 Description
-Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
+Given a binary tree, return the zigzag level order traversal of its nodes' values. 
+(ie, from left to right, then right to left for the next level and alternate between).
 
 Example
 Given binary tree {3,9,20,#,#,15,7},
@@ -29,8 +30,6 @@ return its zigzag level order traversal as:
 #### 一、BFS（单队列）
 
 和题目  Binary Tree Level Order Traversal 相比，不同在于相邻层结点的排列顺序相反，那么只需要设置一个标志，每到下一层时反转结点顺序即可。
-
-
 
 Java 实现
 
@@ -98,7 +97,7 @@ public class Solution {
 
 #### 二、BFS（两个栈）
 
-也可以使用两个栈来实现，这里面的入栈顺序有一些小 trick ，如果不熟悉，不太建议使用。
+也可以使用两个栈来实现，这里面的入栈顺序有一些小 trick。
 
 Java 实现
 
@@ -172,8 +171,6 @@ public class Solution {
     }
 }
 ```
-
-
 
 
 
