@@ -36,7 +36,7 @@
    * [Insert Node in a Binary Search Tree](Insert Node in a Binary Search Tree.md)
    * [Search Range in Binary Search Tree](Search Range in Binary Search Tree.md)
    * [Remove Node in Binary Search Tree](Remove Node in Binary Search Tree.md)
-   * Binary Search Tree Iterator
+   * [Binary Search Tree Iterator](Binary Search Tree Iterator.md)
 * Linked List
    * [Remove Duplicates from Sorted List](Remove Duplicates from Sorted List.md)
    * [Remove Duplicates from Sorted List II](Remove Duplicates from Sorted List II.md)
