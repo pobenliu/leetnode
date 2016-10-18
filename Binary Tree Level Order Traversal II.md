@@ -4,7 +4,8 @@
 
 ```
 Description
-Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).
+Given a binary tree, return the bottom-up level order traversal of its nodes' values. 
+(ie, from left to right, level by level from leaf to root).
 
 Example
 Given binary tree {3,9,20,#,#,15,7},
@@ -26,11 +27,9 @@ return its bottom-up level order traversal as:
 
 ### 解题思路
 
-一、BFS
+#### 一、BFS
 
 参考 Binary Tree Level Order Traversal ，最后结果反转一下即可。
-
-
 
 Java 实现
 
@@ -88,8 +87,6 @@ public class Solution {
     
 }
 ```
-
-
 
 
 
