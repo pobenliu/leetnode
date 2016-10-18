@@ -1,4 +1,4 @@
-#  Binary Tree Maximum Path Sum
+# Binary Tree Maximum Path Sum
 
  Binary Tree Maximum Path Sum ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/binary-tree-maximum-path-sum/) )
 
@@ -15,8 +15,6 @@ Given the below binary tree:
 return 6.
 ```
 
-注：一个小疑问，{2,#,4,#,-2,3,4,-6,6} 如果表示成树是什么？
-
 
 
 ### 解题思路
@@ -25,18 +23,23 @@ return 6.
 
 首先将题目简化，如果是求从根结点出发的最大路径长度，那么直接使用递归法即可：
 
-- 求解左子树的最大路径长度
-- 求解左子树的最大路径长度
+- 求左子树的最大路径长度。
+- 求左子树的最大路径长度。
 - 取以上两者的最大值加上当前根结点数值，即为当前根结点的最大路径长度。
 
-现在求解任意结点出发的最大路径，与简化情况相比，多了一种情况：跨越根结点的路径，这里的根结点不一定是整棵树的根结点，也可能只存在于左子树、或右子树。除了比较左、右子树的最大路径长度，还需要比较增加了根结点之后的总路径长度。
+现在求解任意结点出发的最大路径，与上述情况相比，多了一种情况：跨越根结点的路径，这里的根结点不一定是整棵树的根结点，也可能只存在于左子树、或右子树。除了比较左、右子树的最大路径长度，还需要比较增加了根结点之后的总路径长度。
 
-所以递归函数需要保存两个参数：子树的最大路径长度、子树中跨越“根结点”路径的最大长度
+所以递归函数需要保存两个信息：子树的最大路径长度、子树中跨越“根结点”路径的最大长度
 
-**算法复杂度**
+##### 算法复杂度
 
-- 时间复杂度：每个结点遍历一遍，每个结点的操作是常数个，所以时间复杂度是`O(n)`
-- 空间复杂度：使用了常数个辅助变量保存参数，空间复杂度为`O(1)`
+- 时间复杂度：每个结点遍历一遍，每个结点的操作是常数个，所以时间复杂度是 `O(n)`。
+- 空间复杂度：使用常数个辅助变量保存参数，空间复杂度为 `O(1)`。
+
+注意：
+
+> 1. 题目中未明确说明结点值的正负，所以要考虑结点值为负的情况，一个典型的输入是只含一个结点{-1}。那么 `singlePath` 的值可能为负，这种情况我们可以直接舍弃该子树，认为 `singlePath` 为 `0`。
+> 2. 关于空结点 singlePath 和 maxPath 的初始化取值，可以从实际意义上理解。目前感觉还讲不清楚，可参考方法一和方法二具体实现。
 
 Java 实现：
 
@@ -60,7 +63,7 @@ public class Solution {
      */
     private class ResultType {
         // singlePath：从root往下走到任意点的最大路径值，这条路径可以不包含任何点
-        // maxPath：从树中任意到任意点的最大路径，这条路径至少包含一个点
+        // maxPath：从树中任意点到任意点的最大路径，这条路径至少包含一个点
         int singlePath, maxPath;
         ResultType (int singlePath, int maxPath) {
             this.singlePath = singlePath;
@@ -69,7 +72,6 @@ public class Solution {
     } 
      
     public int maxPathSum(TreeNode root) {
-        // write your code here
         ResultType result = helper(root);
         return result.maxPath;
     }
@@ -99,11 +101,9 @@ public class Solution {
 
 
 
-#### 二、分治法v2.0
+#### 二、分治法 II
 
-和解法一类似，具体操作上有些许区别。暂时还不是很清楚这么做有什么好处。
-
-
+和解法一类似，具体操作上有些区别。暂时还不是很清楚这么做有什么好处。
 
 Java 实现
 
@@ -122,7 +122,12 @@ public class Solution {
             this.maxPath = maxPath;
         }
     }
-
+  
+    public int maxPathSum(TreeNode root) {
+        ResultType result = helper(root);
+        return result.maxPath;
+    }
+  
     private ResultType helper(TreeNode root) {
         if (root == null) {
             return new ResultType(Integer.MIN_VALUE, Integer.MIN_VALUE);
@@ -145,18 +150,8 @@ public class Solution {
 
         return new ResultType(singlePath, maxPath);
     }
-
-    public int maxPathSum(TreeNode root) {
-        ResultType result = helper(root);
-        return result.maxPath;
-    }
-
 }
 ```
-
-
-
-
 
 
 
