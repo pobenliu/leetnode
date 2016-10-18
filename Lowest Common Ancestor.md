@@ -1,10 +1,11 @@
-#  Lowest Common Ancestor
+# Lowest Common Ancestor
 
 Lowest Common Ancestor ( [leetcode]() [lindcode](http://www.lintcode.com/en/problem/lowest-common-ancestor/) )
 
 ```
 Description
-Given the root and two nodes in a Binary Tree. Find the lowest common ancestor(LCA) of the two nodes.
+Given the root and two nodes in a Binary Tree. 
+Find the lowest common ancestor(LCA) of the two nodes.
 The lowest common ancestor is the node with largest depth which is the ancestor of both nodes.
 
 Notice
@@ -28,17 +29,17 @@ LCA(6, 7) = 7
 
 #### 一、分治法
 
-在二叉树中寻找结点 A 和 B 的 LCA ：
+在二叉树中寻找结点 `A` 和 `B` 的 `LCA` ：
 
-- 如果找到了就返回该结点
-- 如果只找到 A，返回 A
-- 如果只找到 B，返回 B
-- 如果都没有找到，就返回 null
+- 如果左右子树都有返回值，说明当前结点就是 `LCA`，直接返回。
+- 如果只找到 `A`，返回 `A`。
+- 如果只找到 `B`，返回 `B`。
+- 如果都没有找到，就返回 `null`。
 
 **算法复杂度**
 
-- 时间复杂度：每个结点遍历一遍，每个结点的操作是常数个，所以时间复杂度是`O(n)`
-- 空间复杂度：使用了常数个辅助变量保存参数，空间复杂度为`O(1)`
+- 时间复杂度：每个结点遍历一遍，每个结点的操作是常数个，所以时间复杂度是 `O(n)`。
+- 空间复杂度：使用了常数个辅助变量保存参数，空间复杂度为 `O(1)`。
 
 Java 实现：
 
@@ -61,7 +62,6 @@ public class Solution {
      * @return: Return the least common ancestor(LCA) of the two nodes.
      */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode A, TreeNode B) {
-        // write your code here
         if (root == null || root == A || root == B) {
             return root;
         }
@@ -88,9 +88,6 @@ public class Solution {
 
 
 
-
-
 ### 参考
 
 1. [Lowest Common Ancestor | 九章算法](http://www.jiuzhang.com/solutions/lowest-common-ancestor/)
-
