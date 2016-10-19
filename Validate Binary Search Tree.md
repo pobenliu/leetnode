@@ -28,7 +28,11 @@ The above binary tree is serialized as {2,1,4,#,#,3,5} (in level order).
 
 #### 一、分治法
 
+在判断时需要三个信息：子树是否平衡，子树的最大值，子树的最小值。需要新建一个类型存储这三种信息。
 
+##### 易错点
+
+> 1. 在判断当前根结点和右子树的最小值时，考虑到空结点的最小值初始化为 Integer.MAX_VALUE，为了防止结点的值等于 Integer.MAX_VALUE，要增加右子树是否为空的判断。做了两遍都犯了这个错误。
 
 Java 实现
 
@@ -60,8 +64,7 @@ public class Solution {
     }
     
     public boolean isValidBST(TreeNode root) {
-        // write your code here
-        
+
         ResultType result = helper(root);
         return result.isBST;
     }
@@ -89,73 +92,6 @@ public class Solution {
     }
 }
 ```
-
-
-
-附：自己第一次做的答案，这里面有一个 bug，记录下来提醒自己。
-
-比如左右儿子为空的一个结点，其取值可能等于 Integer.MAX_VALUE ，此时不满足`root.val < right.minValue` ，但是，单结点是BST。
-
-Java 实现
-
-```java
-/**
- * Definition of TreeNode:
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
- * }
- */
-public class Solution {
-    /**
-     * @param root: The root of binary tree.
-     * @return: True if the binary tree is BST, or false
-     */
-    private class ResultType {
-        boolean isBST;
-        int maxValue, minValue;
-        ResultType (boolean isBST, int maxValue, int minValue) {
-            this.isBST = isBST;
-            this.maxValue = maxValue;
-            this.minValue = minValue;
-        }
-    }
-    
-    public boolean isValidBST(TreeNode root) {
-        // write your code here
-        
-        ResultType result = helper(root);
-        return result.isBST;
-    }
-    
-    private ResultType helper (TreeNode root) {
-        ResultType curr = new ResultType(true, Integer.MIN_VALUE, Integer.MAX_VALUE);
-        if (root == null) {
-            return curr;
-        }
-        
-        ResultType left = helper(root.left);
-        ResultType right = helper(root.right);
-        // 当root.right为根结点，root.val == Integer.MAX_VALUE 时，此时应返回true，但是当前实现未考虑此问题
-        if (left.isBST && right.isBST && (root.val > left.maxValue && root.val < right.minValue)) {
-            curr.isBST = true;
-        } else {
-            curr.isBST = false;
-            return curr;
-        }
-        
-        curr.maxValue = Math.max(root.val, right.maxValue);
-        curr.minValue = Math.min(root.val, left.minValue);
-        return curr;
-    }
-}
-```
-
-
 
 
 
