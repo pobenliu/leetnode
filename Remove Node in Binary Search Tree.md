@@ -1,10 +1,13 @@
-#  Remove Node in Binary Search Tree
+# Remove Node in Binary Search Tree
 
  Remove Node in Binary Search Tree ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/remove-node-in-binary-search-tree/) )
 
 ```
 Description
-Given a root of Binary Search Tree with unique value for each node. Remove the node with given value. If there is no such a node with given value in the binary search tree, do nothing. You should keep the tree still a binary search tree after removal.
+Given a root of Binary Search Tree with unique value for each node. 
+Remove the node with given value. 
+If there is no such a node with given value in the binary search tree, do nothing. 
+You should keep the tree still a binary search tree after removal.
 
 Example
 Given binary search tree:
@@ -36,8 +39,8 @@ or
 
 大的步骤分为2步：
 
-- 找到需要删除的结点
-- 如果结点存在，删除该结点
+- 找到需要删除的结点。
+- 如果结点存在，删除该结点。
 
 关于查找算法，第一反应就是递归算法，不过涉及删除操作，所以需要记录当前结点的父结点。
 
@@ -53,7 +56,7 @@ or
 
 2. 只有一个儿子结点：
 
-   只有左结点或右结点
+   只有左结点或右结点。
 
    此时也比较简单，将该结点的父结点的儿子指向其儿子结点即可。
 
@@ -74,8 +77,6 @@ or
    ![](http://ww4.sinaimg.cn/mw690/600e6311jw1f7d5m7fpbbj20fa08cdg2.jpg)
 
    ![](http://ww3.sinaimg.cn/mw690/600e6311jw1f7d5m7p1paj20fa08caa7.jpg)
-
-
 
 Java 实现
 
@@ -98,7 +99,6 @@ public class Solution {
      * @return: The root of the binary search tree after removal.
      */
     public TreeNode removeNode(TreeNode root, int value) {
-        // write your code here
         if (root == null) {
             return root;
         } else {
@@ -135,8 +135,7 @@ public class Solution {
             if (root.left != null && root.right != null) {
                 root.val = minValue(root.right);
                 remove(root.right, root.val, root);
-            } else if (parent.left == root) {
-                // 要删除结点只有一个子树，需要对父结点进行操作
+            } else if (parent.left == root) {  // 要删除结点只有一个子树，需要对父结点进行操作
                 parent.left = (root.left != null) ? root.left : root.right;
             } else if (parent.right == root) {
                 parent.right = (root.left != null) ? root.left : root.right;
@@ -157,8 +156,6 @@ public class Solution {
 
 
 
-
-
 ### 参考
 
-1. [Binary search tree. Removing a node](http://www.algolist.net/Data_structures/Binary_search_tree/Removal)
+1. [Binary search tree. Removing a node | Algorithms and Data Structures](http://www.algolist.net/Data_structures/Binary_search_tree/Removal)
