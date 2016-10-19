@@ -1,10 +1,11 @@
-#  Insert Node in a Binary Search Tree
+# Insert Node in a Binary Search Tree
 
  Insert Node in a Binary Search Tree ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/insert-node-in-a-binary-search-tree/) )
 
 ```
 Description
-Given a binary search tree and a new tree node, insert the node into the tree. You should keep the tree still be a valid binary search tree.
+Given a binary search tree and a new tree node, insert the node into the tree. 
+You should keep the tree still be a valid binary search tree.
 
 Notice
 You can assume there is no duplicate values in this tree + node.
@@ -27,7 +28,9 @@ Can you do it without recursion?
 
 #### 一、递归法
 
+注意：
 
+> 1. 在遍历二叉树时，有返回值的递归函数的使用方法。
 
 Java 实现
 
@@ -50,7 +53,6 @@ public class Solution {
      * @return: The root of the new binary search tree.
      */
     public TreeNode insertNode(TreeNode root, TreeNode node) {
-        // write your code here
         if (root == null) {
             return node;
         }
@@ -67,11 +69,7 @@ public class Solution {
 
 
 
-
-
 #### 二、非递归法
-
-
 
 Java 实现
 
