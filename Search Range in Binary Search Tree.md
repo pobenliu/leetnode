@@ -5,7 +5,8 @@
 ```
 Description
 Given two values k1 and k2 (where k1 < k2) and a root pointer to a Binary Search Tree. 
-Find all the keys of tree in range k1 to k2. i.e. print all x such that k1<=x<=k2 and x is a key of given BST. 
+Find all the keys of tree in range k1 to k2. 
+i.e. print all x such that k1<=x<=k2 and x is a key of given BST. 
 Return all the keys in ascending order.
 
 Example
@@ -24,8 +25,6 @@ If k1 = 10 and k2 = 22, then your function should return [12, 20, 22].
 #### 一、DFS
 
 二叉搜索树的中序遍历是升序，根据题目要求，范围内的取值按升序排列，可以对 BST 进行中序 DFS ，并对遍历到的结点值进行判断，满足大小范围加入数组即可。
-
-
 
 Java实现 v1 ：将 `ArrayList<Integer> results` 作为一个参数传递
 
@@ -135,7 +134,56 @@ public class Solution {
 } 
 ```
 
+#### 二、迭代法
 
+参考二叉树中序遍历的迭代实现。注意只能对根结点大于 `k2` 的部分才能剪枝。
+
+Java 实现
+
+```java
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+public class Solution {
+    /**
+     * @param root: The root of the binary search tree.
+     * @param k1 and k2: range k1 to k2.
+     * @return: Return all keys that k1<=key<=k2 in ascending order.
+     */
+    public ArrayList<Integer> searchRange(TreeNode root, int k1, int k2) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        if (root == null) {
+            return result;
+        }
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode node = root;
+        
+        while (!stack.isEmpty() || node != null) {
+            if (node != null) {
+                stack.push(node);
+                node = node.left;
+            } else {
+                node = stack.pop();
+                if (node.val >= k1 && node.val <= k2) {
+                    result.add(node.val);
+                } else if (node.val > k2) {
+                    break;
+                }
+                node = node.right;
+            }
+        }
+        return result;
+    }
+}
+```
 
 
 
