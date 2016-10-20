@@ -1,10 +1,11 @@
 # Partition List
 
-Partition List ( [leetcode]() [lintcode]() )
+Partition List ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/partition-list/#) )
 
 ```
 Description
-Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
+Given a linked list and a value x, 
+partition it such that all nodes less than x come before nodes greater than or equal to x.
 You should preserve the original relative order of the nodes in each of the two partitions.
 
 Example
@@ -16,12 +17,14 @@ return 1->2->2->4->3->5->null.
 
 ### 解题思路
 
-- 新建两个临时链表，表头使用 dummy node （初始化为 `new ListNode(0)`）
-  - 小于 x 的结点，放在 left 链表
-  - 大于 x 的结点，放在 right 链表
-- 合并两个临时链表，将 right 链表挂在 left 链表尾部，并**将 right 链表尾结点指向 null**
+- 新建两个临时链表，表头使用 `dummy node` （初始化为 `new ListNode(0)`）。
+  - 小于 `x` 的结点，放在 `left` 链表。
+  - 大于 `x` 的结点，放在 `right` 链表。
+- 合并两个临时链表，将 `right` 链表挂在 `left` 链表尾部，并**将 `right` 链表尾结点指向 `null`**。
 
+易错点：
 
+> 1. `ListNode left = leftDummy = new ListNode(0);` 这种方式是不对的，原因暂时不清楚，应该是和Java语言特性有关。
 
 Java 实现
 
@@ -44,7 +47,6 @@ public class Solution {
      * @return: a ListNode 
      */
     public ListNode partition(ListNode head, int x) {
-        // write your code here
         if (head == null) {
             return null;
         }
@@ -71,12 +73,7 @@ public class Solution {
         return leftDummy.next;
     }
 }
-
 ```
-
-注：
-
-`ListNode left = leftDummy = new ListNode(0);` 这种方式是不对的，原因暂时不清楚，应该是和Java语言特性有关。
 
 
 
