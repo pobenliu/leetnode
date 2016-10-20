@@ -1,4 +1,4 @@
-#  Reverse Linked List
+# Reverse Linked List
 
  Reverse Linked List ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/reverse-linked-list/#) )  
 
@@ -17,7 +17,7 @@ Reverse it in-place and in one-pass
 
 ### 解题思路
 
-这里要注意一点，就是尾结点的 next 是 null ，利用这一点可以简化操作。
+这里要注意一点，就是尾结点的 `next` 是 `null`，利用这一点可以简化操作。
 
 Java 实现
 
@@ -39,7 +39,10 @@ public class Solution {
      * @return: The new head of reversed linked list.
      */
     public ListNode reverse(ListNode head) {
-        // write your code here
+	    if (head == null || head.next == null) {
+            return head;
+        }
+      
         ListNode prev = null;
         while (head != null) {
             ListNode temp = head.next;
@@ -51,7 +54,6 @@ public class Solution {
         return prev;
     }
 }
-
 ```
 
 
