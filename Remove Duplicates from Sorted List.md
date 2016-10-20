@@ -1,4 +1,4 @@
-#  Remove Duplicates from Sorted List
+# Remove Duplicates from Sorted List
 
  Remove Duplicates from Sorted List ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-list/) )
 
@@ -15,11 +15,11 @@ Given 1->1->2->3->3, return 1->2->3.
 
 ### 解题思路
 
-- 比较当前结点值与下一个结点的值，当下一个结点为 null 时（尾结点）停止循环
-  - 如果相等，将当前结点指向其下下一个结点
-  - 如不等，将当前结点指向下一个结点
+- 比较当前结点值与下一个结点的值，当下一个结点为 `null` 时（尾结点）停止循环
+  - 如果相等，将当前结点指向其下下一个结点。
+  - 如不等，将当前结点指向下一个结点。
 
-注意：以上两个判别条件构成一个全集，所以要使用 if … else … 缺少 else 会出现不必要的错误。
+注意：以上两个判别条件构成一个全集，所以要使用 `if … else …` 缺少 `else` 会出现不必要的错误。
 
 Java 实现
 
@@ -41,7 +41,6 @@ public class Solution {
      * @return: ListNode head of linked list
      */
     public static ListNode deleteDuplicates(ListNode head) { 
-        // write your code here
         if (head == null) {
             return null;
         }
@@ -57,10 +56,6 @@ public class Solution {
     }  
 }
 ```
-
-
-
-### 参考
 
 
 
