@@ -52,6 +52,7 @@
    * [Merge k Sorted Lists](Merge k Sorted Lists.md)
    * [Copy List with Random Pointer](Copy List with Random Pointer.md)
    * [Convert Sorted List to Balanced BST](Convert Sorted List to Balanced BST.md)
+   * Delete Node in the Middle of Singly Linked List
 * Dynamic Programming
    * [Triangle](Triangle.md)
    * [Minimum Path Sum](Minimum Path Sum.md)
