@@ -39,7 +39,7 @@
    * [Binary Search Tree Iterator](Binary Search Tree Iterator.md)
 * Linked List
    * [Remove Linked List Elements](Remove Linked List Elements.md)
-   * Delete Node in the Middle of Singly Linked List
+   * [Delete Node in the Middle of Singly Linked List](Delete Node in the Middle of Singly Linked List.md)
    * [Remove Duplicates from Sorted List](Remove Duplicates from Sorted List.md)
    * [Remove Duplicates from Sorted List II](Remove Duplicates from Sorted List II.md)
    * [Add Two Numbers](Add Two Numbers.md)
