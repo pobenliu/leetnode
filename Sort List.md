@@ -23,8 +23,8 @@ Solve it by merge sort & quick sort separately.
 
 **复杂度分析**
 
-- 时间复杂度：归并排序的时间复杂度是 `O(nlogn)` 
-- 空间复杂度：由于使用了栈空间，所以空间复杂度是 `O(logn)` 
+- 时间复杂度：归并排序的时间复杂度是 `O(nlogn)` 。
+- 空间复杂度：由于使用了栈空间，所以空间复杂度是 `O(logn)` 。
 
 Java 实现
 
@@ -95,7 +95,6 @@ public class Solution {
         return dummy.next;
     }
 }
-
 ```
 
 
@@ -211,86 +210,7 @@ public class Solution {
         return head;
     }
 }
-
 ```
-
-
-
-
-
-自己第一次尝试着写的，但是运行到 `if (head == null || head.next == null) {` 和 `ListNode left = sortList(leftHead);` 时会出现报错 `Exception in thread "main" java.lang.StackOverflowError at ` ，暂时还没搞清楚是哪里的错误，先记录下来。
-
-Java 实现
-
-```java
-/**
- * Definition for ListNode.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int val) {
- *         this.val = val;
- *         this.next = null;
- *     }
- * }
- */ 
-public class Solution {
-    /**
-     * @param head: The head of linked list.
-     * @return: You should return the head of the sorted linked list,
-                    using constant space complexity.
-     */
-    public ListNode sortList(ListNode head) {  
-        // 至少要有2个结点
-        if (head == null || head.next == null) {
-            return head;
-        }
-        ListNode part = partition(head);
-        
-        ListNode leftHead = head;
-        ListNode rightHead = part.next;
-        part.next = null;
-        
-        ListNode left = sortList(leftHead);
-        ListNode right = sortList(rightHead);
-        
-        while (left != null) {
-            left = left.next;
-        }
-        left.next = right;
-        return head;
-    }
-    
-    private ListNode partition(ListNode head) {
-        int val = head.val;
-        
-        ListNode leftDummy = new ListNode(0);
-        ListNode left = leftDummy;
-        ListNode rightDummy = new ListNode(0);
-        ListNode right = rightDummy;
-        
-        while (head != null) {
-            if (head.val < val) {
-                left.next = head;
-                left = left.next;
-            } else {
-                right.next = head;
-                right = right.next;
-            }
-            head = head.next;
-        }
-        
-        left.next = rightDummy.next;
-        right.next = null;
-        head = leftDummy.next;
-        return left;
-    }
-    
-}
-
-```
-
-
 
 
 
@@ -298,6 +218,4 @@ public class Solution {
 
 1. [Sort List | 九章算法](http://www.jiuzhang.com/solutions/sort-list/)
 2. [LeetCode: Sort List 解题报告 | Yu's garden](http://www.cnblogs.com/yuzhangcmu/p/4131885.html)
-
-
 
