@@ -18,11 +18,11 @@ Can you do this in-place without altering the nodes' values?
 
 ### 解题思路
 
-- 将链表分为相等的两部分，如果结点为奇数个，左链表个数比右链表个数多1
-- 反转右链表
-- 合并两个链表
+可以分为以下几个步骤实现。
 
-
+- 将链表分为相等的两部分，如果结点为奇数个，左链表个数比右链表个数多 1。
+- 反转右半部分链表。
+- 合并两个链表。
 
 Java 实现
 
@@ -61,8 +61,8 @@ public class Solution {
     
     private ListNode findMedian(ListNode head) {
         ListNode slow = head;
-        ListNode fast = head;
-        while(fast.next != null || fast.next != null && fast.next.next != null) {
+        ListNode fast = head.next;
+        while(fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -70,16 +70,15 @@ public class Solution {
     }
     
     private ListNode reverse(ListNode head) {
-        ListNode dummy = null;
+        ListNode prev = null;
         
-        while(head.next != null) {
+        while(head!= null) {
             ListNode temp = head.next;
-            head.next = dummy;
-            dummy = head;
+            head.next = prev;
+            prev = head;
             head = temp;
         }
-        head.next = dummy;
-        return head;
+        return prev;
     }
     
     private ListNode merge(ListNode left, ListNode right) {
@@ -98,17 +97,12 @@ public class Solution {
             head = head.next;
         }
         
-        while(left != null) {
+        if(left != null) {
             head.next = left;
-            left = left.next;
-            head = head.next;
         }
-        while(right != null) {
+        if(right != null) {
             head.next = right;
-            right = right.next;
-            head = head.next;
         }
-        
         return dummy.next;
     }
 }
