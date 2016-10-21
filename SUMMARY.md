@@ -51,10 +51,10 @@
    * [Reorder List](Reorder List.md)
    * [Linked List Cycle](Linked List Cycle.md)
    * [Linked List Cycle II](Linked List Cycle II.md)
+   * Intersection of Two Linked Lists
    * [Merge k Sorted Lists](Merge k Sorted Lists.md)
    * [Copy List with Random Pointer](Copy List with Random Pointer.md)
    * [Convert Sorted List to Balanced BST](Convert Sorted List to Balanced BST.md)
-   * Intersection of Two Linked Lists
 * Dynamic Programming
    * [Triangle](Triangle.md)
    * [Minimum Path Sum](Minimum Path Sum.md)
