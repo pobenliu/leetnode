@@ -19,14 +19,12 @@ Can you solve it without using extra space?
 
 ### 解题思路
 
-#### 一、快慢指针
+#### 快慢指针
 
-- 判断是否有循环
-  - 如果快指针指向结点或下一个结点为空，说明到达链表末尾，没有循环
-  - 如果快指针等于慢指针，说明存在循环
-- 头指针和慢指针同时移动，当头指针等于慢指针的下一个结点时，为循环开始处（此处省去证明）
-
-
+- 判断是否链表有循环。
+  - 如果快指针遇到空结点，说明到达链表末尾，没有循环。
+  - 如果快指针遇到慢指针，说明存在循环。
+- 在快慢指针相遇后，同时移动头指针和慢指针，当头指针遇到慢指针的下一个结点时，为循环开始处（此处省去证明）。
 
 Java 实现
 
@@ -72,7 +70,6 @@ public class Solution {
         return head;
     }
 }
-
 ```
 
 
@@ -80,8 +77,3 @@ public class Solution {
 ### 参考
 
 1. [Linked List Cycle II | 九章算法](http://www.jiuzhang.com/solutions/linked-list-cycle-ii/) 
-
-
-
-
-
