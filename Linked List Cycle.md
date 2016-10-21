@@ -18,7 +18,7 @@ Can you solve it without using extra space?
 
 ### 解题思路
 
-#### 一、快慢指针
+#### 快慢指针
 
 - 快指针每次走两步，慢指针每次走一步。
 - 如果两个指针相遇，说明有循环。
