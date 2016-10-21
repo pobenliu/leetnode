@@ -4,7 +4,8 @@
 
 ```
 Description
-Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
+Implement an algorithm to delete a node in the middle of a singly linked list, 
+given only access to that node.
 
 Example
 Given 1->2->3->4, and node 3. return 1->2->4
