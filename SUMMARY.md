@@ -42,6 +42,7 @@
    * [Delete Node in the Middle of Singly Linked List](Delete Node in the Middle of Singly Linked List.md)
    * [Remove Duplicates from Sorted List](Remove Duplicates from Sorted List.md)
    * [Remove Duplicates from Sorted List II](Remove Duplicates from Sorted List II.md)
+   * Merge Two Sorted Lists
    * [Add Two Numbers](Add Two Numbers.md)
    * [Reverse Linked List](Reverse Linked List.md)
    * [Reverse Linked List II](Reverse Linked List II.md)
@@ -53,7 +54,6 @@
    * [Merge k Sorted Lists](Merge k Sorted Lists.md)
    * [Copy List with Random Pointer](Copy List with Random Pointer.md)
    * [Convert Sorted List to Balanced BST](Convert Sorted List to Balanced BST.md)
-   * Merge Two Sorted Lists
 * Dynamic Programming
    * [Triangle](Triangle.md)
    * [Minimum Path Sum](Minimum Path Sum.md)
