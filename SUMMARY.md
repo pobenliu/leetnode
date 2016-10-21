@@ -38,6 +38,7 @@
    * [Remove Node in Binary Search Tree](Remove Node in Binary Search Tree.md)
    * [Binary Search Tree Iterator](Binary Search Tree Iterator.md)
 * Linked List
+   * Delete Node in the Middle of Singly Linked List
    * [Remove Linked List Elements](Remove Linked List Elements.md)
    * [Remove Duplicates from Sorted List](Remove Duplicates from Sorted List.md)
    * [Remove Duplicates from Sorted List II](Remove Duplicates from Sorted List II.md)
@@ -52,7 +53,6 @@
    * [Merge k Sorted Lists](Merge k Sorted Lists.md)
    * [Copy List with Random Pointer](Copy List with Random Pointer.md)
    * [Convert Sorted List to Balanced BST](Convert Sorted List to Balanced BST.md)
-   * Delete Node in the Middle of Singly Linked List
 * Dynamic Programming
    * [Triangle](Triangle.md)
    * [Minimum Path Sum](Minimum Path Sum.md)
