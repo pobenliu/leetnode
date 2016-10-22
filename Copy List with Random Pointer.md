@@ -4,7 +4,8 @@
 
 ```
 Description
-A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+A linked list is given such that each node contains an additional random pointer 
+which could point to any node in the list or null.
 Return a deep copy of the list.
 
 Example
@@ -25,20 +26,20 @@ Could you solve it with O(1) space?
 
 实现逻辑：
 
-- 复制 `next` 指针关系
-  - 原链表的当前结点不在哈希表中
+- 复制 `next` 指针关系。
+  - 原链表的当前结点不在哈希表中。
     - 新建结点，拷贝结点值。
-    - 将原始链表结点（`Key`）和新建结点（`Value`）存放在哈希表中
-  - 原链表当前结点在哈希表中（之前已经作为 `random` 指针指向结点被存储）
-    - 指向该结点（`Key`）对应的（`Value`）结点
-  - 将新建结点放入新建链表中
-- 复制 `random` 指针关系
-  - 原链表结点的 `random` 指针不为空
-    - `random` 所指结点在哈希表中
-      - 将对应复制结点的 `random` 指针指向哈希表中原始结点 `random` 指向结点的复制结点
-    - `random` 所指结点不在哈希表中
-      - 新建 `random` 指向结点，将原始结点、复制结点 `random` 指向结点对放入哈希表
-  - 准备处理下一个结点
+    - 将原始链表结点（`Key`）和新建结点（`Value`）存放在哈希表中。
+  - 原链表当前结点在哈希表中（之前已经作为 `random` 指针指向结点被存储）。
+    - 指向该结点（`Key`）对应的（`Value`）结点。
+  - 将新建结点放入新建链表中。
+- 复制 `random` 指针关系。
+  - 原链表结点的 `random` 指针不为空。
+    - `random` 所指结点在哈希表中。
+      - 将对应复制结点的 `random` 指针指向哈希表中原始结点 `random` 指向结点的复制结点。
+    - `random` 所指结点不在哈希表中。
+      - 新建 `random` 指向结点，将原始结点、复制结点 `random` 指向结点对放入哈希表。
+  - 准备处理下一个结点。
 
 **算法复杂度**
 
@@ -104,13 +105,13 @@ public class Solution {
 
 #### 二、复制链表
 
-- 在原链表基础上复制结点
-  - 利用 `next` 指针，在原链表每个结点后面建立复制结点（同时复制 `value` 值， `next` 指针和 `random` 指针）。
-- 调整 `random` 指针关系
-  - 将复制结点的 `random` 指针指向相应的复制结点
-- 拆分链表
+- 在原链表基础上复制结点。
+  - 利用 `next` 指针，在原链表每个结点后面建立复制结点（同时复制 `value` 值， `next` 指针）。
+- 调整 `random` 指针关系。
+  - 将复制结点的 `random` 指针指向相应的复制结点。
+- 拆分链表。
 
-以图示说明（下面的图来自参考链接2中的解释）
+以图示说明（下面的图来自参考链接 2 中的解释）
 
 ```
 比如链表是
@@ -138,8 +139,12 @@ public class Solution {
 
 **算法复杂度**
 
-- 时间复杂度：`O(n)`
-- 空间复杂度：`O(1)` 【疑问：复制结点也占用了O(n)的空间，为何空间复杂度为O(1)】
+- 时间复杂度：`O(n)` 。
+- 空间复杂度：`O(1)` 。【疑问：复制结点也占用了O(n)的空间，为何空间复杂度为O(1)】
+
+##### 易错点
+
+> 1. 在 `copyNext, copyRandom` 函数中 `head` 是局部变量，不会对 `copyRandomList` 中的 `head` 变量产生影响，所以可以把 `head` 当作局部变量使用；考虑到 `Java` 中函数调用的机制，这两个函数却改变了链表的结点内容，所以无需返回值。【注】受限于对 `Java` 语言的理解，目前还不能解释得很清楚。
 
 Java 实现
 
@@ -158,43 +163,42 @@ public class Solution {
      * @return: A new head of a deep copy of the list.
      */
     public RandomListNode copyRandomList(RandomListNode head) {
-        // write your code here
-        if(head == null) {
+        if (head == null) {
             return null;
         }
+        
         copyNext(head);
         copyRandom(head);
-        return splitList(head);
+        return split(head);
     }
     
-    private void copyNext(RandomListNode head) {
-        while(head != null) {
+    private void copyNext (RandomListNode head) {
+        while (head != null) {
             RandomListNode newNode = new RandomListNode(head.label);
-            newNode.random = head.random;
             newNode.next = head.next;
             head.next = newNode;
             head = head.next.next;
         }
     }
     
-    private void copyRandom(RandomListNode head) {
-        while(head != null) {
-            if(head.next.random != null) {
-                head.next.random = head.random.next;   // 很巧妙
+    private void copyRandom (RandomListNode head) {
+        while (head != null) {
+            if (head.random != null) {
+                head.next.random = head.random.next;
             }
             head = head.next.next;
         }
     }
-
-    private RandomListNode splitList(RandomListNode head) {
+    
+    private RandomListNode split (RandomListNode head) {
         RandomListNode newHead = head.next;
-        while(head != null) {
-            RandomListNode temp = head.next;
-            head.next = temp.next;
-            head = head.next;
-            if(temp.next != null) {
-                temp.next = temp.next.next;
+        while (head != null) {
+            RandomListNode tmp = head.next;
+            head.next = head.next.next;
+            if (tmp.next != null) {
+                tmp.next = tmp.next.next;
             }
+            head = head.next;
         }
         return newHead;
     }
@@ -210,4 +214,3 @@ public class Solution {
 1. [Copy List with Random Pointer | 九章算法](http://www.jiuzhang.com/solutions/copy-list-with-random-pointer/)
 2. [Copy List with Random Pointer | LeetCode题解](https://siddontang.gitbooks.io/leetcode-solution/content/linked_list/copy_list_with_random_pointer.html)
 3. [Copy List with Random Pointer | 数据结构与算法/leetcode/lintcode题解](https://algorithm.yuanbin.me/zh-hans/index.html)
-
