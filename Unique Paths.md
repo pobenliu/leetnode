@@ -1,11 +1,13 @@
 # Unique Paths
 
-Unique Paths  ( [leetcode]()  [lintcode]() )
+Unique Paths  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/unique-paths/#) )
 
 ```
 Description
 A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
-The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+The robot can only move either down or right at any point in time. 
+The robot is trying to reach the bottom-right corner of the grid 
+(marked 'Finish' in the diagram below).
 How many possible unique paths are there?
 
 Notice
@@ -19,16 +21,17 @@ Example
 | 3,1 |                             | 3,7 |
 
 Above is a 3 x 7 grid. How many possible unique paths are there?
-
 ```
 
 
 
 ### 解题思路
 
+求方案的总数量，属于矩阵类型的动态规划。
+
 1. 定义状态：题目求解的是到达路径数量，那么可以定义 `f[i][j]` 为从起点 `[0][0]` 走到 `[i][j]` 的路径数量。
 2. 定义状态转移函数：画图观察，走到 `[i][j]` 的之前一步可以是 `[i - 1][j]` 或 `[i][j - 1]` ，所以有 `f[i][j] = f[i - 1][j] + f[i][j - 1]` 。
-3. 定义起点：从矩阵的左上角开始，所以起点是 `[0][0]` 。同时，边界序列，如最左边的一排，考虑到每个点都只能从上一行的点走到，所以初始化为 1。
+3. 定义起点：从矩阵的左上角开始，所以起点是 `[0][0]` 。同时，在第一行或第一列，机器人都只有一种走法，所以初始化为 1。
 4. 定义终点：也就是最终的结果，右下角位置。
 
 Java 实现
@@ -40,7 +43,6 @@ public class Solution {
      * @return an integer
      */
     public int uniquePaths(int m, int n) {
-        // write your code here 
         if (m == 0 || n == 0) {
             return 0;
         }
