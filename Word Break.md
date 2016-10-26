@@ -27,7 +27,7 @@ Return true because "lintcode" can be break as "lint code".
 
 1. 程序优化：考虑到一个单词的长度是有限的，所以先获取字典集合中单词的最大长度。然后以切分位置的枚举为外循环，单词长度枚举为内循环。
 2. Java 中 `substring(start, end)` 返回的是字符串起始位置是 `start ~ end - 1` 。
-3. 内层循环中变量是单词长度，要注意单词长度和上一个切分字符串长度之间的切换。
+3. 内层循环中变量是单词长度 `wordLen`，对应的状态函数就是 `canBreak[i - wordLen]`。
 
 Java 实现
 
