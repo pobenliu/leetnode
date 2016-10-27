@@ -71,7 +71,7 @@
    * [Edit Distance](Edit Distance.md)
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
-   * House Robber
+   * [House Robber](House Robber.md)
    * [Backpack](Backpack.md)
    * [Backpack II](Backpack II.md)
    * [k Sum](k Sum.md)
