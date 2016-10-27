@@ -32,7 +32,7 @@ O(n2) time or better
 
 易错点：
 
-> 1. 在初始化时，比较 `s1` 和 `s3` 时，为何不能用 `s1.substring(0, i) == s3.substring(0, i)` ？
+> 1. 在初始化时，比较 `s1` 和 `s3` 时，如果要用 substring 函数，需要使用 equals 函数来比较，也即 `s1.substring(0, i).equals(s3.substring(0, i))` 。
 
 Java 实现
 
