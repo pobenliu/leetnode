@@ -72,7 +72,7 @@
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
    * [House Robber](House Robber.md)
-   * Maximal Square
+   * [Maximal Square](Maximal Square.md)
    * [Backpack](Backpack.md)
    * [Backpack II](Backpack II.md)
    * [k Sum](k Sum.md)
