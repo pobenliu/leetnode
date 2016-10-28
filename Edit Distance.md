@@ -16,7 +16,7 @@ You have the following 3 operations permitted on a word:
 Example
 Given word1 = "mart" and word2 = "karma", return 3.
 ```
- 
+
 
 
 ### 解题思路
@@ -86,6 +86,46 @@ public class Solution {
         
         // end
         return f[n][m];
+    }
+}
+```
+
+优化空间（滚动数组）：
+
+观察状态转移函数，`f[i][j]` 由 `f[i - 1][j]` 或 `f[i][j - 1]` 决定，与前 `i - 2` 行无关，所以可利用滚动数组进行优化。
+
+```java
+public class Solution {
+    /**
+     * @param word1 & word2: Two string.
+     * @return: The minimum number of steps.
+     */
+    public int minDistance(String w1, String w2) {
+        if (w1 == null || w2 == null ) {
+            return 0;        
+        }
+        
+        int m = w1.length();
+        int n = w2.length();
+        // status
+        int[][] f = new int[2][n + 1];
+        // initialize
+        for (int i = 0; i <= n; i++) {
+            f[0][i] = i;
+        }
+        
+        for (int i = 1; i <= m; i++) {
+            f[i % 2][0] = i;
+            for (int j = 1; j <= n; j++) {
+                if (w1.charAt(i - 1) == w2.charAt(j - 1)) {
+                    f[i % 2][j] = Math.min(f[(i - 1) % 2][j - 1], Math.min(f[(i - 1) % 2][j], f[i % 2][j - 1]) + 1);
+                } else {
+                    f[i % 2][j] = Math.min(f[(i - 1) % 2][j - 1], Math.min(f[(i - 1) % 2][j], f[i % 2][j - 1])) + 1;
+                }
+            }
+        }
+        
+        return f[m % 2][n];
     }
 }
 ```
