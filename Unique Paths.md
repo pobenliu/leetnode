@@ -72,5 +72,41 @@ public class Solution {
  
 ```
 
+优化空间（滚动数组）：
 
+观察状态转移函数，`sum[i][j]` 由 `sum[i - 1][j]` 或 `sum[i][j - 1]` 决定，与前 `i - 2` 行无关，所以可利用滚动数组进行优化。
+
+```java
+public class Solution {
+    /**
+     * @param n, m: positive integer (1 <= n ,m <= 100)
+     * @return an integer
+     */
+    public int uniquePaths(int m, int n) {
+        if (m == 0 || n == 0) {
+            return 0;
+        }
+        
+        // status
+        int[][] f = new int[2][n];
+        
+        // initialize
+        for (int i = 0; i < 2; i++) {
+            f[i][0] = 1;
+        }
+        for (int i = 1; i < n; i++) {
+            f[0][i] = 1;
+        }
+        
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                f[i % 2][j] = f[(i - 1) % 2][j] + f[i % 2][j - 1];
+            }
+        }
+        
+        return f[(m - 1) % 2][n - 1];
+    }
+}
+
+```
 
