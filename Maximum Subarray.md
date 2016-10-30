@@ -63,7 +63,7 @@ public class Solution {
 
 对前缀和 `sum[i] = nums[0] + nums[1] + … + nums[i]` ，
 
-那么第 `i + 1` 到 `j + 1` 个连续数字的和为 `sum[i … j] = sum[j] - sum[i]` 。
+那么第 `i + 1` 到 `j + 1` 个连续数字的和为 `sum[i … j] = sum[j] - sum[i - 1]` 。
 
 以上是使用前缀和进行解题的基础。
 
