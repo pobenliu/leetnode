@@ -1,4 +1,4 @@
-#  Maximum Subarray
+# Maximum Subarray
 
  Maximum Subarray  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/maximum-subarray/) )
 
@@ -10,7 +10,8 @@ Notice
 The subarray should contain at least one number.
 
 Example
-Given the array [−2,2,−3,4,−1,2,1,−5,3], the contiguous subarray [4,−1,2,1] has the largest sum = 6.
+Given the array [−2,2,−3,4,−1,2,1,−5,3], 
+the contiguous subarray [4,−1,2,1] has the largest sum = 6.
 
 Challenge 
 Can you do it in time complexity O(n)?
@@ -101,4 +102,3 @@ public class Solution {
 1. [[LeetCode] Maximum Subarray | 喜刷刷](http://bangbingsyb.blogspot.jp/2014/11/leetcode-maximum-subarray.html)
 2. [Maximum Subarray | 九章算法](http://www.jiuzhang.com/solutions/maximum-subarray/)
 3. [Maximum Subarray — LeetCode | Code Ganker](http://blog.csdn.net/linhuanmars/article/details/21314059)
-
