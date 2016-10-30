@@ -78,9 +78,9 @@
    * [k Sum](k Sum.md)
    * [Minimum Adjustment Cost](Minimum Adjustment Cost.md)
    * [Maximum Subarray](Maximum Subarray.md)
+   * [Maximum Subarray III](Maximum Subarray III.md)
    * [Maximum Subarray II](Maximum Subarray II.md)
    * Maximum Product Subarray
-   * [Maximum Subarray III](Maximum Subarray III.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
