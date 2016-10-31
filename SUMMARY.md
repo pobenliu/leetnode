@@ -68,6 +68,7 @@
    * [Longest Common Subsequence](Longest Common Subsequence.md)
    * [Longest Common Substring](Longest Common Substring.md)
    * [Longest Increasing Subsequence](Longest Increasing Subsequence.md)
+   * [Longest Increasing Continuous Subsequence](Longest Increasing Continuous Subsequence.md)
    * [Edit Distance](Edit Distance.md)
    * [Distinct Subsequences](Distinct Subsequences.md)
    * [Interleaving String](Interleaving String.md)
@@ -82,7 +83,6 @@
    * [Maximum Subarray II](Maximum Subarray II.md)
    * [Maximum Product Subarray](Maximum Product Subarray.md)
    * [Best Time to Buy and Sell Stock IV](Best Time to Buy and Sell Stock IV.md)
-   * [Longest Increasing Continuous Subsequence](Longest Increasing Continuous Subsequence.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
