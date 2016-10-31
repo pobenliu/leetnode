@@ -82,7 +82,7 @@
    * [Maximum Subarray II](Maximum Subarray II.md)
    * [Maximum Product Subarray](Maximum Product Subarray.md)
    * [Best Time to Buy and Sell Stock IV](Best Time to Buy and Sell Stock IV.md)
-   * Longest Increasing Continuous Subsequence
+   * [Longest Increasing Continuous Subsequence](Longest Increasing Continuous Subsequence.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
