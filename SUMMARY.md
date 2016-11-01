@@ -85,6 +85,7 @@
    * [Best Time to Buy and Sell Stock IV](Best Time to Buy and Sell Stock IV.md)
    * [Longest Increasing Continuous subsequence II](Longest Increasing Continuous subsequence II.md)
    * [Coins in a Line](Coins in a Line.md)
+   * Coins in a Line II
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
