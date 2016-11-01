@@ -57,11 +57,11 @@ public class Solution {
         return sum < 2 * MemorySearch(0, values.length - 1, f, flag, values);
     }
     
-    private int MemorySearch (int left, int right, int[][] f, boolean[][] flag, values) {
+    private int MemorySearch (int left, int right, int[][] f, boolean[][] flag, int[] values) {
         if (flag[left][right]) {
             return f[left][right];
         }
-        f[left][right] = true;
+        flag[left][right] = true;
         if (left > right) {
             f[left][right] = 0;
         } else if (left == right) {
