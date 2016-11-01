@@ -86,7 +86,7 @@
    * [Longest Increasing Continuous subsequence II](Longest Increasing Continuous subsequence II.md)
    * [Coins in a Line](Coins in a Line.md)
    * [Coins in a Line II](Coins in a Line II.md)
-   * Coins in a Line III
+   * [Coins in a Line III](Coins in a Line III.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
