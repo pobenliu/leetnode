@@ -42,7 +42,8 @@ O(n x m) memory is also acceptable if you do not know how to optimize memory.
 易错点：
 
 > 1. 状态函数 `f[][]` 的初始化范围为 `boolean[][] f = new boolean[n + 1][m + 1];` 。
-> 2. 双重循环的起始值，结束值
+> 2. 双重循环的起始值，结束值。
+> 3. `j` 和 `A[i - 1]` 之间的关系，可以等于。
 
 Java 实现
 
