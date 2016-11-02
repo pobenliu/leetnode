@@ -88,7 +88,7 @@
    * [Coins in a Line II](Coins in a Line II.md)
    * [Coins in a Line III](Coins in a Line III.md)
    * [Stone Game](Stone Game.md)
-   * Scramble String
+   * [Scramble String](Scramble String.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
