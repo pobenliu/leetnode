@@ -25,7 +25,7 @@ O(n x m) memory is also acceptable if you do not know how to optimize memory.
 
 ### 解题思路
 
-#### 一、动态规划 
+#### 一、动态规划
 
 1. 定义状态：定义 `f[i][j]` 为 `A` 的前 `i` 个数是否能填满大小为 `j` 的背包。
 2. 定义状态转移函数：对于当前状态 `f[i][j]` ，
@@ -39,11 +39,16 @@ O(n x m) memory is also acceptable if you do not know how to optimize memory.
    - `f[0][0]` 状态为 `true` 。
 4. 定义终点：最终结果即为 `f[n][m]` 。<u>**注：初始化时也需要注意取值范围是数组长度加一。**</u>
 
-易错点：
+易错点： 
 
 > 1. 状态函数 `f[][]` 的初始化范围为 `boolean[][] f = new boolean[n + 1][m + 1];` 。
 > 2. 双重循环的起始值，结束值。
 > 3. `j` 和 `A[i - 1]` 之间的关系，可以等于。
+
+##### 算法复杂度
+
+- 时间复杂度：`O(n*m)`。
+- 空间复杂度：`O(n*m)`。
 
 Java 实现
 
@@ -79,6 +84,49 @@ public class Solution {
             }
         }
         return 0;
+    }
+}
+```
+
+使用滚动数组优化空间，可使空间复杂度降至 `O(m)`。
+
+```java
+public class Solution {
+    /**
+     * @param m: An integer m denotes the size of a backpack
+     * @param A: Given n items with size A[i]
+     * @return: The maximum size
+     */
+    public int backPack(int m, int[] A) {
+        if (m <= 0 || A == null || A.length == 0) {
+            return 0;
+        }
+        
+        int n = A.length;
+        // status
+        boolean[][] f = new boolean[2][m + 1];
+        // initialize
+        f[0][0] = true;
+        for (int i = 1; i <= m; i++) {
+            f[0][i] = false;
+        }
+        
+        for (int i = 1; i <= n; i++) {
+            f[i % 2][0] = true;
+            for (int j = 1; j <= m; j++) {
+                f[i % 2][j] = f[(i - 1) % 2][j] || 
+                                ((A[i-1] <= j) && f[(i - 1) % 2][j - A[i - 1]]);
+            }
+        }
+        
+        int res = 0;
+        for (int i = m; i >= 0; i--) {
+            if(f[n % 2][i]) {
+                res = i;
+                break;
+            }
+        }
+        return res;
     }
 }
 ```
@@ -143,8 +191,6 @@ public class Solution {
 
 1. [Lintcode: Backpack | neverlandly](http://www.cnblogs.com/EdwardLiu/p/4269149.html)
 2. [Backpack | lintcode题解](https://lefttree.gitbooks.io/leetcode/content/dynamicProgramming2/backpack.html)
-
-
 
 
 
