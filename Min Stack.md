@@ -1,4 +1,4 @@
-#  Min Stack
+# Min Stack
 
  Min Stack  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/min-stack/) )
 
@@ -25,6 +25,12 @@ min()   // return 1
 ### 解题思路
 
 题目要求是 `O(1)` 时间的 `min` 操作，对空间复杂度则没有要求，考虑使用两个栈，其中一个栈用作正常用处，另一个栈则同步存储对应的最小值。
+
+注意和栈相关的操作：
+
+> 1. 判断是否相等：`stack.empty()`。
+> 2. 查看栈顶元素：`stack.peek()`。
+> 3. 判断栈顶元素是否相等：`equals()`。
 
 Java 实现
 
@@ -110,7 +116,6 @@ public class MinStack {
         return mins.peek();
     }     
 }
-
 ```
 
 
@@ -118,4 +123,3 @@ public class MinStack {
 ### 参考
 
 1. [Min Stack | 九章算法](http://www.jiuzhang.com/solutions/min-stack/)
-
