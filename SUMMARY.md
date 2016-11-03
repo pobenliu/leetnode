@@ -79,6 +79,7 @@
    * [Backpack III](Backpack III.md)
    * [Backpack IV](Backpack IV.md)
    * [Backpack V](Backpack V .md)
+   * [Backpack VI](Backpack VI.md)
    * [k Sum](k Sum.md)
    * [Minimum Adjustment Cost](Minimum Adjustment Cost.md)
    * [Maximum Subarray](Maximum Subarray.md)
@@ -92,7 +93,6 @@
    * [Coins in a Line III](Coins in a Line III.md)
    * [Stone Game](Stone Game.md)
    * [Scramble String](Scramble String.md)
-   * [Backpack VI](Backpack VI.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
