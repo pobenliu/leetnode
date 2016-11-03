@@ -92,7 +92,7 @@
    * [Coins in a Line III](Coins in a Line III.md)
    * [Stone Game](Stone Game.md)
    * [Scramble String](Scramble String.md)
-   * Backpack VI
+   * [Backpack VI](Backpack VI.md)
 * Data Structure
    * [Min Stack](Min Stack.md)
    * [Implement Queue by Two Stacks](Implement Queue by Two Stacks.md)
