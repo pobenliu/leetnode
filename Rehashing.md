@@ -5,7 +5,8 @@ Rehashing  ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/rehashin
 ```
 Description
 The size of the hash table is not determinate at the very beginning. 
-If the total size of keys is too large (e.g. size >= capacity / 10), we should double the size of the hash table and rehash every keys. 
+If the total size of keys is too large (e.g. size >= capacity / 10), 
+we should double the size of the hash table and rehash every keys. 
 Say you have a hash table looks like below:
 
 size=3, capacity=4
@@ -20,7 +21,8 @@ int hashcode(int key, int capacity) {
     return key % capacity;
 }
 
-here we have three numbers, 9, 14 and 21, where 21 and 9 share the same position as they all have the same hashcode 1 (21 % 4 = 9 % 4 = 1). 
+here we have three numbers, 9, 14 and 21, 
+where 21 and 9 share the same position as they all have the same hashcode 1 (21 % 4 = 9 % 4 = 1). 
 We store them in the hash table by linked list.
 
 rehashing this hash table, double the capacity, you will get:
@@ -47,9 +49,13 @@ return [null, 9->null, null, null, null, 21->null, 14->null, null]
 
 ### 解题思路
 
-依次从原 hash 表中取出结点，并装入扩展后的 hash 表即可。里面涉及链表的操作需要注意，主要是如何向链表中添加结点，这里要分两种情况，当链表为空时，当链表不为空时，此外链表结点的赋值操作也要注意： `newhashTable[j] = new ListNode(hashTable[i].val);` 。
+依次从原 hash 表中取出结点，重新进行 hash 映射，添加到扩展后的 hash 表即可。需要注意，如何向链表中添加结点，这里要分两种情况，当链表为空时，当链表不为空时。此外链表结点的赋值操作也要注意： `newhashTable[j] = new ListNode(hashTable[i].val);` 。
 
+##### 易错点：
 
+> 1. 向链表数组中的一个链表 `result[j]` 中插入结点时，当链表为空时，插入操作需要使用 `result[j] = new ListNode(value)` ；如果先赋值 `ListNode tmp = result[j]`，再添加结点 `tmp = new ListNode(value)`，无法正常添加结点。
+>
+>    当链表非空时，则需要先赋值 `ListNode tmp = result[j]`，在 `tmp.next == null` 时再添加结点 `tmp.next = new ListNode(value)`。如果直接使用 `result[j].next = new ListNode(value)` 赋值在某些测试例会出错。**这部分的具体原理目前还不是很明白。**
 
 Java 实现
 
@@ -71,102 +77,36 @@ public class Solution {
      * @return: A list of The first node of linked list which have twice size
      */    
     public ListNode[] rehashing(ListNode[] hashTable) {
-        // write your code here
         if (hashTable == null || hashTable.length == 0) {
-            return hashTable;
+            return null;
         }
-        
         int len = hashTable.length;
-        int newlen = len * 2;
-        ListNode[] newhashTable = new ListNode[newlen];
-
+        int newLen = len * 2;
+        ListNode[] result = new ListNode[newLen];
+        
         for (int i = 0; i < len; i++) {
-            while (hashTable[i] != null) {
-                // j is the index of newhashTable
-                int j = (hashTable[i].val % newlen + newlen) % newlen;
+            ListNode curt = hashTable[i];
+            while (curt != null) {
+                int j = (curt.val % newLen + newLen) % newLen;
 
-                if (newhashTable[j] == null) {
-                    // attention here for the assignment
-                    newhashTable[j] = new ListNode(hashTable[i].val);
+                if (result[j] == null) {
+                    result[j] = new ListNode(curt.val);
                 } else {
-                    ListNode dummy = newhashTable[j];
-                    while (dummy.next != null ) {
+                    ListNode dummy = result[j];
+                    while (dummy.next != null) {
                         dummy = dummy.next;
                     }
-                        dummy.next = new ListNode(hashTable[i].val);
+                    dummy.next = new ListNode(curt.val);
                 }
                 
-                hashTable[i] = hashTable[i].next;
+                curt = curt.next;
             }
         }
         
-        return newhashTable;
+        return result;
     }
 };
 
-```
-
-
-
-以下实现和上面的实现有细微的差别，但是以下测试例报错，不太清楚是哪里的问题
-
-testcase
-
-```
-[80->null,null,null,null,null,null,null,187->null,null,49->109->null,10->50->-10->null,null,12->null,53->133->153->93->null,null,15->null,36->null,-3->null,118->null,159->139->null]
-```
-
-Java 实现
-
-```java
-/**
- * Definition for ListNode
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
-    /**
-     * @param hashTable: A list of The first node of linked list
-     * @return: A list of The first node of linked list which have twice size
-     */    
-    public ListNode[] rehashing(ListNode[] hashTable) {
-        // write your code here
-        if (hashTable == null || hashTable.length == 0) {
-            return hashTable;
-        }
-        
-        int len = hashTable.length;
-        int newlen = len * 2;
-        ListNode[] newhashTable = new ListNode[newlen];
-
-        for (int i = 0; i < len; i++) {
-            while (hashTable[i] != null) {
-                // j is the index of newhashTable
-                int j = (hashTable[i].val % newlen + newlen) % newlen;
-
-                if (newhashTable[j] == null) {
-                    newhashTable[j] = new ListNode(hashTable[i].val);
-                } else {
-                    // bug here but don't know why
-                    while (newhashTable[j].next != null ) {
-                        newhashTable[j] = newhashTable[j].next;
-                    }
-                        newhashTable[j].next = new ListNode(hashTable[i].val);
-                }
-                
-                hashTable[i] = hashTable[i].next;
-            }
-        }
-        
-        return newhashTable;
-    }
-};
 ```
 
 
