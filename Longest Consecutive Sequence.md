@@ -1,6 +1,6 @@
 # Longest Consecutive Sequence
 
- Longest Consecutive Sequence  ( [leetcode]() [lintcode]() )
+ Longest Consecutive Sequence  ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/longest-consecutive-sequence/#) )
 
 ```
 Description
