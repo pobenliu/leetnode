@@ -31,6 +31,11 @@ Least Recently Used Cache 的基本思想是“最近用到的数据被重用的
 
 ![](http://ww4.sinaimg.cn/mw690/600e6311jw1f9jf243fs3j20im06sgm7.jpg)
 
+##### 易错点
+
+> 1. 双向链表的头尾哨兵结点在初始化时要连在一起。
+> 2. 在涉及删除和添加结点时，要同时对 HashMap 和 LinkedList 进行删除/添加操作。
+
 Java 实现
 
 ```java
