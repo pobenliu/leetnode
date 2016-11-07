@@ -105,7 +105,7 @@
    * [Anagrams](Anagrams.md)
    * [Heapify](Heapify.md)
    * [Word Search II](Word Search II.md)
-   * Data Stream Median
+   * [Data Stream Median](Data Stream Median.md)
 * Math and Bit Manipulation
    * [Single Number](Single Number.md)
    * [Single Number II](Single Number II.md)
