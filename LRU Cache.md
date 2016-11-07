@@ -1,15 +1,17 @@
 # LRU Cache
 
-LRU Cache  ( [leetcode]() [lintcode]() )
+LRU Cache  ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/lru-cache/#) )
 
 ```
 Description
 Design and implement a data structure for Least Recently Used (LRU) cache. 
 It should support the following operations: get and set.
 
-get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+get(key) - Get the value (will always be positive) of the key if the key exists in the cache, 
+otherwise return -1.
 set(key, value) - Set or insert the value if the key is not already present. 
-When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
+When the cache reached its capacity, 
+it should invalidate the least recently used item before inserting a new item.
 ```
 
 
@@ -18,14 +20,16 @@ When the cache reached its capacity, it should invalidate the least recently use
 
 Least Recently Used Cache 的基本思想是“最近用到的数据被重用的概率比较早用到的大得多”。
 
-对于 Cache ，如果要求查找复杂度为 `O(1)` ，那么需要使用 HashMap 保存 key 和 对象映射。
+对于 Cache ，如果要求查找复杂度为 `O(1)` ，那么需要使用 HashMap 保存 key 和 value。
 
 而对于 Cache 的插入和删除操作，也需要复杂度为 `O(1)` ，使用双向链表存储 Cache。从头到尾依次按照从旧到新的顺序存储 Cache ，对于任一结点，如果被访问了，将其移至尾部，这样最近被使用过的内容向链表尾部移动，而未使用内容则向链表头部移动；如 Cache 已满，则删除头部结点（近期未使用），在尾部插入新结点。
 
 用到的两个数据结构：
 
-1. HashMap：保存 key 和对象位置的映射。
+1. HashMap：保存 key 和 value。
 2. Doubly Linked List：保存对象新旧程度的队列。
+
+![](http://ww4.sinaimg.cn/mw690/600e6311jw1f9jf243fs3j20im06sgm7.jpg)
 
 Java 实现
 
@@ -113,5 +117,7 @@ public class Solution {
 2. [[LeetCode] LRU Cache, Solution | 水中的鱼](http://fisherlei.blogspot.jp/2013/11/leetcode-lru-cache-solution.html)
 
 3. [LRU Cache leetcode java | 爱做饭的小莹子](http://www.cnblogs.com/springfor/p/3869393.html)
+
+4. [LeetCode – LRU Cache (Java) | ProgramCreek](http://www.programcreek.com/2013/03/leetcode-lru-cache-java/)
 
    ​
