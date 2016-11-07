@@ -33,7 +33,7 @@ Total run time in O(nlogn).
   - 如果 `maxHeap.size() > minHeap.size()` ，那么将 `median` 放入 `minHeap` ，取出 `maxHeap` 最大值作为当前 `median` 。
   - 如果 `maxHeap.size() + 1 < minHeap.size()` ，那么将 `median` 放入 `maxHeap` ，取出 `minHeap` 最小值作为当前 `median` 。
 
-其中，Java 中的 `PriorityQueue` 默认是最小堆，堆顶元素是最小值，所以处理最大堆时取了负数。
+Java 中的 `PriorityQueue` 默认是最小堆，堆顶元素是最小值，所以处理最大堆时取了负数。
 
 Java 实现
 
@@ -101,38 +101,32 @@ public class Solution {
             return results;
         }
         
-        //left half and the median are stored in the maxHeap. median == maxHeap.peek()
-        //right half of the median are stored in the minHeap.
-        PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>( );//default min heap
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(11 /*default capacity*/, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer x, Integer y) {
-                return y - x;
-            }
-        });
+        Comparator<Integer> revComp = new Comparator<Integer>() {
+            public int compare(Integer left, Integer right) {
+                return right - left;
+            }  
+        };
+        
+        PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>(nums.length);
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(nums.length, revComp);
         
         results[0] = nums[0];
         maxHeap.add(nums[0]);
         
         for (int i = 1; i < nums.length; i++) {
-            int tmp = maxHeap.peek();
-            if (nums[i] > tmp) {
-                minHeap.add(nums[i]);
-            } else {
-                maxHeap.add(nums[i]);
-            }
+            maxHeap.add(nums[i]);
+            minHeap.add(maxHeap.poll());
             
-            //maxHeap.size() == minHeap.size() || maxHeap.size() == minHeap.size() + 1;
-            if (maxHeap.size() > minHeap.size() + 1) {
-                minHeap.add(maxHeap.poll());
-            } else if (maxHeap.size() < minHeap.size()) {
+            if (minHeap.size() > maxHeap.size()) {
                 maxHeap.add(minHeap.poll());
             }
+
             results[i] = maxHeap.peek();
         }
         
         return results;
     }
+    
 }
 ```
 
@@ -143,4 +137,3 @@ public class Solution {
 1. [Data Stream Median | 九章算法](http://www.jiuzhang.com/solutions/median-in-data-stream/)
 2. [lintcode 1: Data Stream Median | 西施豆腐渣](http://blog.csdn.net/xudli/article/details/46389077)
 3. [Data Stream Median – Lintcode Java | WELKIN LAN](http://blog.welkinlan.com/2015/06/26/data-stream-median-lintcode-java/)
-
