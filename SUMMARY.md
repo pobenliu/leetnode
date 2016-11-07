@@ -100,12 +100,12 @@
    * [Max Tree](Max Tree.md)
    * [Rehashing](Rehashing.md)
    * [LRU Cache](LRU Cache.md)
+   * [Data Stream Median](Data Stream Median.md)
    * [Longest Consecutive Sequence](Longest Consecutive Sequence.md)
    * [Subarray Sum](Subarray Sum.md)
    * [Anagrams](Anagrams.md)
    * [Heapify](Heapify.md)
    * [Word Search II](Word Search II.md)
-   * [Data Stream Median](Data Stream Median.md)
 * Math and Bit Manipulation
    * [Single Number](Single Number.md)
    * [Single Number II](Single Number II.md)
