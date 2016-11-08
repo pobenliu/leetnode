@@ -135,7 +135,7 @@
    * [Sort Colors](Sort Colors.md)
    * [Interleaving Positive and Negative Numbers](Interleaving Positive and Negative Numbers.md)
    * [Median](Median.md)
-   * Kth Largest Element
+   * [Kth Largest Element](Kth Largest Element.md)
 * Graph
    * [Clone Graph](Clone Graph.md)
    * [Topological Sorting](Topological Sorting.md)
