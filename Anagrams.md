@@ -26,7 +26,7 @@ What is Anagram?
 - 对每个字符串 `string` 进行排序得到 `string'` 。
 - 然后在 `HashMap` 中存储 `string' <—> List<string>` 。
   - 没有对应排序字符串 `string'` ，新建 `List` ，存储当前配对 。
-  - 存在对应 `string'` ，将原始 string 加入对应链表。
+  - 存在对应 `string'` ，将原始 `string` 加入对应链表。
 - 最后输出所有满足条件的 `anagrams` 。
 
 **算法复杂度**
