@@ -1,4 +1,4 @@
-# Anagrams
+#  
 
 Anagrams  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/anagrams/) )
 
@@ -64,10 +64,9 @@ public class Solution {
             }
         }
         
-        for (Map.Entry<String, List<String>> entry : map.entrySet()) {
-            List<String> list = entry.getValue();
+        for (List<String> list : map.values()) {
             if (list.size() > 1) {
-                results.addAll(list);
+                result.addAll(list);
             }
         }
         
@@ -144,4 +143,3 @@ public class Solution {
 
 1. [Anagrams.java | shawnfan/LintCode](https://github.com/shawnfan/LintCode/blob/master/Java/Anagrams.java)
 2. [Anagrams | 九章算法](http://www.jiuzhang.com/solutions/anagrams/)
-
