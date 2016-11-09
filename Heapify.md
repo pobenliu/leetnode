@@ -1,18 +1,22 @@
 # Heapify
 
-Heapify  ( [leetcode]() [lintcode]() )
+Heapify  ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/heapify/) )
 
 ```
 Description
 Given an integer array, heapify it into a min-heap array.
-For a heap array A, A[0] is the root of heap, and for each A[i], A[i * 2 + 1] is the left child of A[i] and A[i * 2 + 2] is the right child of A[i].
+For a heap array A, A[0] is the root of heap, and for each A[i], 
+A[i * 2 + 1] is the left child of A[i] and A[i * 2 + 2] is the right child of A[i].
 
 Clarification
 - What is heap?
-- Heap is a data structure, which usually have three methods: push, pop and top. where "push" add a new element the heap, "pop" delete the minimum/maximum element in the heap, "top" return the minimum/maximum element.
+- Heap is a data structure, which usually have three methods: push, pop and top. 
+where "push" add a new element the heap, "pop" delete the minimum/maximum element in the heap,
+"top" return the minimum/maximum element.
 
 - What is heapify?
-- Convert an unordered integer array into a heap array. If it is min-heap, for each element A[i], we will get A[i * 2 + 1] >= A[i] and A[i * 2 + 2] >= A[i].
+- Convert an unordered integer array into a heap array. If it is min-heap, 
+for each element A[i], we will get A[i * 2 + 1] >= A[i] and A[i * 2 + 2] >= A[i].
 
 - What if there is a lot of solutions?
 - Return any of them.
@@ -30,10 +34,14 @@ O(n) time complexity
 
 构造堆的基本操作有两种：`siftdown` 和 `siftup` 。两种操作在本质上是相同的，处理不符合堆定义的结点直至满足规则。以构造最小堆为例：
 
-- `siftup` ：当前结点比父结点小，两者交换，迭代操作直至当前结点大于其父结点。
-- `siftdown` ：当前结点比父结点大，同较小的儿子结点交换，迭代操作直至当前结点大于两个儿子结点。
+- `siftup` ：当前结点比父结点大，两者交换，迭代操作直至当前结点小于其父结点。
+- `siftdown` ：当前结点比子结点大，同较小的儿子结点交换，迭代操作直至当前结点小于两个儿子结点。
 
-对一个结点进行 `siftup` 或 `siftdown` 时涉及的实际操作数，与该结点需要移动的距离正相关。对 `siftup` 是结点到树底层的距离，所以树顶端结点的移动代价较高；对 `siftdown` 是结点到树的根结点的距离，所以叶子节点的移动代价较高。不难发现，自顶向下 `siftdown` 构造堆时，只有根结点等少数几个结点需要移动约为 `logn` 的长距离；而自底向上 `siftdown` 构造堆时，大量的叶子结点需要移动约为 `logn` 的距离，所以两种方式构造堆所需要的操作数是不同的。
+对一个结点进行 `siftup` 或 `siftdown` 时涉及的实际操作数，与该结点需要移动的距离正相关。
+
+- 对 `siftup` 是结点从树底层开始向上移动的距离，所以构造完成时树顶端结点的移动代价较高，自底向上 `siftup` 构造堆时，大量的叶子结点需要移动约为 `logn` 的距离。
+- 对 `siftdown` 是结点从树顶端开始向下移动的距离，所以构造完成时叶子节点的移动代价较高，自顶向下 `siftdown` 构造堆时，只有根结点等少数几个结点需要移动约为 `logn` 的长距离。
+- 不难发现，两种方式构造堆所需要的操作数是不同的。
 
 假设树的高度为 `h = logn` ，那么在最坏情况下，自顶向下 `siftdown` 构造堆所需要的操作数为：
 
@@ -41,11 +49,11 @@ O(n) time complexity
 
 使用泰勒级数对其进行近似可以得到时间复杂度最坏为 `O(n)` 。具体证明过程请参考[链接](http://www.cs.umd.edu/~meesh/351/mount/lectures/lect14-heapsort-analysis-part.pdf)。
 
-同样假设在最坏情况下，自底向上 `siftdown` 构造堆所需要的操作数为：
+同样假设在最坏情况下，自底向上 `siftup` 构造堆所需要的操作数为：
 
 > `sum2 = (h * n/2) + ((h-1) * n/4) + ((h-2)*n/8) + ... + (0 * 1)` 
 
- `siftdown` 所需要的操作更多，其中第一项 `h * n/2 = 1/2 * nlogn` ，因此其复杂度最差为 `O(nlogn)` 。
+ `siftup` 所需要的操作更多，其中第一项 `h * n/2 = 1/2 * nlogn` ，因此其时间复杂度最差为 `O(nlogn)` 。
 
 以上内容其实会引出一个问题：
 
@@ -53,13 +61,15 @@ O(n) time complexity
 
 具体分析可参考本文提供的参考链接。
 
+##### 易错点
+
+> 1. 在 `siftup` 和 `siftdown` 函数中，循环终止的条件有两个，一个是自变量 `k` 的取值范围，另一个是满足最小堆的特性。
+
 #### 一、自底向上 `siftup`
 
 根据最小堆的定义，对数组中的每个元素，依次进行 `siftup` 操作。
 
 - `siftup` ：当前结点比父结点小，两者交换，迭代操作直至当前结点大于其父结点。
-
-
 
 Java 实现
 
@@ -97,7 +107,7 @@ public class Solution {
 
 
 
-#### 二、自顶向下 `siftdown` 
+#### 二、自顶向下 `siftdown`
 
 对数组中的每个元素，依次进行 `siftdown` 操作，可参考这个[演示 demo](https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pdf/DemoHeapify.pdf)。
 
@@ -151,7 +161,7 @@ public class Solution {
 
 ### 参考
 
-1. [ Heapify | 九章算法](http://www.jiuzhang.com/solutions/heapify/)
+1. [Heapify | 九章算法](http://www.jiuzhang.com/solutions/heapify/)
 
 2. [How can building a heap be O(n) time complexity? | StackOverFlow](http://stackoverflow.com/questions/9755721/how-can-building-a-heap-be-on-time-complexity)
 
