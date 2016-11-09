@@ -1,4 +1,4 @@
-#  Majority Number II
+# Majority Number II
 
  Majority Number II  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/majority-number-ii/) )
 
@@ -31,11 +31,13 @@ O(n) time and O(1) extra space.
 - 否则，也就是出现了第三个不同的值，减少 `c1` 和 `c2` 。
 - 最后，检查剩下的两个候选值。
 
-之所以最后还要检查候选值，是因为在抵消之后，Majority Number 对应的次数不一定是最多的，比如序列[1 1 1 1 2 3 2 3 4 4 4] ，抵消后 4 出现的次数比 1 1多。
+之所以最后还要检查候选值，是因为在抵消之后，Majority Number 对应的次数不一定是最多的，比如序列 `[1 1 1 1 2 3 2 3 4 4 4]`，抵消后 4 出现的次数比 1 1多。
 
 易错点：
 
 > 1. 在 `count1 == 0` 时，未对其进行初始化 `count1 = 1` 。
+> 2. 在对两个候选值进行投票时，要先判断当前值是否等于任一候选值。如果先判断 `count1, count2` 是否为零，那么遇到两个重复数值时会被错认为两个不同的候选值。
+> 3. 由于抵消之后 Majority Number 对应的数量不一定是最多的，所以需要重新进行计数。
 
 Java 实现
 
@@ -80,7 +82,6 @@ public class Solution {
         return count1 > count2 ? candidate1 : candidate2;
     }
 }
-
 ```
 
 
@@ -88,4 +89,3 @@ public class Solution {
 ### 参考
 
 1. [Lintcode: Majority Number II 解题报告 | Yu's garden](http://www.cnblogs.com/yuzhangcmu/p/4175779.html) 
-
