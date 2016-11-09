@@ -4,7 +4,8 @@
 
 ```
 Description
-Given an array of integers, the majority number is the number that occurs more than 1/3 of the size of the array.
+Given an array of integers, 
+the majority number is the number that occurs more than 1/3 of the size of the array.
 Find it.
 
 Notice
