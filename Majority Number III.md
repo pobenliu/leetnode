@@ -4,8 +4,7 @@
 
 ```
 Description
-Given an array of integers and a number k, 
-the majority number is the number that occurs more than 1/k of the size of the array.
+Given an array of integers and a number k, the majority number is the number that occurs more than 1/k of the size of the array.
 Find it.
 
 Notice
@@ -28,7 +27,7 @@ O(n) time and O(k) extra space
 - 在 `candidate` 个数大于等于 `k` 时，将 `k - 1` 个数的出现次数减 `1` ，并记录次数为 `0` 的数字，将其从 `HashMap` 删除。
 - 完成它上述步骤后，在所有数字中，统计出现次数最多的数字，即为结果。
 
-HashMap的遍历方法
+HashMap 的遍历方法
 
 - 如果只需要访问 key
 
@@ -58,7 +57,9 @@ for (Map.Entry<String, Object> entry : map.entrySet()) {
 }
 ```
 
+##### 易错点
 
+> 1. 当 HashMap 中元素达到 `k` 个时，需要将所有的 `value` 值减一，此时不能直接删除对应的 `key`，推测和 HashMap 的遍历机制有关。需要记录 `value` 为零的 `key`，接下来删除。
 
 Java 实现
 
@@ -129,7 +130,6 @@ public class Solution {
         }
     }
 }
-
 ```
 
 
