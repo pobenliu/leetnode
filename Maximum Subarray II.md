@@ -1,4 +1,4 @@
-#  Maximum Subarray II
+# Maximum Subarray II
 
  Maximum Subarray II  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/maximum-subarray-ii/) )
 
@@ -12,10 +12,8 @@ Notice
 The subarray should contain at least one number
 
 Example
-For given [1, 3, -1, 2, -1, 2], 
-the two subarrays are [1, 3] and [2, -1, 2] or [1, 3, -1, 2] and [2], 
-they both have the largest sum 7.
- 
+For given [1, 3, -1, 2, -1, 2], the two subarrays are [1, 3] and [2, -1, 2] or [1, 3, -1, 2] and [2], they both have the largest sum 7.
+
 Challenge 
 Can you do it in time complexity O(n) ?
 ```
@@ -26,9 +24,10 @@ Can you do it in time complexity O(n) ?
 
 如果在遍历划分点的时候，同时寻找两个最大子数组，双重循环的时间复杂度为 `O(n^2)` 。我们可以先寻找不同划分左数组的最大子数组，将和存储在数组中；然后寻找不同划分右数组的最大子数组，将和存储在数组中；最后两个数组分别求和取最大值即可。
 
-易错点：
+##### 易错点：
 
 > 1. 最后求和的时候需注意，由于有划分的存在，所以两个数组的索引差 `1` 。
+> 2. 在求最大值、最小值时，变量的初始化需要使用 `Integer.MIN_VALUE` 或 `Integer.MAX_VLUAE`。
 
 Java 实现
 
