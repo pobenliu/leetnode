@@ -49,6 +49,7 @@ public class Solution {
         
         for (int i = 1; i < nums.length; i++) {
             curSum = curSum <= 0 ? nums[i] : curSum + nums[i];
+            // curSum = Math.max(nums[i], curSum + nums[i]);
             maxSum = Math.max(curSum, maxSum);
         }
         
