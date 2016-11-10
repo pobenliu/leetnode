@@ -12,7 +12,9 @@ Notice
 The subarray should contain at least one number
 
 Example
-For given [1, 3, -1, 2, -1, 2], the two subarrays are [1, 3] and [2, -1, 2] or [1, 3, -1, 2] and [2], they both have the largest sum 7.
+For given [1, 3, -1, 2, -1, 2], 
+the two subarrays are [1, 3] and [2, -1, 2] or [1, 3, -1, 2] and [2], 
+they both have the largest sum 7.
 
 Challenge 
 Can you do it in time complexity O(n) ?
