@@ -4,7 +4,8 @@
 
 ```
 Description
-Given an array of integers and a number k, find k non-overlapping subarrays which have the largest sum.
+Given an array of integers and a number k, 
+find k non-overlapping subarrays which have the largest sum.
 The number in each subarray should be contiguous.
 Return the largest sum.
 
@@ -204,4 +205,3 @@ public class Solution {
 4. [LintCode 43 [Maximum Subarray III] | Jason_Yuan](http://www.jianshu.com/p/5045dda5ea1f)
 5. [[LintCode]Maximum Subarray III | 今際の国の呵呵君](http://hehejun.blogspot.com/2015/01/lintcodemaximum-subarray-iii.html)
 6. [Maximum Subarray III | 九章算法](http://www.jiuzhang.com/solutions/maximum-subarray-iii/)
-
