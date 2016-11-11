@@ -48,7 +48,7 @@ LCA(6, 7) = 7
 ##### Follow up question
 
 - 如果是二叉搜索树，要怎么做？
-- 如果每个结点有父亲指针怎么做？
+- 如果每个结点有父亲指针，要怎么做？
 
 Java 实现：
 
@@ -101,4 +101,4 @@ public class Solution {
 
 1. [Lowest Common Ancestor | 九章算法](http://www.jiuzhang.com/solutions/lowest-common-ancestor/)
 2. [[Leetcode] Lowest Common Ancestor of a Binary Tree 最小公共祖先 | segmentfault](https://segmentfault.com/a/1190000003509399)
-3. [Lowest Common Ancestor of Two Nodes in a Binary Tree | 返回主页 爱做饭的小莹子](http://www.cnblogs.com/springfor/p/4141924.html)
+3. [Lowest Common Ancestor of Two Nodes in a Binary Tree | 爱做饭的小莹子](http://www.cnblogs.com/springfor/p/4141924.html)
