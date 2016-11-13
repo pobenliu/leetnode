@@ -137,8 +137,8 @@
    * [Kth Largest Element](Kth Largest Element.md)
 * Two Pointers
    * [3 Sum](3 Sum.md)
-   * [4 Sum](4 Sum.md)
    * [3 Sum Closest](3 Sum Closest.md)
+   * [4 Sum](4 Sum.md)
 * Graph
    * [Clone Graph](Clone Graph.md)
    * [Topological Sorting](Topological Sorting.md)
