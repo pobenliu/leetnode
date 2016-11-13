@@ -138,6 +138,7 @@
    * [Interleaving Positive and Negative Numbers](Interleaving Positive and Negative Numbers.md)
    * [Median](Median.md)
    * [Kth Largest Element](Kth Largest Element.md)
+* Two Pointers
 * Graph
    * [Clone Graph](Clone Graph.md)
    * [Topological Sorting](Topological Sorting.md)
@@ -152,5 +153,4 @@
    * [Combination Sum](Combination Sum.md)
    * [Letter Combinations of a Phone Number](Letter Combinations of a Phone Number.md)
    * [Word Ladder](Word Ladder.md)
-* Two Pointers
 
