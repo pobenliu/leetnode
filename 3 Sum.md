@@ -23,10 +23,15 @@ For example, given array S = {-1 0 1 2 -1 -4}, A solution set is:
 
 三个数之和为零 `a + b + c = 0` ，很容易转化为两个数求和等于一个固定值 `b + c = -a` ，由此本题可转化为题目 two sum 。由于数组中元素可能重复，所以对数组排序后处理会比较方便，而且排序不会增加算法整体的复杂度。在排序后，使用双指针从开头和结尾向中间移动寻找，注意重复元素的处理。
 
-**算法复杂度**
+##### 算法复杂度
 
 - 时间复杂度：排序为 `O(nlogn)` ，两重循环寻找三个数为 `O(n^2)` ，所以时间复杂度为 `O(n^2)` 。
 - 空间复杂度：`O(n)` 。
+
+##### 易错点
+
+> 1. 重复元素的处理。
+> 2. 双指针的边界条件限定。
 
 Java 实现
 
@@ -81,59 +86,6 @@ public class Solution {
 
 
 
-#### 二、哈希表
-
-本题目用哈希表实现，需考虑如何去掉重复组合。
-
-自己尝试使用哈希表实现，但是有 bug ，无法查找出所有的组合。
-
-
-
-```java
-public class Solution {
-    /**
-     * @param numbers : Give an array numbers of n integer
-     * @return : Find all unique triplets in the array which gives the sum of zero.
-     */
-    public ArrayList<ArrayList<Integer>> threeSum(int[] numbers) {
-        ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
-        if (numbers == null || numbers.length < 3) {
-            return results;
-        }
-        
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-        ArrayList<Integer> tmp = new ArrayList<Integer>();
-        HashSet<ArrayList<Integer>> uniset = new HashSet<ArrayList<Integer>>();
-        
-        Arrays.sort(numbers);
-        
-        for (int i = 0; i < numbers.length - 3; i++) {
-            map.clear();
-            for (int j = i + 1; j < numbers.length - 1; j++) {
-                tmp.clear();
-                if (map.get(numbers[j]) != null) {
-                    tmp.add(numbers[i]);
-                    tmp.add(-numbers[i] - numbers[j]);
-                    tmp.add(numbers[j]);
-                    Collections.sort(tmp);
-                    if (!uniset.contains(tmp)) {
-                        uniset.add(tmp);
-                    }
-                }
-                map.put(-numbers[i] - numbers[j], j);
-            }
-        }
-        
-        results.addAll(uniset);
-
-        return results;
-    }
-}
-```
-
-
-
 ### 参考
 
 1. [3 Sum | 九章算法](http://www.jiuzhang.com/solutions/3sum/)
-
