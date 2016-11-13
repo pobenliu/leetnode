@@ -129,7 +129,6 @@
    * [Maximum Subarray Difference](Maximum Subarray Difference.md)
    * [Subarray Sum Closest](Subarray Sum Closest.md)
    * [Two Sum](Two Sum.md)
-   * [4 Sum](4 Sum.md)
    * [Partition Array](Partition Array.md)
    * [Sort Letters by Case](Sort Letters by Case.md)
    * [Sort Colors](Sort Colors.md)
@@ -138,6 +137,7 @@
    * [Kth Largest Element](Kth Largest Element.md)
 * Two Pointers
    * [3 Sum](3 Sum.md)
+   * [4 Sum](4 Sum.md)
    * [3 Sum Closest](3 Sum Closest.md)
 * Graph
    * [Clone Graph](Clone Graph.md)
