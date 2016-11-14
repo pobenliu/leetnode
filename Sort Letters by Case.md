@@ -1,4 +1,4 @@
-#  Sort Letters by Case
+# Sort Letters by Case
 
  Sort Letters by Case  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/sort-letters-by-case/) )
 
@@ -19,6 +19,10 @@ Do it in one-pass and in-place.
 ### 解题思路
 
 思路与 Partition Array 相同，使用指向数组首尾的双指针，向中间遍历。
+
+##### 易错点
+
+> 1. `Character.isLowerCase()` 函数的使用。
 
 Java 实现
 
@@ -53,8 +57,4 @@ public class Solution {
     }
 }
 ```
-
-
-
-### 参考
 
