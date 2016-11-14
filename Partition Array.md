@@ -1,16 +1,18 @@
-#  Partition Array
+# Partition Array
 
  Partition Array  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/partition-array/) )
 
 ```
 Description
-Given an array nums of integers and an int k, partition the array (i.e move the elements in "nums") such that:
+Given an array nums of integers and an int k, partition the array 
+(i.e move the elements in "nums") such that:
 All elements < k are moved to the left
 All elements >= k are moved to the right
 Return the partitioning index, i.e the first index i nums[i] >= k.
 
 Notice
-You should do really partition in array nums instead of just counting the numbers of integers smaller than k.
+You should do really partition in array nums instead of 
+just counting the numbers of integers smaller than k.
 If all elements in nums are smaller than k, then return nums.length
 
 Example
@@ -23,6 +25,11 @@ Can you partition the array in-place and in O(n)?
 ### 解题思路
 
 本题目和快速排序是同一类题目，使用指向首尾的两个指针 `left` 和 `right` 向中间遍历，当 `left` 指向对象大于等于 `k` ，`right` 指向对象小于 `k` 时，交换两者，直至 `left > right` 。操作过程要时刻注意两个指针的相对位置，确保不越界。
+
+##### 易错点
+
+> 1. 在移动过程要确保两根指针的相对位置，不会让数组越界。
+> 2. 两个特殊情况需考虑，数组全部小于 `k`，数组全部大于 `k`。
 
 Java 实现
 
@@ -62,8 +69,4 @@ public class Solution {
     }
 }
 ```
-
-
-
-### 参考
 
