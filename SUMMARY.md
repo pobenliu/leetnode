@@ -137,8 +137,8 @@
    * [Two Sum](Two Sum.md)
    * [3 Sum](3 Sum.md)
    * [3 Sum Closest](3 Sum Closest.md)
-   * [Sort Colors](Sort Colors.md)
    * [4 Sum](4 Sum.md)
+   * [Sort Colors](Sort Colors.md)
 * Graph
    * [Clone Graph](Clone Graph.md)
    * [Topological Sorting](Topological Sorting.md)
