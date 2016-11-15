@@ -130,7 +130,6 @@
    * [Subarray Sum Closest](Subarray Sum Closest.md)
    * [Partition Array](Partition Array.md)
    * [Sort Letters by Case](Sort Letters by Case.md)
-   * [Sort Colors](Sort Colors.md)
    * [Interleaving Positive and Negative Numbers](Interleaving Positive and Negative Numbers.md)
    * [Median](Median.md)
    * [Kth Largest Element](Kth Largest Element.md)
@@ -138,6 +137,7 @@
    * [Two Sum](Two Sum.md)
    * [3 Sum](3 Sum.md)
    * [3 Sum Closest](3 Sum Closest.md)
+   * [Sort Colors](Sort Colors.md)
    * [4 Sum](4 Sum.md)
 * Graph
    * [Clone Graph](Clone Graph.md)
