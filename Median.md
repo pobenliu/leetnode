@@ -1,4 +1,4 @@
-#  Median
+# Median
 
  Median  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/median/) )
 
@@ -17,7 +17,7 @@ O(n) time.
 
 ### 解题思路
 
-最简单的方法是先对数组排序，然后取中位数。快排和归并排序等基于比较的排序算法的时间复杂度为 `O(n)`，桶排序、计数排序、基数排序等线性排序算法对数据有一定限制，且空间复杂度较高。
+最简单的方法是先对数组排序，然后取中位数。快排和归并排序等基于比较的排序算法的时间复杂度为 `O(logn)`，桶排序、计数排序、基数排序等线性排序算法对数据有一定限制，且空间复杂度较高。
 
 由于只需要找出中位数即可，所以可以参考快速排序中的 partition 操作，根据 pivot 元素将数组划分为左小右大的两部分，然后对包含中位数的部分继续查找即可。当 pivot 元素的下标等于数组长度的一半时，即为中位数。
 
@@ -40,7 +40,7 @@ public class Solution {
         return helper(nums, 0, nums.length - 1, (nums.length - 1)/2);
     }
     
-    private int helper(int[] nums, int start, int end, int size) {
+    private int helper(int[] nums, int start, int end, int mid) {
         if (start >= end) {
             return nums[end];
         }
@@ -53,12 +53,12 @@ public class Solution {
         }
         swap(nums, start, m);
         
-        if (m == size) {
+        if (m == mid) {
             return nums[m];
-        } else if (m  > size) {
-            return helper(nums, start, m - 1, size);
+        } else if (m  > mid) {
+            return helper(nums, start, m - 1, mid);
         } else {
-            return helper(nums, m + 1, end, size);
+            return helper(nums, m + 1, end, mid);
         }
     }
     
