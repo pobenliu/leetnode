@@ -128,10 +128,10 @@
    * [Minimum Subarray](Minimum Subarray.md)
    * [Maximum Subarray Difference](Maximum Subarray Difference.md)
    * [Subarray Sum Closest](Subarray Sum Closest.md)
-   * [Partition Array](Partition Array.md)
    * [Median](Median.md)
    * [Kth Largest Element](Kth Largest Element.md)
 * Two Pointers
+   * [Partition Array](Partition Array.md)
    * [Two Sum](Two Sum.md)
    * [3 Sum](3 Sum.md)
    * [3 Sum Closest](3 Sum Closest.md)
