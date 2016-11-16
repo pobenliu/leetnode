@@ -1,4 +1,4 @@
-#  Clone Graph
+# Clone Graph
 
  Clone Graph  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/clone-graph/) )
 
@@ -8,7 +8,8 @@ Clone an undirected graph. Each node in the graph contains a label and a list of
 
 How we serialize an undirected graph:
 Nodes are labeled uniquely.
-We use # as a separator for each node, and , as a separator for node label and each neighbor of the node.
+We use # as a separator for each node, and , 
+as a separator for node label and each neighbor of the node.
 
 As an example, consider the serialized graph {0,1,2#1,2#2,2}.
 The graph has a total of three nodes, and therefore contains three parts as separated by #.
@@ -30,7 +31,7 @@ return a deep copied graph.
 
 ### 解题思路
 
-首先复习一下宽度优先搜索（BFS, Breadth-first Search）的原理：从树或图的某个结点开始，先遍历该结点的所有相邻结点，然后再遍历下一层相邻结点。BFS 的实现通常需要一个辅助栈 queue 保存已遍历结点。
+首先复习一下宽度优先搜索（BFS, Breadth-first Search）的原理：从树或图的某个结点开始，先遍历该结点的所有相邻结点，然后再遍历下一层相邻结点。BFS 的实现通常需要一个辅助队列 queue 保存已遍历结点。
 
 伪代码如下：
 
@@ -61,11 +62,15 @@ procedure BFS(G,v) is
 
 #### 一、BFS
 
-- 使用 BFS 遍历无向图的所有结点，需要使用 HashSet 去除重复结点。
-- 新建 HashMap <oldNode, newNode> ，依次拷贝结点（主要是 label）。
-- 依次拷贝每个结点的邻居结点
+由于题目只给出了一个结点，所以要使用 BFS 遍历无向图找到所有结点，和遍历树不同的是，需要使用 `HashSet` 去除重复结点。
 
-其实分解后每个步骤都比较容易实现，需要对 HashSet 、 HashMap 、 Queue 的操作比较熟悉。
+- 找到无向图的所有结点。
+
+
+- 依次拷贝结点（主要是结点值），使用 `HashMap<oldNode, newNode>` 。
+- 依次拷贝每个结点的邻居结点。
+
+其实分解后每个步骤都比较容易实现，需要对 `HashSet` 、 `HashMap` 、 `Queue` 的操作比较熟悉。
 
 Java 实现
 
@@ -150,7 +155,7 @@ Java 实现
  *     UndirectedGraphNode(int x) { 
  *          label = x; 
  *          neighbors = new ArrayList<UndirectedGraphNode>(); 
- *      }
+ *     }
  * };
  */
 public class Solution {
@@ -163,10 +168,9 @@ public class Solution {
             return node;
         }
         
-        ArrayList<UndirectedGraphNode> nodes = new ArrayList<UndirectedGraphNode>();
-        HashMap<UndirectedGraphNode, UndirectedGraphNode> map 
-            = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
-            
+        ArrayList<UndirectedGraphNode> nodes = new ArrayList<>();
+        HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
+        
         // clone nodes
         nodes.add(node);
         map.put(node, new UndirectedGraphNode(node.label));
@@ -174,25 +178,24 @@ public class Solution {
         int start = 0;
         while (start < nodes.size()) {
             UndirectedGraphNode head = nodes.get(start++);
-            for (int i = 0; i < head.neighbors.size(); i++) {
-                UndirectedGraphNode neighbor = head.neighbors.get(i);
-                if (!map.containsKey(neighbor)) {
-                    map.put(neighbor, new UndirectedGraphNode(neighbor.label));
-                    nodes.add(neighbor);
+            for (UndirectedGraphNode neigh : head.neighbors) {
+                if (!map.containsKey(neigh)) {
+                    map.put(neigh, new UndirectedGraphNode(neigh.label));
+                    nodes.add(neigh);
                 }
             }
         }
         
         // clone neighbors
-        for (int i = 0; i < nodes.size(); i++) {
-            UndirectedGraphNode newNode = map.get(nodes.get(i));
-            for (int j = 0; j < nodes.get(i).neighbors.size(); j++) {
-                newNode.neighbors.add(map.get(nodes.get(i).neighbors.get(j)));
+        for (UndirectedGraphNode oldNode : nodes) {
+            UndirectedGraphNode newNode = map.get(oldNode);
+            for (UndirectedGraphNode oldNeigh : oldNode.neighbors) {
+                newNode.neighbors.add(map.get(oldNeigh));
             }
         }
+        
         return map.get(node);
     }
-    
 }
 ```
 
@@ -213,7 +216,7 @@ Java 实现
  *     UndirectedGraphNode(int x) { 
  *          label = x; 
  *          neighbors = new ArrayList<UndirectedGraphNode>(); 
- *      }
+ *     }
  * };
  */
 public class Solution {
@@ -225,28 +228,25 @@ public class Solution {
         if (node == null) {
             return node;
         }
+        Queue<UndirectedGraphNode> q = new LinkedList<UndirectedGraphNode>();
+        HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
         
-        LinkedList<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
-        HashMap<UndirectedGraphNode, UndirectedGraphNode> map 
-            = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
-            
-        UndirectedGraphNode head = new UndirectedGraphNode(node.label);
-        map.put(node, head);
-        queue.add(node);
+        map.put(node, new UndirectedGraphNode(node.label));
+        q.add(node);
         
-        while (!queue.isEmpty()) {
-            UndirectedGraphNode curnode = queue.poll();
-            for (UndirectedGraphNode neighbor : curnode.neighbors) {
+        while (!q.isEmpty()) {
+            UndirectedGraphNode curt = q.poll();
+            for (UndirectedGraphNode neighbor : curt.neighbors) {
                 if (!map.containsKey(neighbor)) {
-                    queue.add(neighbor);
-                    UndirectedGraphNode newneighbor = new UndirectedGraphNode(neighbor.label);
-                    map.put(neighbor, newneighbor);
+                    // clone nodes
+                    map.put(neighbor, new UndirectedGraphNode(neighbor.label));
+                    q.add(neighbor);
                 }
-                map.get(curnode).neighbors.add(map.get(neighbor));
+                // clone neighbors
+                map.get(curt).neighbors.add(map.get(neighbor));
             }
         }
-        
-        return head;
+        return map.get(node);
     }
     
 }
