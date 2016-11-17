@@ -1,6 +1,6 @@
 # Subsets II
 
-Subsets II ( leetcode [lintcode](http://www.lintcode.com/en/problem/subsets-ii/) )
+Subsets II ( [leetcode](https://leetcode.com/problems/subsets-ii/)  [lintcode](http://www.lintcode.com/en/problem/subsets-ii/) )
 
 ```
 Description
@@ -34,13 +34,12 @@ Can you do it in both recursively and iteratively?
 
 以`{1, 2(1), 2(2), 2(3)}`为例，`{1, 2(1)}`和`{1, 2(2)}`重复，`{1, 2(1), 2(2)}`和`{1, 2(2), 2(3)}`重复。可以看到，对于重复元素，我们只关心取了几个，不关心取哪几个。
 
-解决方案是从重复元素的第一个持续向下添加列表，而不能取第二个或之后的重复元素。（换句话讲就是重复的元素必须连续选取）
+解决方案是从重复元素的第一个持续向下添加列表，而不能取第二个或之后的重复元素。换句话讲就是重复的元素必须连续选取。该方法很巧妙，建议使用图示以及函数运行的堆栈图理解。
 
-该方法很巧妙，建议使用图示以及函数运行的堆栈图理解。
+算法复杂度
 
-**算法复杂度**
-
-- 同 Subsets，最坏情况时间复杂度`O(2^n)`，空间复杂度`O(n)`
+- 时间复杂度：在本题中解的个数为 `2^n`，产生一个解的复杂度最坏可以认为是 `n`，故算法时间复杂度的上界可以认为是 `O(n* 2^n)`。
+- 空间复杂度：使用临时空间 `list` 保存中间结果，`list` 最大长度为数组长度，故空间复杂度近似为 `O(n)` 。
 
 Java 实现：
 
