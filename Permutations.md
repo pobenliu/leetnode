@@ -30,17 +30,14 @@ Do it without recursion.
 
 `Permutation` 要求遍历得到所有长度为 `n` 的排列，与 `Subsets` 的实现相比较，有两点不一样的地方：一是只有在长度为 `n` 时才会记录；二是不再要求升序，所有排序都必须遍历到。
 
-**算法复杂度**
+##### 算法复杂度
 
-- 时间复杂度：
-
-  以状态数来分析，全排列的个数为 `n!`，一个排列中的每个元素被遍历的次数为`(n - 1)!`（**这是为何？**），故一个排列所有 `n` 个元素被遍历的状态数一共为 `O(n * (n - 1)!) = O(n!)`，此为时间复杂度的下界，因为这里只算了合法条件下的遍历状态数。如果不对 `list` 中是否包含 `nums[i]` 进行检查，则总的状态数应为 `n^n` 种。
-
-  由于最终每个排列的长度都为 `n` ，各排列的相同元素并不共享，故时间复杂度的下界为 `O(n * n!)`，上届为 `n * n^n` 。这里的时间复杂度并未考虑查找列表中是否包含重复元素的 `contain` 操作。
+- 时间复杂度：一般而言，搜索问题的复杂度可以这么计算 `O(解的个数 * 产生解的复杂度)`。在本题中解的个数为 `n!`，产生一个解的复杂度最坏可以认为是 `n`，故算法渐进性能的上界可以认为是 `O(n*n!)`。这里的时间复杂度并未考虑查找 `list` 中是否包含重复元素的 `contain` 操作。
+- 空间复杂度：空间复杂度的计算也是类似的 `O(解的个数 * 每个解占用空间)`。一共 `n!` 种排列，每种排列共有 `n` 个数，所以空间复杂度为 `O(n*n!)`。
 
 易错点：
 
-> 1. 再往 `result` 中添加结果时要新建一个  `list` 的 拷贝，否则添加的只是 `list` 的引用。
+> 1. 在往 `result` 中添加结果时要新建一个 `list` 的 拷贝（深拷贝），这是因为 Java 中所有对象都是引用，如果添加的是 `list`，在主程序中修改 `list` 时， `result` 中的 `list` 对象也会被修改。
 
 Java 实现
 
@@ -58,6 +55,9 @@ class Solution {
         }
         
         ArrayList<Integer> list = new ArrayList<Integer>();
+        // 把以 list 开头的所有排列全部放到 result 中
+        // 把以空{}为开头的所有排列全部放到 result 中
+        // 把以{1},{2},{3}为开头的所有排列全部放到 result 中...
         dfs(result, list, nums);
         return result;
     }
@@ -134,16 +134,7 @@ public class Solution {
 ### 参考
 
 1. [Permutations | 数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/zh-hans/exhaustive_search/permutations.html)
-2. [Permutations | 九章算法](http://www.jiuzhang.com/solutions/permutations/) ​
-3. [LeetCode – Permutations (Java) | Program Creek](http://www.programcreek.com/2013/02/leetcode-permutations-java/)
-
-
-
-
-
-
-
-
-
-
+2. [Permutations | 九章算法](http://www.jiuzhang.com/solutions/permutations/) 
+3. [permutation 和subset的时间复杂度 | 九章问答](http://www.jiuzhang.com/qa/1753/)
+4. [LeetCode – Permutations (Java) | Program Creek](http://www.programcreek.com/2013/02/leetcode-permutations-java/)
 
