@@ -1,6 +1,6 @@
 # Subsets
 
-Subsets (leetcode [lintcode](http://www.lintcode.com/en/problem/subsets/))
+Subsets ( [leetcode](https://leetcode.com/problems/subsets/)  [lintcode](http://www.lintcode.com/en/problem/subsets/) )
 
 ```
 Given a set of distinct integers, return all possible subsets.
