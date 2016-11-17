@@ -33,7 +33,7 @@ Do it without recursion.
 ##### 算法复杂度
 
 - 时间复杂度：一般而言，搜索问题的复杂度可以这么计算 `O(解的个数 * 产生解的复杂度)`。在本题中解的个数为 `n!`，产生一个解的复杂度最坏可以认为是 `n`，故算法渐进性能的上界可以认为是 `O(n*n!)`。这里的时间复杂度并未考虑查找 `list` 中是否包含重复元素的 `contain` 操作。
-- 空间复杂度：空间复杂度的计算也是类似的 `O(解的个数 * 每个解占用空间)`。一共 `n!` 种排列，每种排列共有 `n` 个数，所以空间复杂度为 `O(n*n!)`。
+- 空间复杂度：空间复杂度的计算也是类似的 `O(解的个数 * 每个解占用空间)`。一共 `n!` 种排列，每种排列共有 `n` 个数，所以空间复杂度为 `O(n*n!)`。如果不考虑结果的存储，那么空间复杂度为 `O(n)`，也即 `list` 变量所占用的空间。
 
 易错点：
 
@@ -46,6 +46,7 @@ public class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (nums == null || nums.length == 0) {
+            result.add(new ArrayList<Integer>());  // when nums = [], return [[]]
             return result;
         }
         
