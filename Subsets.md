@@ -38,19 +38,10 @@ Can you do it in both recursively and iteratively?
 
 ![](http://ww3.sinaimg.cn/mw690/600e6311jw1f8a8qisz8ij218g0xcn1y.jpg)
 
-**算法复杂度**
+##### 算法复杂度
 
-- 时间复杂度：`O(2^n)`
-
-  对原有数组排序，时间复杂度近似为 `O(nlogn)` 。
-
-  状态数为所有可能的组合数 `2^n`，生成每个状态所需的时间复杂度近似为 `O(1)`（只有 `add` 操作）。
-
-  故总的时间复杂度近似为 `O(2^n)` 。
-
-- 空间复杂度：`O(n)`
-
-  使用临时空间 `list` 保存中间结果，`list` 最大长度为数组长度，故空间复杂度近似为 `O(n)` 。
+- 时间复杂度：在本题中解的个数为 `2^n`，产生一个解的复杂度最坏可以认为是 `n`，故算法时间复杂度的上界可以认为是 `O(n* 2^n)`。
+- 空间复杂度：使用临时空间 `list` 保存中间结果，`list` 最大长度为数组长度，故空间复杂度近似为 `O(n)` 。
 
 Java 实现：
 
@@ -65,6 +56,7 @@ class Solution {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         // 注意：此处int型数组取长度无需括号()
       	if (nums == null || nums.length == 0) {
+            result.add(new ArrayList<Integer>());  // when nums = [], return [[]]
             return result;
         }
         ArrayList<Integer> list = new ArrayList<Integer>();
