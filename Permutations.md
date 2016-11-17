@@ -42,19 +42,14 @@ Do it without recursion.
 Java 实现
 
 ```java
-class Solution {
-    /**
-     * @param nums: A list of integers.
-     * @return: A list of permutations.
-     */
-    public ArrayList<ArrayList<Integer>> permute(ArrayList<Integer> nums) {
-        // write your code here
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-        if (nums == null || nums.size() == 0) {
+public class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        if (nums == null || nums.length == 0) {
             return result;
         }
         
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<Integer>();
         // 把以 list 开头的所有排列全部放到 result 中
         // 把以空{}为开头的所有排列全部放到 result 中
         // 把以{1},{2},{3}为开头的所有排列全部放到 result 中...
@@ -62,19 +57,19 @@ class Solution {
         return result;
     }
     
-    private void dfs (ArrayList<ArrayList<Integer>> result,
-                      ArrayList<Integer> list, 
-                      ArrayList<Integer> nums) {
-        if (list.size() == nums.size()) {
+    private void dfs (List<List<Integer>> result,
+                        List<Integer> list,
+                        int[] nums) {
+        if (list.size() == nums.length) {
             result.add(new ArrayList<Integer>(list));
+            return;
         }
         
-        for (int i = 0; i < nums.size(); i++) {
-            if (list.contains(nums.get(i))) {
+        for (int i = 0; i < nums.length; i++) {
+            if (list.contains(nums[i])) {
                 continue;
             }
-            
-            list.add(nums.get(i));
+            list.add(nums[i]);
             dfs(result, list, nums);
             list.remove(list.size() - 1);
         }
@@ -94,7 +89,7 @@ class Solution {
 
 易错点：
 
-> 1. 在新建 List 类型变量时要使用 ArrayList 或其他类型初始化，在赋值时同样。
+> 1. 在新建 `List` 类型变量时要使用 `ArrayList` 或其他类型初始化，在赋值时同样。
 
 Java 实现
 
