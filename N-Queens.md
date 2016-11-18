@@ -1,10 +1,11 @@
 # N-Queens
 
- N-Queens  ( [leetcode]()  [lintcode]() )
+ N-Queens  ( [leetcode](https://leetcode.com/problems/n-queens/)  [lintcode](http://www.lintcode.com/en/problem/n-queens/#) )
 
 ```
 Description
-The n-queens puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
+The n-queens puzzle is the problem of placing n queens on an n×n chessboard 
+such that no two queens attack each other.
 Given an integer n, return all distinct solutions to the n-queens puzzle.
 Each solution contains a distinct board configuration of the n-queens' placement, 
 where 'Q' and '.' both indicate a queen and an empty space respectively.
@@ -34,7 +35,7 @@ Can you do it without recursion?
 
 在国际象棋中，皇后是战斗力最强的一个棋子，可以横、竖、斜走，吃子和走法相同。
 
-本题目的问题是如何在一个 `n * n` 的棋盘上面摆放 `n` 个皇后，使得任何一个皇后都无法直接吃掉其他的皇后？根据国际象棋的规则，要达到目的，任意两个皇后都不能处在同一行、同一列、同一斜线上面。
+本题目的问题是如何在一个 `n * n` 的棋盘上面摆放 `n` 个皇后，使得任何一个皇后都无法直接吃掉其他的皇后？根据国际象棋的规则，要达到要求，任意两个皇后都不能处在同一行、同一列、同一斜线上面。
 
 以 `4 * 4` 棋盘为例，将解决方案中每一行皇后所在列放入一维数组中，两个解决方案分别为 `[2, 4, 1, 3]` 和 `[3, 1, 4, 2]` ，**<u>数组索引表示皇后所在行，数组元素表示皇后所在列</u>**，不难发现，这其实是 `[1, 2, 3, 4]` 全排列的一部分。所以问题可以转化为①求解所有全排列；②判断全排列是否满足规则要求。
 
@@ -131,5 +132,6 @@ class Solution {
 
 ### 参考
 
-1. [ N-Queens | 九章算法](http://www.jiuzhang.com/solutions/n-queens/)
+1. [N-Queens | 九章算法](http://www.jiuzhang.com/solutions/n-queens/)
 2. [N-Queens leetcode java | 爱做饭的小莹子](http://www.cnblogs.com/springfor/p/3870944.html)
+
