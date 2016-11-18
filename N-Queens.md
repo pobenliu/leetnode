@@ -111,8 +111,8 @@ class Solution {
     
     private boolean isValid (ArrayList<Integer> cols, int col) {
         int row = cols.size();
+        // queen‘s coodinate in cols [i, cols.get(i)] vs queen to be added [row, col]
         for (int i = 0; i < row; i++) {
-            // coodinate of the point now is [i, cols.get(i)] , compare with point [row, col]
             // same column
             if (cols.get(i) == col) {
                 return false;
@@ -134,4 +134,3 @@ class Solution {
 
 1. [N-Queens | 九章算法](http://www.jiuzhang.com/solutions/n-queens/)
 2. [N-Queens leetcode java | 爱做饭的小莹子](http://www.cnblogs.com/springfor/p/3870944.html)
-
