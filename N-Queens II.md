@@ -1,4 +1,4 @@
-#  N-Queens II
+# N-Queens II
 
  N-Queens II  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/n-queens-ii/) )
 
@@ -15,7 +15,7 @@ For n=4, there are 2 distinct solutions.
 
 ### 解题思路
 
-实现思路参考问题  N-Queens ，不必输出具体结果，只需计算结果数量即可，这里需要一个全局变量。∫
+实现思路参考问题  N-Queens ，不必输出具体结果，只需计算结果数量即可，这里需要一个全局变量。
 
 Java 实现
 
@@ -58,6 +58,7 @@ class Solution {
     
     private boolean isValid (ArrayList<Integer> cols, int col) {
         int row = cols.size();
+        // queen‘s coodinate in cols [i, cols.get(i)] vs queen to be added [row, col]
         for (int i = 0; i < row; i++) {
             // same column
             if (cols.get(i) == col) {
@@ -72,8 +73,4 @@ class Solution {
     }
 };
 ```
-
-
-
-### 参考
 
