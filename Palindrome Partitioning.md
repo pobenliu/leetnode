@@ -1,8 +1,8 @@
-#  Palindrome Partitioning
+# Palindrome Partitioning
 
- Palindrome Partitioning  ( [leetcode]()  [lintcode]() )
+ Palindrome Partitioning  ( [leetcode](https://leetcode.com/problems/palindrome-partitioning/)  [lintcode](http://www.lintcode.com/en/problem/palindrome-partitioning/#) )
 
- ```
+```
 Description
 Given a string s, partition s such that every substring of the partition is a palindrome.
 Return all possible palindrome partitioning of s.
@@ -13,15 +13,17 @@ Given s = "aab", return:
   ["aa","b"],
   ["a","a","b"]
 ]
- ```
+```
 
 ### 解题思路
 
-#### 一、DFS
-
-一般而言，如果题目要求所有的组合、排列、结果，都是用搜索（DFS + backtracking）来做。先来分析一下题目可能的解有多少个，如果字符串 `s` 共有 `n` 个字符，那么 `n` 个字符之间可以放置 `n - 1` 块隔板，每块隔板可能放也可能不放，所以可得到一共 `2 ^ (n-1)` 种划分情况，接下来要做的是判断哪些符合回文。
+一般而言，如果题目要求所有的组合、排列、结果，都是用搜索（DFS + backtracking）来做。先来分析一下题目可能的解有多少个，如果字符串 `s` 共有 `n` 个字符，那么 `n` 个字符之间可以放置 `n - 1` 块隔板，每块隔板可能放也可能不放，所以可得到一共 `2 ^ (n-1)` 种划分情况，接下来要做的是判断哪些划分结果符合回文。
 
 > s = " x1 | x2 | x3 | …  | x(n-1) | xn "
+
+##### 算法复杂度
+
+- 时间复杂度：最多有 `2^(n-1)` 个结果，遍历得到每个结果的最坏时间开销是 `O(n)` ，所以是 `O(n * 2^(n-1))`。
 
 Java 实现
 
