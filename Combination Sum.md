@@ -1,10 +1,11 @@
-#  Combination Sum
+# Combination Sum
 
  Combination Sum  ( [leetcode]()  [lintcode]() )
 
 ```
 Description
-Given a set of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
+Given a set of candidate numbers (C) and a target number (T), 
+find all unique combinations in C where the candidate numbers sums to T.
 The same repeated number may be chosen from C unlimited number of times.
 
 For example, given candidate set 2,3,6,7 and target 7, 
@@ -28,7 +29,7 @@ A solution set is:
 
 本题与 Subsets 不同之处在于同一个数组元素可以重复使用，以 `[2, 3, 6, 7]` 举例，第一个放入 `list` 中的是首元素 `2` ，下一次递归调用仍将 `2` 放入 `list` 中，直至 `list` 的和大于目标值，然后依次取出 `list` 队尾的 `2` ，开始将 `3` 放入，以此类推。
 
-需要注意的地方：
+##### 易错点
 
 > 1. 原始数组中可能有重复元素，所以需要先将原始数组**排序**，在函数中增加**去重处理**。
 
@@ -94,7 +95,7 @@ public class Solution {
 
 
 
-九章算法提供的解答将 list 求和操作融合在递归函数中，感觉更简洁，供参考。
+九章算法提供的解答将 `list` 求和操作融合在递归函数中，感觉更简洁，供参考。
 
 Java 实现
 
