@@ -1,6 +1,6 @@
 # Combination Sum
 
- Combination Sum  ( [leetcode]()  [lintcode]() )
+ Combination Sum  ( [leetcode](https://leetcode.com/problems/combination-sum/)  [lintcode]() )
 
 ```
 Description
