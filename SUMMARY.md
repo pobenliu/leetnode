@@ -151,7 +151,7 @@
    * [N-Queens II](N-Queens II.md)
    * [Palindrome Partitioning](Palindrome Partitioning.md)
    * [Combination Sum](Combination Sum.md)
+   * [Combination Sum II](Combination Sum II.md)
    * [Letter Combinations of a Phone Number](Letter Combinations of a Phone Number.md)
    * [Word Ladder](Word Ladder.md)
-   * [Combination Sum II](Combination Sum II.md)
 
