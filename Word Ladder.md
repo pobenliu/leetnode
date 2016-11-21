@@ -1,10 +1,11 @@
-#  Word Ladder
+# Word Ladder
 
  Word Ladder  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/word-ladder/) )
 
 ```
 Description
-Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that:
+Given two words (start and end), and a dictionary, 
+find the length of shortest transformation sequence from start to end, such that:
 
 1. Only one letter can be changed at a time
 2. Each intermediate word must exist in the dictionary
@@ -27,9 +28,9 @@ return its length 5.
 
 本题目主要考察图的宽度优先搜索（ BFS ），我们来思考一下问题如何抽象。
 
-1. 将每个单词看成图中的一个结点
-2. 如果单词 s1 改变一个字符可以变成 s2 （ s1 和 s2 均在字典中），则 s1 和 s2 之间有连接（双向连接，权重相等皆为 1 ）
-3. 给定 s1 和 s2 ，问题求解的是图中从 s1 到 s2 的最短路径长度
+1. 将每个单词看成无权图中的一个结点。
+2. 如果单词 `s1` 改变一个字符可以变成 `s2` （ `s1` 和 s2 均在字典中），则 `s1` 和 `s2` 之间有连接（双向连接，权重相等皆为 `1` ）
+3. 给定 `s1` 和 `s2` ，问题求解的是图中从 `s1` 到 `s2` 的最短路径长度。
 
 在使用 BFS 求最短路径时，有几个关键步骤：
 
