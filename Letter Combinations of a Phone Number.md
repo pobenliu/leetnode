@@ -1,10 +1,11 @@
-#  Letter Combinations of a Phone Number
+# Letter Combinations of a Phone Number
 
  Letter Combinations of a Phone Number  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/letter-combinations-of-a-phone-number/) )
 
 ```
 Description
-Given a digit string excluded 01, return all possible letter combinations that the number could represent.
+Given a digit string excluded 01, 
+return all possible letter combinations that the number could represent.
 A mapping of digit to letters (just like on the telephone buttons) is given below.
 ```
 
@@ -25,9 +26,22 @@ Return ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
 
 需要注意的地方有：
 
-1. 建立一个数字到字母的对照表
-2. 注意 String 、 StringBuilder 相关的函数及操作
-3. 数字需要递增遍历，每个数字对应的字母要全部遍历
+1. 建立一个数字到字母的对照表。
+2. 注意 String 、 StringBuilder 相关的函数及操作。
+   - String ： 
+     - 第 `i` 个字符 `s.charAt(i)` ；
+     - 字符串相等 `s.equals(t)` ；
+     - 空字符串 `s.isEmpty()` ；
+     - 字符串长度 `s.length()` ；
+     - 子字符串（索引范围 `start ~ end-1` ） `s.substring(start, end)` ；
+     - 转换为字符数组 `s.toCharArray()` 。
+   - StringBuilder ：
+     - 添加字符或字符串 `sb.append(s)` ；
+     - 第 `i` 个字符 `sb.charAt(i)` ；
+     - 删除第 `i` 个字符 `sb.deleteCharAt(i)` ；
+     - 字符串大小 `sb.length()` ；
+     - 转化为 `string` 类型 `sb.toString()` 。
+3. `digits` 字符串中的数字需要递增遍历，每个数字对应的字母需要从头遍历。
 
 Java 实现
 
@@ -78,4 +92,3 @@ public class Solution {
 ### 参考
 
 1. [[LeetCode] Letter Combinations of a Phone Number (Java) | Life In Code](http://www.lifeincode.net/programming/leetcode-letter-combinations-of-a-phone-number-java/)
-
