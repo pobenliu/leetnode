@@ -49,6 +49,10 @@ return its length 5.
 
 3. 一旦 BFS 找到目标单词，如何回溯找到路径？
 
+##### 易错点
+
+- `String` 变量可以直接使用 `char[]` 进行初始化。
+
 Java 实现
 
 ```java
