@@ -156,5 +156,5 @@
    * [Combination Sum III](Combination Sum III.md)
    * [Letter Combinations of a Phone Number](Letter Combinations of a Phone Number.md)
    * [Word Ladder](Word Ladder.md)
-   * Word Ladder II
+   * [Word Ladder II](Word Ladder II.md)
 
