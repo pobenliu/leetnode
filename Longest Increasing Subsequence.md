@@ -9,8 +9,8 @@ You code should return the length of the LIS.
 
 Clarification
 What's the definition of longest increasing subsequence?
-- The longest increasing subsequence problem is to find a subsequence of a given sequence in which 
-the subsequence's elements are in sorted order, lowest to highest, 
+- The longest increasing subsequence problem is to find a subsequence of a given sequence 
+in which the subsequence's elements are in sorted order, lowest to highest, 
 and in which the subsequence is as long as possible. 
 This subsequence is not necessarily contiguous, or unique.
 https://en.wikipedia.org/wiki/Longest_increasing_subsequence
@@ -32,8 +32,8 @@ Time complexity O(n^2) or O(nlogn)
 #### 一、动态规划
 
 1. 定义状态：定义一维状态变量 `f[i]` ，表示前 `i` 个数字中 LIS 的长度。
-2. 定义状态转移函数：考虑到 <u>**LIS 是非连续的**</u>，对当前状态 `f[i]` ，上一个状态可能为 `f[j], j < i` ，而且此时需要满足 `f[i] > f[j]` ；如果所有 `f[i] <= f[j], j = 0...i-1` ，那么 `f[i] = 1` 。
-3. 定义起点： `f[0]` 从前 `0` 个数字中 LIS 的长度，为 `0` 。考虑到对于每一个 `i` ， `f[i]` 至少为 1 ，所以初始化  `f[i] = 1, i = 1,2...,n-1` 。
+2. 定义状态转移函数：考虑到 <u>**LIS 是非连续的**</u>，对当前状态 `f[i]` ，上一个状态可能为 `f[j], j < i` ，而且此时需要满足 `nums[i-1] > nums[j-1]` ，在所有满足此条件的状态中取最大值 `f[i] = MAX{f[j] + 1, j < i, nums[j-1] < nums[i-1]}`；如果所有 `nums[i-1] <= nums[j-1], j = 1...i-1` ，那么 `f[i] = 1` 。
+3. 定义起点： `f[0]` 为前 `0` 个数字中 LIS 的长度，为 `0` 。考虑到对于每一个 `i` ， `f[i]` 至少为 `1` ，所以初始化  `f[i] = 1, i = 1,2...,n-1`。
 4. 定义终点：最终结果为 `f[i], i = 1,2...,n-1` 的最大值。
 
 ##### 算法复杂度
