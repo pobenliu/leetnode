@@ -1,6 +1,6 @@
 # Min Stack
 
- Min Stack  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/min-stack/) )
+Min Stack  \( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/min-stack/) \)
 
 ```
 Description
@@ -20,8 +20,6 @@ push(1)
 min()   // return 1
 ```
 
-
-
 ### 解题思路
 
 题目要求是 `O(1)` 时间的 `min` 操作，对空间复杂度则没有要求，考虑使用两个栈，其中一个栈用作正常用处，另一个栈则同步存储对应的最小值。
@@ -32,6 +30,10 @@ min()   // return 1
 > 2. 查看栈顶元素：`stack.peek()`。
 > 3. 判断栈顶元素是否相等：`equals()`。
 
+##### 易错点
+
+> 1. 注意考察存储最小值的栈为空的时候。
+
 Java 实现
 
 ```java
@@ -39,7 +41,7 @@ public class MinStack {
 
     private Stack<Integer> nums;
     private Stack<Integer> mins; 
-    
+
     public MinStack() {
         // do initialize if necessary
         nums = new Stack<Integer>();
@@ -69,8 +71,6 @@ public class MinStack {
 }
 ```
 
-
-
 优化解法：
 
 只有在进栈元素小于等于当前最小值时，才将其加入最小值栈；进栈元素大于当前最大值时，最小值栈无需操作。出栈时需要做同样的判断。
@@ -84,7 +84,7 @@ public class MinStack {
 
     private Stack<Integer> nums;
     private Stack<Integer> mins; 
-    
+
     public MinStack() {
         // do initialize if necessary
         nums = new Stack<Integer>();
@@ -118,8 +118,9 @@ public class MinStack {
 }
 ```
 
-
-
 ### 参考
 
-1. [Min Stack | 九章算法](http://www.jiuzhang.com/solutions/min-stack/)
+1. [Min Stack \| 九章算法](http://www.jiuzhang.com/solutions/min-stack/)
+
+
+
