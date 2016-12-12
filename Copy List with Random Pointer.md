@@ -1,6 +1,6 @@
 # Copy List with Random Pointer
 
- Copy List with Random Pointer ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/copy-list-with-random-pointer/) )
+Copy List with Random Pointer \( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/copy-list-with-random-pointer/) \)
 
 ```
 Description
@@ -14,8 +14,6 @@ Challenge
 Could you solve it with O(1) space?
 ```
 
-
-
 ### 解题思路
 
 #### 一、哈希表
@@ -26,25 +24,32 @@ Could you solve it with O(1) space?
 
 实现逻辑：
 
-- 复制 `next` 指针关系。
-  - 原链表的当前结点不在哈希表中。
-    - 新建结点，拷贝结点值。
-    - 将原始链表结点（`Key`）和新建结点（`Value`）存放在哈希表中。
-  - 原链表当前结点在哈希表中（之前已经作为 `random` 指针指向结点被存储）。
-    - 指向该结点（`Key`）对应的（`Value`）结点。
-  - 将新建结点放入新建链表中。
-- 复制 `random` 指针关系。
-  - 原链表结点的 `random` 指针不为空。
-    - `random` 所指结点在哈希表中。
-      - 将对应复制结点的 `random` 指针指向哈希表中原始结点 `random` 指向结点的复制结点。
-    - `random` 所指结点不在哈希表中。
-      - 新建 `random` 指向结点，将原始结点、复制结点 `random` 指向结点对放入哈希表。
-  - 准备处理下一个结点。
+* 复制 `next` 指针关系。
+  * 原链表的当前结点不在哈希表中。
+    * 新建结点，拷贝结点值。
+    * 将原始链表结点（`Key`）和新建结点（`Value`）存放在哈希表中。
+
+  * 原链表当前结点在哈希表中（之前已经作为 `random` 指针指向结点被存储）。
+    * 指向该结点（`Key`）对应的（`Value`）结点。
+
+  * 将新建结点放入新建链表中。
+
+* 复制 `random` 指针关系。
+  * 原链表结点的 `random` 指针不为空。
+    * `random` 所指结点在哈希表中。
+      * 将对应复制结点的 `random` 指针指向哈希表中原始结点 `random` 指向结点的复制结点。
+
+    * `random` 所指结点不在哈希表中。
+      * 新建 `random` 指向结点，将原始结点、复制结点 `random` 指向结点对放入哈希表。
+
+
+  * 准备处理下一个结点。
+
 
 **算法复杂度**
 
-- 时间复杂度：遍历原链表一次，故为 `O(n)` 。
-- 空间复杂度：建立一个哈希表做结点映射，为 `O(n)` 。
+* 时间复杂度：遍历原链表一次，故为 `O(n)` 。
+* 空间复杂度：建立一个哈希表做结点映射，为 `O(n)` 。
 
 Java 实现
 
@@ -67,12 +72,12 @@ public class Solution {
         if(head == null) {
             return null;
         }
-        
+
         HashMap<RandomListNode, RandomListNode> map 
           = new HashMap<RandomListNode, RandomListNode>();
         RandomListNode dummy = new RandomListNode(0);
         RandomListNode pre = dummy, newNode;
-        
+
         while(head != null) {
             // copy next pointer
             if(map.containsKey(head)) {
@@ -82,7 +87,7 @@ public class Solution {
                 map.put(head, newNode);
             } 
             pre.next = newNode;
-            
+
             // copy random pointer
             if(head.random != null) {
                 if(map.containsKey(head.random)) {
@@ -95,52 +100,48 @@ public class Solution {
             pre = newNode;
             head = head.next;
         }
-        
+
         return dummy.next;
     }
 }
 ```
 
-
-
 #### 二、复制链表
 
-- 在原链表基础上复制结点。
-  - 利用 `next` 指针，在原链表每个结点后面建立复制结点（同时复制 `value` 值， `next` 指针）。
-- 调整 `random` 指针关系。
-  - 将复制结点的 `random` 指针指向相应的复制结点。
-- 拆分链表。
+* 在原链表基础上复制结点。
+  * 利用 `next` 指针，在原链表每个结点后面建立复制结点（同时复制 `value` 值， `next` 指针）。
+
+* 调整 `random` 指针关系。
+  * 将复制结点的 `random` 指针指向相应的复制结点。
+
+* 拆分链表。
 
 以图示说明（下面的图来自参考链接 2 中的解释）
 
-```
-比如链表是
-|------------|
-|            v
-1  --> 2 --> 3 --> 4 
+    比如链表是
+    |------------|
+    |            v
+    1  --> 2 --> 3 --> 4 
 
-第一遍扫描利用 next 指针，扫描过程中先建立 copy 结点(包括 next 和 random 指针)，得到
-|--------------------------|
-|                          v
-1  --> 1' --> 2 --> 2' --> 3 --> 3' --> 4 --> 4'
-       |                   ^
-       |-------------------|
+    第一遍扫描利用 next 指针，扫描过程中先建立 copy 结点(包括 next 指针)，得到
+    |--------------------------|
+    |                          v
+    1  --> 1' --> 2 --> 2' --> 3 --> 3' --> 4 --> 4'
 
-第二遍扫描复制 random 指针的 copy ，将复制结点的 random 向后移动一位即可；
-|--------------------------|
-|                          v
-1  --> 1' --> 2 --> 2' --> 3 --> 3' --> 4 --> 4'
-       |                         ^
-       |-------------------------|
+    第二遍扫描复制 random 指针的 copy
+    |--------------------------|
+    |                          v
+    1  --> 1' --> 2 --> 2' --> 3 --> 3' --> 4 --> 4'
+           |                         ^
+           |-------------------------|
 
-最后拆分结点，一边扫描一边拆成两个链表，这里用到两个dummy node。
-拆分后第一个链表为 1-->2-->3-->4，第二链表为 1`-->2`-->3`-->4`。
-```
+    最后拆分结点，一边扫描一边拆成两个链表。
+    拆分后第一个链表为 1-->2-->3-->4，第二链表为 1`-->2`-->3`-->4`。
 
 **算法复杂度**
 
-- 时间复杂度：`O(n)` 。
-- 空间复杂度：`O(1)` 。【疑问：复制结点也占用了O(n)的空间，为何空间复杂度为O(1)】
+* 时间复杂度：`O(n)` 。
+* 空间复杂度：`O(1)` 。【疑问：复制结点也占用了 O\(n\) 的空间，为何空间复杂度为 O\(1\)。因为复制结点占用的空间是一定需要的，而第一种解法中哈希表占用的空间是复制结点以外的额外空间。】
 
 ##### 易错点
 
@@ -166,12 +167,12 @@ public class Solution {
         if (head == null) {
             return null;
         }
-        
+
         copyNext(head);
         copyRandom(head);
         return split(head);
     }
-    
+
     private void copyNext (RandomListNode head) {
         while (head != null) {
             RandomListNode newNode = new RandomListNode(head.label);
@@ -180,7 +181,7 @@ public class Solution {
             head = head.next.next;
         }
     }
-    
+
     private void copyRandom (RandomListNode head) {
         while (head != null) {
             if (head.random != null) {
@@ -189,7 +190,7 @@ public class Solution {
             head = head.next.next;
         }
     }
-    
+
     private RandomListNode split (RandomListNode head) {
         RandomListNode newHead = head.next;
         while (head != null) {
@@ -205,12 +206,11 @@ public class Solution {
 }
 ```
 
-
-
-
-
 ### 参考
 
-1. [Copy List with Random Pointer | 九章算法](http://www.jiuzhang.com/solutions/copy-list-with-random-pointer/)
-2. [Copy List with Random Pointer | LeetCode题解](https://siddontang.gitbooks.io/leetcode-solution/content/linked_list/copy_list_with_random_pointer.html)
-3. [Copy List with Random Pointer | 数据结构与算法/leetcode/lintcode题解](https://algorithm.yuanbin.me/zh-hans/index.html)
+1. [Copy List with Random Pointer \| 九章算法](http://www.jiuzhang.com/solutions/copy-list-with-random-pointer/)
+2. [Copy List with Random Pointer \| LeetCode题解](https://siddontang.gitbooks.io/leetcode-solution/content/linked_list/copy_list_with_random_pointer.html)
+3. [Copy List with Random Pointer \| 数据结构与算法/leetcode/lintcode题解](https://algorithm.yuanbin.me/zh-hans/index.html)
+
+
+
