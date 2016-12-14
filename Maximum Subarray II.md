@@ -1,6 +1,6 @@
 # Maximum Subarray II
 
- Maximum Subarray II  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/maximum-subarray-ii/) )
+Maximum Subarray II  \( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/maximum-subarray-ii/) \)
 
 ```
 Description
@@ -43,7 +43,7 @@ public class Solution {
         if (nums == null || nums.size() == 0) {
             return 0;
         }
-        
+
         int curSum = 0;
         int minSum = 0;
         int max = Integer.MIN_VALUE;
@@ -54,7 +54,7 @@ public class Solution {
             minSum = Math.min(minSum, curSum);
             maxSumLeft[i] = max;
         }
-        
+
         curSum = 0;
         minSum = 0;
         max = Integer.MIN_VALUE;
@@ -65,10 +65,52 @@ public class Solution {
             minSum = Math.min(minSum, curSum);
             maxSumRight[i] = max;
         }
-        
+
         max = Integer.MIN_VALUE;
         for (int i = 0; i < nums.size() - 1; i++) {
             max = Math.max(max, maxSumLeft[i] + maxSumRight[i + 1]);
+        }
+
+        return max;
+    }
+}
+```
+
+以下实现似乎更简洁
+
+```java
+public class Solution {
+    /**
+     * @param nums: A list of integers
+     * @return: An integer denotes the sum of max two non-overlapping subarrays
+     */
+    public int maxTwoSubArrays(ArrayList<Integer> nums) {
+        // write your code
+        if (nums == null || nums.size() == 0) {
+            return Integer.MIN_VALUE;
+        }
+        int n = nums.size();
+        
+        int curtSum = nums.get(0);
+        int[] left = new int[n];
+        left[0] = nums.get(0);
+        for (int i = 1; i < n; i++) {
+            curtSum = Math.max(curtSum + nums.get(i), nums.get(i));
+            left[i] = Math.max(left[i-1], curtSum);
+        }
+        
+        curtSum = nums.get(n - 1);
+        int[] right = new int[n];
+        right[n - 1] = nums.get(n - 1);
+        for (int i = n - 2; i >= 0; i--) {
+            curtSum = Math.max(curtSum + nums.get(i), nums.get(i));
+            right[i] = Math.max(right[i+1], curtSum);
+        }
+        
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < n - 1; i++) {
+            int temp = left[i] + right[i + 1];
+            max = Math.max(temp, max);
         }
         
         return max;
@@ -80,4 +122,7 @@ public class Solution {
 
 ### 参考
 
-1. [Maximum Subarray II | 九章算法](http://www.jiuzhang.com/solutions/maximum-subarray-ii/)
+1. [Maximum Subarray II \| 九章算法](http://www.jiuzhang.com/solutions/maximum-subarray-ii/)
+
+
+
