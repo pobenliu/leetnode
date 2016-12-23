@@ -35,8 +35,8 @@ D-->1-->2-->3-->4-->5-->null
     |
    head
 
-2.以第 m 个结点为头结点，将长度为 L=n-m+1 部分反转。
-D-->1<--2<--3<--4   5-->null
+2.以第 m 个结点为头结点，将长度为 L=n-m 部分反转。
+D-->1-->2<--3<--4   5-->null
     ^           ^   ^
     |           |   |
    head       prev curt
@@ -85,7 +85,7 @@ public class Solution {
             head = head.next;
         }
         
-        // reverse list from prev with length n-m+1
+        // reverse list from prev with length n-m
         ListNode prev = head.next;
         ListNode curt = prev.next;
         for (int i = 1; i <= n - m; i++) {
