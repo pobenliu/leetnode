@@ -1,10 +1,11 @@
-#  Convert Sorted List to Balanced BST
+# Convert Sorted List to Balanced BST
 
  Convert Sorted List to Balanced BST ( [leetcode]() [lintcode](http://www.lintcode.com/en/problem/convert-sorted-list-to-balanced-bst/) )
 
 ```
 Description
-Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+Given a singly linked list where elements are sorted in ascending order, 
+convert it to a height balanced BST.
 
 Example
                2
@@ -27,8 +28,6 @@ Example
 **复杂度分析**
 
 - 时间复杂度：由于采用了分治法，所以复杂度分析参考归并排序，约为 `O(nlogn)`
-
-
 
 注：
 
@@ -97,8 +96,65 @@ public class Solution {
         return slow;
     }
 }
+```
+
+以上实现过于繁琐，以下方法实现更加简洁。
+
+```java
+/**
+ * Definition for ListNode.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int val) {
+ *         this.val = val;
+ *         this.next = null;
+ *     }
+ * }
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */ 
+public class Solution {
+    /**
+     * @param head: The first node of linked list.
+     * @return: a tree node
+     */
+    public TreeNode sortedListToBST(ListNode head) {  
+        // write your code here
+        return convert(head, null);
+    }
+    
+    private TreeNode convert(ListNode start, ListNode end) {
+        if (start == end) {
+            return null;
+        }
+        
+        ListNode slow = start;
+        ListNode fast = start.next;
+        
+        while (fast != end && fast.next != end) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        
+        TreeNode node = new TreeNode(slow.val);
+        node.left = convert(start, slow);
+        node.right = convert(slow.next, end);
+        
+        return node;
+    }
+}
 
 ```
+
+
 
 
 
@@ -171,7 +227,6 @@ public class Solution {
     }
     
 }
-
 ```
 
 
@@ -182,4 +237,4 @@ public class Solution {
 
 1. [Divide&Conquer Java solution Complexity? | leetcode discussion](https://discuss.leetcode.com/topic/9560/divide-conquer-java-solution-complexity)
 2. [Convert Sorted List to Balanced BST | 九章算法](http://www.jiuzhang.com/solutions/convert-sorted-list-to-binary-search-tree/)
-
+3. [Convert Sorted List to Binary Search Tree | LeetCode题解](https://siddontang.gitbooks.io/leetcode-solution/content/tree/convert_sorted_listarray_to_binary_search_tree.html)
