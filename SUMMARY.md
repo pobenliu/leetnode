@@ -73,7 +73,7 @@
     * [Distinct Subsequences](Distinct Subsequences.md)
     * [Interleaving String](Interleaving String.md)
     * [House Robber](House Robber.md)
-    * [House Robber II](house-robber-ii.md)
+    * [House Robber II](House Robber II.md)
     * [Maximal Square](Maximal Square.md)
     * [Backpack](Backpack.md)
     * [Backpack II](Backpack II.md)
