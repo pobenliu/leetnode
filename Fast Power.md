@@ -1,4 +1,4 @@
-#  Fast Power
+# Fast Power
 
  Fast Power  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/fast-power/) )
 
@@ -24,9 +24,13 @@ O(logn)
 
 本题目还用到了整数取模操作的以下特点：`(a * b) % p =((a % p) * (b % p)) % p` 。
 
-**算法复杂度**
+##### 算法复杂度
 
 - 时间复杂度：`O(logn)` 。
+
+##### 易错点
+
+> 1. 注意对 int 类型数据溢出的处理。
 
 Java 实现
 
@@ -61,4 +65,3 @@ class Solution {
 ### 参考
 
 1. [Lintcode: Fast Power 解题报告 | Yu's garden](http://www.cnblogs.com/yuzhangcmu/p/4174781.html)
-
