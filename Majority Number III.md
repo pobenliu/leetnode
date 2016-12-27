@@ -4,7 +4,8 @@
 
 ```
 Description
-Given an array of integers and a number k, the majority number is the number that occurs more than 1/k of the size of the array.
+Given an array of integers and a number k, 
+the majority number is the number that occurs more than 1/k of the size of the array.
 Find it.
 
 Notice
