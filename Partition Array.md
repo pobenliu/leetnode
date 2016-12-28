@@ -24,6 +24,8 @@ Can you partition the array in-place and in O(n)?
 
 ### 解题思路
 
+#### 一、反方向双指针
+
 本题目和快速排序是同一类题目，使用指向首尾的两个指针 `left` 和 `right` 向中间遍历，当 `left` 指向对象大于等于 `k` ，`right` 指向对象小于 `k` 时，交换两者，直至 `left > right` 。操作过程要时刻注意两个指针的相对位置，确保不越界。
 
 ##### 易错点
@@ -66,6 +68,43 @@ public class Solution {
 	    }
 	    
         return left;
+    }
+}
+```
+
+
+
+#### 二、同方向双指针
+
+使用指针 `prev` 记录最后一个小于 `k` 的元素索引，`curt` 遍历数组寻找小于 `k` 的元素。
+
+```java
+public class Solution {
+	/** 
+     *@param nums: The integer array you should partition
+     *@param k: As description
+     *return: The index after partition
+     */
+    public int partitionArray(int[] nums, int k) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int prev = -1;
+        int curt = 0;
+        for ( ; curt < nums.length; curt++) {
+            if (nums[curt] < k) {
+                prev++;
+                swap(nums, prev, curt);
+            } 
+        }
+	    
+	    return prev + 1;
+    }
+    
+    private void swap(int[] nums, int start, int end) {
+        int tmp = nums[start];
+        nums[start] = nums[end];
+        nums[end] = tmp;
     }
 }
 ```
