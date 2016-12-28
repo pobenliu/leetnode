@@ -1,4 +1,4 @@
-#  Remove Duplicates from Sorted Array II
+# Remove Duplicates from Sorted Array II
 
  Remove Duplicates from Sorted Array II  ( [leetcode]()  [lintcode](http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-array-ii/#) )
 
@@ -15,6 +15,8 @@ Your function should return length = 5, and A is now [1,1,2,2,3].
 ### 解题思路
 
 参考题目 Remove Duplicates from Sorted Array 的思路，用指针 `curr` 遍历数组，指针 `prev` 记录最后一个不重复元素的位置。考虑到允许同一个元素出现两次，那么 `curr` 指向元素除了与 `prev` 指向元素比较，还需要和 `prev - 1` 指向元素比较。
+
+考虑排序数组的非降特性，所以 `nums[curr] == nums[prev - 1]` 时，也必然有 `nums[prev] == nums[prev]` ，所以，实际上只需要比较 `nums[curr] 和 nums[prev - 1]` 即可。
 
 ##### 算法复杂度
 
@@ -51,8 +53,6 @@ public class Solution {
 ```
 
 
-
-考虑排序数组的特性，所以 `nums[curr] == nums[prev - 1]` 时，也必然有 `nums[prev] == nums[prev - 1]` ，所以，实际上只需要比较 `nums[curr] 和 nums[prev - 1]` 即可。（<u>这段想的不是特别明白</u>）
 
 参考 Remove Duplicates from Sorted Array 题目的解法二，有以下 Java 实现
 
