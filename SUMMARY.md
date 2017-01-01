@@ -132,6 +132,7 @@
     * [Subarray Sum Closest](Subarray Sum Closest.md)
     * [Median](Median.md)
     * [Kth Largest Element](Kth Largest Element.md)
+    * [Kth Smallest Number in Sorted Matrix](Kth Smallest Number in Sorted Matrix.md)
     * [Kth Largest in N Arrays](Kth Largest in N Arrays.md)
 * Two Pointers
     * [Partition Array](Partition Array.md)
