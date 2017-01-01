@@ -1,6 +1,6 @@
 # Kth Largest in N Arrays
 
-Kth Largest in N Arrays 
+Kth Largest in N Arrays ( [lintcode](http://www.lintcode.com/en/problem/kth-largest-in-n-arrays/) )
 
 ```
 Description
@@ -22,7 +22,6 @@ In n=2 arrays [[9,3,2,4,8],[1,2,3,4,2]], the 1st largest element is 9, 2nd large
 Java 实现
 
 ```java
-
 
 class Node {
     public int value, row_id, col_id;
