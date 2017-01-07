@@ -57,9 +57,10 @@
 1. [九章算法](http://www.jiuzhang.com/solutions/)，提供 Lintcode 三种语言（ Java, C++, Python ）的解题答案，我个人在学习过程中大量参考了九章的答案，在此致谢。
 2. [Leetcode 讨论区](https://discuss.leetcode.com/)，大家会讨论分享交流不同的解法和思路。
 3. [数据结构与算法/leetcode/lintcode题解](http://algorithm.yuanbin.me/)，作者 yuanbin 维护的个人博客，包含算法基础知识、编程题目解析等内容，题目解析部分很详细，本文档的建立也是受其启发，过程中也借鉴学习了很多，在此表示感谢。
-4. [水中的鱼](http://fisherlei.blogspot.jp/)，leetcode 题目的答案解析， google 搜索的排名很高。
-5. [喜刷刷](http://bangbingsyb.blogspot.jp/)，跟“水中的鱼”很像。
-6. [算法精粹 | soulmachine](https://www.gitbook.com/book/soulmachine/algorithm-essentials/details) ，soulmachine 的习题汇编在线阅读地址，有 C++ 和 Java 两个版本。
+4. [ProgramCreek](http://www.programcreek.com/)，个人博客站点，里面有大量关于算法和 Java 相关的内容。Simple Java 中总结的知识点很适合面试前参考。
+5. [水中的鱼](http://fisherlei.blogspot.jp/)，leetcode 题目的答案解析， google 搜索的排名很高。
+6. [喜刷刷](http://bangbingsyb.blogspot.jp/)，跟“水中的鱼”很像。
+7. [算法精粹 | soulmachine](https://www.gitbook.com/book/soulmachine/algorithm-essentials/details) ，soulmachine 的习题汇编在线阅读地址，有 C++ 和 Java 两个版本。
 
 ### 参考书籍{#5}
 
