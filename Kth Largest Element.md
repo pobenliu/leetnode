@@ -1,4 +1,4 @@
-#  Kth Largest Element
+# Kth Largest Element
 
  Kth Largest Element  ( [leetcode]()  [lintcode]() )
 
@@ -32,9 +32,10 @@ class Solution {
      * @return: description of return
      */
     public int kthLargestElement(int k, int[] nums) {
-        if (nums == null || nums.length == 0 
-            || k <= 0 || k > nums.length) {
-            return -1;
+        // write your code here
+        if (nums == null || nums.length == 0 || 
+            k <= 0 || k > nums.length) {
+            return -1;        
         }
         
         return helper(nums, 0, nums.length - 1, k - 1);
@@ -45,28 +46,29 @@ class Solution {
             return nums[end];
         }
         
-        int m = start;
-        for (int i = start + 1; i < end + 1; i++) {
-            if (nums[i] > nums[start]) {
-                m++;
-                swap(nums, i, m);
+        int prev = start;
+        int curt = start + 1;
+        int pivot = nums[start];
+        for( ; curt <= end; curt++) {
+            if (nums[curt] > pivot) {
+                prev++;
+                swap(nums, prev, curt);
             }
         }
-        swap(nums, m, start);
-        
-        if (m == k) {
-            return nums[m];
-        } else if (m > k) {
-            return helper(nums, start, m - 1, k);
+        swap(nums, prev, start);
+        if (prev == k) {
+            return nums[prev];
+        } else if (prev > k) {
+            return helper(nums, start, prev - 1, k);
         } else {
-            return helper(nums, m + 1, end, k);
+            return helper(nums, prev + 1, end, k);
         }
     }
     
-    private void swap(int[] nums, int i, int j) {
-        int tmp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = tmp;
+    private void swap(int[] A, int i, int j) {
+        int temp = A[i];
+        A[i] = A[j];
+        A[j] = temp;
     }
 };
 ```
