@@ -136,6 +136,7 @@
     * [Kth Smallest Number in Sorted Matrix](Kth Smallest Number in Sorted Matrix.md)
     * [Kth Largest in N Arrays](Kth Largest in N Arrays.md)
     * [Kth Smallest Sum In Two Sorted Arrays](Kth Smallest Sum In Two Sorted Arrays.md)
+    * [Reorder array to construct the minimum number](Reorder array to construct the minimum number.md)
 * Two Pointers
     * [Partition Array](Partition Array.md)
     * [Two Sum](Two Sum.md)
