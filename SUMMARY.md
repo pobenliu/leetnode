@@ -122,6 +122,7 @@
     * [Trailing Zeros](Trailing Zeros.md)
     * [O\(1\) Check Power of 2](O1 Check Power of 2.md)
     * [Digit Counts](Digit Counts.md)
+    * [Ugly Number II](Ugly Number II.md)
 * Array
     * [Merge Sorted Array](Merge Sorted Array.md)
     * [Merge Two Sorted Arrays](Merge Two Sorted Arrays.md)
