@@ -154,6 +154,7 @@
     * [Sort Letters by Case](Sort Letters by Case.md)
     * [Sort Colors](Sort Colors.md)
     * Triangle Count
+    * [Longest Substring Without Repeating Characters](Longest Substring Without Repeating Characters.md)
 * Graph
     * [Clone Graph](Clone Graph.md)
     * [Topological Sorting](Topological Sorting.md)
