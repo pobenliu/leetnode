@@ -123,6 +123,7 @@
     * [O\(1\) Check Power of 2](O1 Check Power of 2.md)
     * [Digit Counts](Digit Counts.md)
     * [Ugly Number II](Ugly Number II.md)
+    * [Count 1 in Binary](Count 1 in Binary.md)
 * Array
     * [Merge Sorted Array](Merge Sorted Array.md)
     * [Merge Two Sorted Arrays](Merge Two Sorted Arrays.md)
