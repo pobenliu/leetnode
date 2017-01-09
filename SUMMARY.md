@@ -129,6 +129,7 @@
 * Array
     * [Quick Sort](Quick Sort.md)
     * Merge Sort
+    * [Reverse Pairs](Reverse Pairs.md)
     * [Merge Sorted Array](Merge Sorted Array.md)
     * [Merge Two Sorted Arrays](Merge Two Sorted Arrays.md)
     * [Recover Rotated Sorted Array](Recover Rotated Sorted Array.md)
@@ -141,7 +142,6 @@
     * [Kth Largest Element](Kth Largest Element.md)
     * [Kth Smallest Number in Sorted Matrix](Kth Smallest Number in Sorted Matrix.md)
     * [Kth Largest in N Arrays](Kth Largest in N Arrays.md)
-    * [Kth Smallest Sum In Two Sorted Arrays](Kth Smallest Sum In Two Sorted Arrays.md)
 * Two Pointers
     * [Partition Array](Partition Array.md)
     * [Two Sum](Two Sum.md)
