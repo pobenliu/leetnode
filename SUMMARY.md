@@ -127,6 +127,7 @@
     * [Ugly Number II](Ugly Number II.md)
     * [Count 1 in Binary](Count 1 in Binary.md)
 * Array
+    * [Quick Sort](Quick Sort.md)
     * [Merge Sorted Array](Merge Sorted Array.md)
     * [Merge Two Sorted Arrays](Merge Two Sorted Arrays.md)
     * [Recover Rotated Sorted Array](Recover Rotated Sorted Array.md)
@@ -140,7 +141,7 @@
     * [Kth Smallest Number in Sorted Matrix](Kth Smallest Number in Sorted Matrix.md)
     * [Kth Largest in N Arrays](Kth Largest in N Arrays.md)
     * [Kth Smallest Sum In Two Sorted Arrays](Kth Smallest Sum In Two Sorted Arrays.md)
-    * [Reorder array to construct the minimum number](Reorder array to construct the minimum number.md)
+    * Quick Sort
 * Two Pointers
     * [Partition Array](Partition Array.md)
     * [Two Sum](Two Sum.md)
